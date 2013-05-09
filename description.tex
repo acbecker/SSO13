@@ -366,17 +366,18 @@ Use KOI 701.01 as a benchmark
 \addcontentsline{toc}{subsection}{IV. Team Qualifications and Previous NASA Support}
 \smallskip
 
-PI Becker was was PI on NASA OSS grant NNX09AB32G, ``3.5m Transit
-Timing Observations at 100\% Duty Cycle'', which observed multiple
-transiting exoplanet systems for evidence of transit timing variations
+PI Becker is PI on NASA OSS grant NNX09AB32G, ``3.5m Transit Timing
+Observations at 100\% Duty Cycle'', which observed multiple transiting
+exoplanet systems for evidence of transit timing variations
 \citep{2011ApJ...731..123K, 2013ApJ...764....8K, 2013ApJ...764L..17B,
   2013arXiv1304.5713K}.  Much of the software developed for that
 project has been modified to operate with the Kepler data, and used in
 the analyses presented here.  He has considerable expertise in using
-modern software packages implemented on distributed systems to model
-multi--dimensional systems.  Relevant examples include the work done
-under NASA ADP grant NNX09AC77G, ``Time Domain Studies of the 2MASS
-Calibration Point Source Working Database'', for which he is also PI
+modern software packages implemented on distributed computing
+infrastructures to model multi--dimensional systems.  Relevant
+examples include the work done under NASA ADP grant NNX09AC77G, ``Time
+Domain Studies of the 2MASS Calibration Point Source Working
+Database'', for which he is also PI
 \citep{2012ApJ...748...58D,2013ApJ...764...62D}.
 
 Co--I Barnes...
@@ -415,21 +416,28 @@ for the Origins of Solar Systems call for proposals, including:
 
 PI Becker will be technical lead the project for the first 1.5 years,
 which will constitute the data analysis (MCMC) portion of the project.
-He will work 50\% FTE with the graduate student to implement the
+He will work at 50\% FTE with the graduate student to implement the
 computations on the Kepler sample of data.  Co--I Barnes will serve as
 technical lead for the project for the second 1.5 years, as the
 project transitions from analysis of the data to interpretation and
 constraints on tidal evolution theory.  Co--I Agol has significant
 experience in dealing with the Kepler data, including implementing
 detrending algorithms to correct for correlated noise in the Kepler
-data.  He will advise as--needed throughout the project.
+data.  He will advise as--needed throughout the project.  PI Becker
+will serve as the project lead throughout.
 
-We expect the graduate student to become an expert in both areas of
-this project, both the computational/modeling side and the theoretical
-side.  This student will receive a strong dose of both data and
-theory, which is a powerful combination and one not seen often enough
-in the field.  We consider this dual--aspect training a strong
-component of this project.
+We regard the professional development of students as an important
+responsibility of {\it any} research project.  In this regard, the
+graduate students funded by this proposal will have the opportunity to
+attend at least one relevant conference each year, and encouraged to
+give oral presentations on our work.  This will become a requirement
+as the project progresses.  We expect the graduate student to become
+an expert in both areas of this project, both the
+computational/modeling side and the theoretical side.  This student
+will receive a strong dose of both data and theory, which is a
+powerful combination and one not seen often enough in the field.  We
+consider this dual--aspect training a strong component of this
+project.
 
 {\bf Year 1 (2014):} This first year of the project will start with PI
 Becker bringing the student up to speed in modeling transit
@@ -445,21 +453,22 @@ of the MCMC chains is expected to take {\tt XXX} CPU--hours, or {\tt
   YYY} calendar--hours on {\tt ZZZ}. The validation of these chains
 (Gelman--Rubin $\hat{\rm R}$ and effective chain lengths) is expected
 to take a comparable amount of time, as some chains are expected to
-have to be re--run for more steps.  The goal of this first year is to
+have to be re--run or extended.  The goal of this first year is to
 have finalized the MCMC chains on $t_0, \beta_0^2, \tau, \zeta$ for
-all the relevant KOIs.  We will make these publicly available through
-a {\tt github} site specifically designed for this project.  Our
-modeling software will also be released via {\tt github}.
+all transits of all KOIs.  We will make these publicly available
+through a {\tt github} site specifically designed for this project.
+Our modeling software will also be released via {\tt github}.
 
-{\bf Year 2 (2015):} The second year is expected to start with the
-MCMC analyses of the times of transit, and a transition to theoretical
-interpretation of the systems.  We will start with linear ephemeris
-models for all systems to estimate periods; for those systems where
-this model is insufficient, we will examine transit timing models with
-more complicated ephemerides.  We anticipate that this effort will
-result in the publication of 1 or more papers on the transit timings
-of the systems under study, with assistance from Agol on the
-interpretation of the results.  We then hand off to \rory{XXX}.
+{\bf Year 2 (2015):} The second year is expected to begin with the
+MCMC analyses of the periods via times of transit, and transition to
+theoretical interpretation of the systems.  We will start with linear
+ephemeris models for all systems to estimate periods; for those
+systems where this model is insufficient, we will examine transit
+timing models with more complicated ephemerides.  We anticipate that
+this effort will result in the publication of 1 or more ancillary
+papers on the transit timings of the systems under study, with
+assistance from Agol on the interpretation of the results.  We then
+hand off to \rory{XXX}.
 
 {\bf Year 3 (2016):} 
 \rory{XXX}
@@ -470,17 +479,19 @@ interpretation of the results.  We then hand off to \rory{XXX}.
 \smallskip
 
 All investigators are committed to the sharing of data and software.
-PI Becker has been behind real--time public transient alert systems
-for many time--domain astronomical surveys.  This includes the MACHO
-survey, the Deep Lens Survey, the SuperMACHO and ESSENCE surveys, and
-the SDSS--II Supernova Survey, all of which have released their events
-to the public in near--real time through web pages, Astronomer's
+PI Becker has been behind real--time public alert systems for many
+time--domain astronomical surveys.  This includes the MACHO survey,
+the Deep Lens Survey, the SuperMACHO and ESSENCE surveys, and the
+SDSS--II Supernova Survey, all of which have released their events to
+the public in near--real time through web pages, Astronomer's
 Telegrams, IAU circulars, and VOEvents.  He has been diligent in
 releasing the software and data behind publications.  This includes
 the image subtraction software {\tt hotpants}, period finding software
 {\tt Supersmoother}, and spatial clustering software {\tt
   OPTICS}\footnote{http://www.astro.washington.edu/users/becker/c\_software.html}
-which have been used in many subsequent publications.
+which have been used in many subsequent publications.  He is currently
+working part--time on the Large Synoptic Survey Telescope (LSST),
+which is both open--source and open--data.
 
 We will version release all software developed for this project on the
 publicly available open--source collaboration website
@@ -493,7 +504,8 @@ license\footnote{http://www.opensource.org/licenses/bsd-license.php}
 whenever possible.  We will make a new {\tt github} account for this
 project that we will use to stage code and data releases, as described
 in the project development plan.  Analysis packages used in our
-publications will be released as {\tt iPython} notebooks to help
-define reproducible research standards in the field.
+publications will be released as {\tt
+  iPython}\footnote{http://ipython.org} notebooks to help establish
+reproducible research standards in the field.
 
 
