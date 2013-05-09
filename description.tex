@@ -65,15 +65,15 @@ perpendicular velocity, and $\tau$ is the (fitted) amount of time it
 takes the planet to traverse a distance equal to the stellar radius
 assuming no acceleration.  This allows us to express geometrically the
 impact parameter as a function of time:
-
 \begin{eqnarray}
-\beta(t) & = & \sqrt{\beta_0^2 + \left((t - t_0) / \tau\right)^2}.
+\beta(t) & = & \sqrt{\beta_0^2 + \left((t - t_0) / \tau\right)^2},
 \end{eqnarray}
+which is then used along with $\zeta$ to generate a model transit
+lightcurve.
 
 The transit duration $\Delta t$ may be found from the 2 solutions to
 $\beta(t) = 1$, and represents the time between the center of the
 planet crossing each limb of the star:
-
 \begin{eqnarray}
 \Delta t & = & 2 * \tau \sqrt{1 - \beta_0^2}.
 \label{eq-dt}
@@ -93,9 +93,8 @@ which is fortuitous as this is typically the least constrained of all
 system parameters, especially for the long--cadence Kepler data.
 While the uncertainty in $\beta_0$ will affect our knowledge of the
 other system parameters, this uncertainty may be marginalized out by
-examining the posterior distribution of system parameters, and drives
-us to use Markov--Chain Monte Carlo (MCMC) modeling (described
-below).
+examining the posterior distributions, and drives us to use
+Markov--Chain Monte Carlo (MCMC) modeling (described below).
 
 Equation~\ref{eq-emin2} indicates that $e_{min}$ is purely a function
 of the fitted parameter $\tau$, the derived period $P$, and an assumed
@@ -105,7 +104,8 @@ parameters:
 
 \begin{eqnarray}
 \Xi & \equiv & \frac{16 \pi^{2} \alpha^{2} \tau^{2} P^{2}}{16 \pi^{4} \alpha^{4} \tau^{4} - P^{4}} \\
-\delta e_{min} & = & \Xi~e_{min}~\frac{\delta \xi}{\xi} ~~~~~ \left[\xi = \tau; P; \alpha \right].\nonumber
+\frac{\delta e_{min}}{\delta \xi} & = & \frac{\Xi~e_{min}}{\xi} ~~~~~ \left[\xi = \tau; P; \alpha \right].\nonumber
+\label{eq-emin3}
 \end{eqnarray}
 In the limit of a circular orbit ($P \rightarrow 2 \pi \alpha \tau$),
 $\Xi~e_{min}$ = 1.
@@ -162,20 +162,20 @@ system, each having hundreds of individual transits to fit.
 {\centerline{\ub{\sc KOI 701.01}}}
 \smallskip
 
-We validate the results of our simulations by analysing the data from
-KOI 701.01 \citep[Kepler 62--b;][]{2013arXiv1304.7387B}.  This planet
-has a period of 5.715 days, $\zeta = 0.018$ (R$_p$ $\sim$ 1.3 R$_E$),
-and a transit depth of $4 \times 10^{-4}$\%.  We use the limb
+We validate the results of our simulations by analyzing Kepler data
+from KOI 701.01 \citep[Kepler 62--b;][]{2013arXiv1304.7387B}.  This
+planet has a period of 5.715 days, $\zeta = 0.018$ (R$_p$ $\sim$ 1.3
+R$_E$), and a transit depth of $4 \times 10^{-4}$~\%.  We use the limb
 darkening parameters for the host star from
-\cite{2010A&A...510A..21S}.  These data have correlated noise that is
-not included in our simulated data above, which is an additional
-complication to the analysis.  To account for this, we perform a local
-detrending by first dividing the data by the proposed model, and
-fitting a low order spline to the result.  The goodness of fit is
-determined by comparing the product of the spline and the model to the
-data.  Figure~\ref{fig-koi70101} provides an example model fit determined in
-this manner.  The data used are the {\tt PDCSAP} fluxes and
-uncertainties.
+\cite{2010A&A...510A..21S}.  The Kepler data have correlated noise
+that is not included in our simulated data above, which is an
+additional complication to the analysis.  To account for this, we
+perform a local detrending by first dividing the data by the proposed
+model, and fitting a low order spline to the result.  The goodness of
+fit is determined by comparing the product of the spline and the model
+to the data.  Figure~\ref{fig-koi70101} provides an example model fit
+determined in this manner.  The data used are the {\tt PDCSAP} fluxes
+and uncertainties.
 
 \begin{figure*}[t] 
   \begin{minipage}[c]{0.6\textwidth}
@@ -201,11 +201,11 @@ uncertainties.
 To examine how our knowledge of system parameters evolves as a
 function of number of transits, we have fit {\it all} the data up to
 the time of each transit, for all $N$ transits in each lightcurve.
-This means that for transit $n <= N$, we have common model parameters
-$\beta_{0}^2, \tau, \zeta$ and per--transit parameters $t_{0;1},
-t_{0;2}, ..., t_{0;n}$, for a total of $n+3$ model parameters.  This
-yields an ensemble of $N$ model evaluations per lightcurve, each
-incorporating one more transit than the previous one.
+This means that for transit $n \leq N$, we have common model
+parameters $\beta_{0}^2, \tau, \zeta$ and per--transit parameters
+$t_{0;i=1..n}$, for a total of $n+3$ model parameters.  This yields an
+ensemble of $N$ system models per lightcurve, each incorporating one
+more transit than the previous one.
 
 We use the affine--invariant MCMC sampler {\tt emcee}
 \citep{2013PASP..125..306F} to sample the posterior distribution of
@@ -214,32 +214,32 @@ the model parameters.  This program uses the method of
 of the aspect ratio of the posterior distribution, meaning covariances
 between parameters are less important to the efficacy of the MCMC
 sampling.  This provides a set of MCMC chains that we examine to
-determine our constraints on the fitted parameters.  We will use the
+determine our constraints on the fitted parameters.  We use the
 Gelman--Rubin $\hat{\rm R}$--static \citep{Gelman92} to assure that
-each chain sufficiently samples model space, and will require
-effective chain lengths larger than $10^4$ to ensure sufficient mixing
-in the MCMC sample \cite[e.g.][]{2004PhRvD..69j3501T}.  Our trial runs
-using KOI 701.01 indicate that our chains typically have
-autocorrelation lengths of $\sim 100$, requiring a total number of
-steps per chain of $10^6$.  This may be achieved by using a set of $N$
-{\tt emcee} ``walkers'', each taking $10^6/N$ steps.  We will use
-burn--in times of $0.1 * 10^6/N$ steps, which are then discarded
-before the final chain commences.  Our KOI 701.01 trials indicate that
-...
+each chain sufficiently samples model space, and require effective
+chain lengths larger than $10^4$ to ensure sufficient mixing in the
+MCMC sample \cite[e.g.][]{2004PhRvD..69j3501T}.  Our trial runs using
+KOI 701.01 indicate that our chains typically have autocorrelation
+lengths of $\sim 100$, requiring a total number of steps per chain of
+$10^6$.  This may be achieved by using a set of $N$ {\tt emcee}
+``walkers'', each taking $10^6/N$ steps.  We use burn--in times having
+10\% the requested number of steps, which are then discarded before
+the final chain commences.
 
 For each transit, we evaluate the joint and marginalized distributions
-of $\zeta$ and $\tau$.  Figure~\ref{xxx} demonstrates how the joint
-distribution evolves from fitting 1 transit (dashed contours, which
-represent 68.3\%, 95.5\%, and 99.7\% confidence limits), to fitting
-all transits for KOI 701.01 (solid contours, at the same confidence
-limit).  We then marginalize over all parameters, and examine the
-confidence limits of each parameter.  Figure~\ref{fig-joint}
-demonstrates how our contraints on $\zeta$ (left panel) and $\tau$
-(right panel) evolve as a function of the number of transits used in
-the fit.  The solid line provides the maximum of the posterior
-distribution, while the dashed line indicates its median.  The shaded
-area encloses 68.3\% of the distribution, i.e. 1--sigma confidence
-limits.  In this way we are able to measure our unceratinty on $\tau$.
+of $\zeta$ and $\tau$.  Figure~\ref{fig-joint} demonstrates how the
+joint distribution evolves from fitting 1 transit (dashed contours,
+which represent 68.3\%, 95.5\%, and 99.7\% confidence limits), to
+fitting all transits (solid contours, at the same confidence limit),
+for KOI 701.01.  We then marginalize over all other parameters, and
+examine the per--parameter confidence limits.  Figure~\ref{fig-marg}
+demonstrates how our marginalized constraints on $\zeta$ (left panel)
+and $\tau$ (right panel) evolve as a function of the number of
+transits used in the fit for 701.01.  The solid line provides the
+maximum of the posterior distribution, and the dashed line indicates
+its median.  The shaded area encloses 68.3\% of the distribution.  In
+this way we quantify $\delta \tau$, as this is necessary to understand
+our ability to constrain $e_{min}$ via Equation~\ref{eq-emin3}.
 
 \begin{figure*}[t] 
   \begin{minipage}[c]{0.47\textwidth}
@@ -258,46 +258,64 @@ limits.  In this way we are able to measure our unceratinty on $\tau$.
 \end{figure*}
 
 
-We next examine our constraints on the system period.  We use the
-posterior distributions from the fits described above for
-$t_{0;1..j}$.  To do so, we use {\tt emcee} to sample the posterior
-space of (nuisance parameter) $t_0$ and period $P$.  For a given trial
-$t_0, P$ pair, the likelihood is determined through:
-\begin{eqnarray}
-\mathcal{L}(t_0, P) & = & \prod_{i=1}^{i=j} \kappa_i(t_0 + P * i)
-\end{eqnarray}
-where $\kappa_i$ is a kernel density estimate of each posterior
-distribution $t_{0;i}$.  Figure~\ref{fig-mcmc2} shows this for the
-period.  We do not fit for a linear ephemeris during the original MCMC
-analysis as it precludes our modeling of a transit timing signal more
-complex than $t_0 + P * i$, which may be necessary in the presence of
-TTVs.
-
 \begin{figure*}[t] 
 \begin{center} 
-\epsfig{file=figures/period.eps, width=0.4\textwidth} 
-\caption{Period.}
-\label{fig-mcmc2} 
+\mbox{
+\subfigure{\includegraphics[width=0.47\textwidth]{figures/tau.eps}}
+\quad
+\subfigure{\includegraphics[width=0.47\textwidth]{figures/rRs.eps}}
+}
+\caption{The marginalized distributions of $\tau$ (left panel) and
+  $\zeta$ (right panel) as a function of the number of transits being
+  used, for KOI 701.01.  For each transit $n \leq N$ we use {\it all}
+  data up to and including transit $n$ to constrain $zeta$ and $\tau$
+  (along with $\beta_0^2$ and times of transit $t_{0;i=1...n}$).  The
+  {\it solid} line represents the maximum of the posterior
+  distribution, while the {\it dashed} line indicates its median.  The
+  shaded area contains 68.3\% of the posterior samples.}
+\hspace*{\fill}  
+\hrule
+\label{fig-marg} 
 \end{center} 
 \end{figure*}
 
-We now understand how $\delta \tau$ and $\delta P$ scale.
+To examine our constraints on the system period, we use the
+$t_{0;1..n}$ posterior distributions from the fits described above.
+We use {\tt emcee} to sample the posterior space of (nuisance
+parameter) $t_{0;1}$ and period $P$.  For a given trial ($t_{0;1}, P$)
+pair, the likelihood is determined through:
+\begin{eqnarray}
+\mathcal{L}(t_{0;1}, P) & = & \prod_{i=1}^{i=n} \kappa_i(t_{0;1} + P * (i-1))
+\end{eqnarray}
+where $\kappa_i$ is a kernel density estimate of each posterior
+distribution $t_{0;i}$, which is evaluated at the predicted time of
+transit $t_0 + P * (i-1)$.  By modeling the times of transit
+separately in the original MCMC analysis, we open the possibility of
+using a more complex ephemeris model at this stage of the analysis,
+such as may be expected from transit timing variations
+\citep{2005MNRAS.359..567A,2005Sci...307.1288H}.  The results of this
+analysis for KOI 701.01 are presented in Figure~\ref{fig-period}.
 
-\medskip
-{\centerline{\ub{\sc Reword below}}}
-\smallskip
+\begin{figure*}[t] 
+  \begin{minipage}[c]{0.47\textwidth}
+    \includegraphics[width=\textwidth]{figures/period.eps}
+  \end{minipage}\hfill
+  \begin{minipage}[c]{0.5\textwidth}
+    \caption{The evolution of the posterior distribution on orbital
+      period $P$ (y--axis) based upon the results of modeling $n$
+      times--of--transit (x--axis) separately.  The period posterior
+      is generated by taking the product of the time--of--transit
+      posteriors ($t_{0;i=1..n}$) evaluated at the predicted transit
+      time $t_0 + P * i$, where $t_0$ is the (marginalized over) time
+      of the first transit.  }
+    \label{fig-period}
+    \hspace*{\fill}  
+    \hrule
+  \end{minipage}
+\end{figure*}
 
 
-We combine the posterior chains to determine our constraints on common
-fitted terms $\tau$ and $\zeta$, both as a joint distribution and with
-each marginalized over all other parameters.  We use the peak of the
-distributions and the range enclosing 68.3\% of the samples to
-understand our uncertainty on each parameter.  The uncertainty on
-$\tau$ will feed in directly to our uncertainty on $e_{min}$ through
-Equation~\ref{eq-emin2}.  Figure~\ref{fig-taurun} shows the peak value
-of the $\tau$ distribution, and its uncertainty $\delta \tau$ as
-described above, as a function of the number of transits sampled, for
-4 magnitude bins.  Table~\ref{tab-taurun} lists the numbers of
+For our simulated data, Table~\ref{tab-taurun} lists the numbers of
 transits that are needed to recover $\tau$ to 10\% as a function of
 the system brightness and transit depth.
 
@@ -319,56 +337,29 @@ Transit Depth (\%) & Magnitude=8 & Mag=10 & Mag=12 & Mag=14\\
 \end{center}
 Estimates of the number of transits needed to recover the value of
 $\tau$ to 10\%, based on our simulated systems.  We determine this as
-a function of transit depth, and the signa--to--noise of the
-lightcurve (here, determiend solely by the host star brightness).  We
+a function of transit depth, and the signal--to--noise of the
+lightcurve (here, determined solely by the host star brightness).  We
 combine all MCMC chains up to and including the transit listed here to
 determine the multi--transit constraint on the distribution.
+\hspace*{\fill} \\
+\hrule
 \end{table}
-
-A bayesian estimate of the period of the system and its uncertainty is
-derived from the ensemble of transit times $t_{0;i=1...N}$.  To
-establish the likelihood of a trial period, we fold all MCMC steps for
-$t_{0;i=1...N}$ at this period to provide an approximate posterior
-distribution in orbital phase of all of the samples of
-$t_{0;i=1...N}$.  This distribution will be strongly peaked when
-folded at the correct period.  We create 1--dimensional kernel density
-estimates (KDE) of the folded distribution, where the peak value of
-the KDE reflects the likelihood of the period.  We use this peak value
-of the phase distribution as the likelihood of a given period,
-allowing {\tt emcee} to sample the posterior of the period
-distribution.  We find that...
-
-\begin{figure*}[t] 
-\begin{center} 
-\mbox{
-\subfigure{\includegraphics[width=3.3in]{figures/tau.eps}}
-\quad
-\subfigure{\includegraphics[width=3.3in]{figures/rRs.eps}}
-}
-\caption{MCMC 1}
-\label{fig-mcmc1} 
-\end{center} 
-\end{figure*}
 
 \medskip
 {\centerline{\ub{\sc Kepler Sample Available for Analysis}}}
 \smallskip
 
 We need systems that are observed with the short cadence (ummm, maybe
-not...), are bright enough to resolve $e_{min}$ to within 0.1, and
-have short period planets (less than 4 days).  From this sample, we
-will need to know the physical characteristics of stellar mass and
-radius, and (ideally) age.
+not since we marginalize over $\beta_0$), are bright enough to resolve
+$e_{min}$ to within 0.1, and have short period planets (less than 4
+days).  From this sample, we will need to know the physical
+characteristics of stellar mass and radius, and (ideally) age.
 
 \medskip
 {\centerline{\ub{\sc Computational Requirements}}}
 \smallskip
 
-For a single--threaded MCMC process using 8 walkers, each having 1000
-burn--in steps that are rejected and 10000 MCMC steps that are
-retained, we can fit a single transit of a single KOI in approximately
-500 seconds.
-
+Use KOI 701.01 as a benchmark
 
 \bigskip
 \centerline{\bf IV. Team Qualifications and Previous NASA Support}
@@ -394,12 +385,12 @@ project moves from analysis of the data to interpretation and
 constraints on tidal evolution theory.  Co--I Agol has significant
 experience in dealing with the Kepler data, in particular implementing
 detrending algorithms to compensate for correlated noise in the Kepler
-data.  He will advive as--needed throuhgout the project.
+data.  He will advise as--needed throughout the project.
 
 We expect the graduate student to become an expert in both areas of
 this project, both the computational and modeling side and the
 theoretical side.  Thus this project will develop a young graduate
-student with a skillset 
+student with a skill set 
 
 {\bf Year 1 (2014):} 
 

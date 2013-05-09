@@ -1,5 +1,10 @@
 \begin{thebibliography}{}
 
+\bibitem[\protect\citeauthoryear{{Agol} et~al.}{{Agol}
+  et~al.}{2005}]{2005MNRAS.359..567A}
+{Agol}, E., {Steffen}, J., {Sari}, R.,  \& {Clarkson}, W. 2005, \mnras, 359,
+  567
+
 \bibitem[\protect\citeauthoryear{{Borucki} et~al.}{{Borucki}
   et~al.}{2013}]{2013arXiv1304.7387B}
 {Borucki}, W.~J., et~al. 2013, ArXiv e-prints
@@ -17,6 +22,10 @@ Gelman, A.,  \& Rubin, D. 1992, Statistical Science, 7, 457
   {Weare}}{2010}]{Goodman-Weare}
 {Goodman}, J.,  \& {Weare}, J. 2010, Communications in Applied Mathematics and
   Computational Science, 5, 65
+
+\bibitem[\protect\citeauthoryear{{Holman} \& {Murray}}{{Holman} \&
+  {Murray}}{2005}]{2005Sci...307.1288H}
+{Holman}, M.~J.,  \& {Murray}, N.~W. 2005, Science, 307, 1288
 
 \bibitem[\protect\citeauthoryear{{Mandel} \& {Agol}}{{Mandel} \&
   {Agol}}{2002}]{2002ApJ...580L.171M}
