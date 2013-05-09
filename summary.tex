@@ -1,27 +1,48 @@
 {\bf This project summary will go in NSPIRES.  Put here for proofing.} \medskip 
 
-\centerline{\bf EXOQ} \medskip 
+\centerline{\bf mini--Neptune vs. super--Earth: Orbital Eccentricity as a Proxy for Internal Structure} \medskip
 
-We propose here a Bayesian reanalysis of Kepler exoplanet lightcurves
-to constrain the tidal quality factor Q of short period planets via
-their minimum eccentricity.  The quality factor Q is expected to be a
-function of planetary radius, and represents the transition between
-gaseous (high Q) and dry, rocky (low Q) bodies.  These two classes of
-exoplanets exhibit significant differences in how they deform due to
-tides when in short period orbits, leading to differences in tidal
-circularization timescales.  We use dynamical simulations to show that
-short period (less than 6 days) gaseous bodies with high Q are found
-with values of eccentricity close to the primordial distribution,
-while rocky bodies having low Q are preferentially found at low
-eccentricity due to tidal circularization.  Thus a study of the
-minimum eccentricities of short--period planets can help constrain the
-radius of this transition.
+We propose here a Bayesian reanalysis of short--period exoplanet
+transits in data from the Kepler spacecraft, in order to constrain the
+exoplanet tidal quality factor Q.  The quality factor Q is expected to
+be a function of planetary radius, and represents the transition
+between gaseous (high Q) and dry, rocky (low Q) bodies.  These two
+classes of exoplanets exhibit significant differences in how they
+deform due to tides when in short period orbits, leading to
+differences in tidal circularization timescales.  We use dynamical
+simulations to show that short period (less than 6 days) gaseous
+bodies with high Q are found with values of eccentricity close to the
+primordial distribution, while rocky bodies having low Q are
+preferentially found at low eccentricity due to tidal circularization.
+Thus a study of the minimum eccentricities of short--period planets
+can constrain the radius of this transition.  This is fundamental to
+understanding if confirmed Kepler exoplanets are likely to be
+uninhabitable mini--Neptunes, or potentially habitable super--Earths.
 
-The minimum eccentricity is measured using the difference between the
-modeled transit duration, and the transit duration that would be seen
-if the orbit was circular.  To assess this difference, we analyze
-Kepler lightcurves using a purely geometric model that includes no
-assumptions about the orbital dynamics.  We cast our measurement of
-$e_{min}$ in terms of two model parameters, whose posterior
-distributions we explore using Markov Chain Monte Carlo methods, and
-one physical parameter which must be estimated from other means.
+The minimum eccentricity is constrained using the difference between
+the modeled transit duration, and the transit duration that would be
+seen if the orbit were circular.  To assess this difference, we
+analyze Kepler lightcurves using a purely geometric model that
+includes no assumptions about the orbital dynamics.  We cast our
+measurement of minimum eccentricity in terms of two model parameters,
+whose posterior distributions we explore using Markov Chain Monte
+Carlo methods, and one physical parameter which must be estimated from
+other means.  We have run a suite of simulations using a grid in
+transit depth, stellar brightness (lightcurve signal--to--noise), and
+the number of transits included in the model.  We find {\bf XXX}.  We
+apply this modeling code to confirmed exoplanet system Kepler 62--b
+and find that we are able to reproduce these results using real data.
+We propose here to extend this analysis to an ensemble of {\bf XXX}
+KOIs that have been selected based upon their Kepler--reported periods
+and planetary radius, and which have supporting information on the
+host star density and age.  This analysis will enable the first
+measurement of Q as a function of planetary radius.
+
+This project spans the fields of high--performance computation,
+statistical modeling of experimental data, and theoretical
+interpretation of the results, which will make it a valuable
+contribution to the field of exoplanet studies.  We will release code
+and data using open--source collaboration tools, and help to guide the
+adoption of reproducible research standards by releasing analysis
+packages as part of our publication process.
+
