@@ -5,9 +5,24 @@
 {Agol}, E., {Steffen}, J., {Sari}, R.,  \& {Clarkson}, W. 2005, \mnras, 359,
   567
 
+\bibitem[\protect\citeauthoryear{{Becker} et~al.}{{Becker}
+  et~al.}{2013}]{2013ApJ...764L..17B}
+{Becker}, A.~C., {Kundurthy}, P., {Agol}, E., {Barnes}, R., {Williams}, B.~F.,
+  \& {Rose}, A.~E. 2013, \apjl, 764, L17
+
 \bibitem[\protect\citeauthoryear{{Borucki} et~al.}{{Borucki}
   et~al.}{2013}]{2013arXiv1304.7387B}
 {Borucki}, W.~J., et~al. 2013, ArXiv e-prints
+
+\bibitem[\protect\citeauthoryear{{Davenport} et~al.}{{Davenport}
+  et~al.}{2012}]{2012ApJ...748...58D}
+{Davenport}, J.~R.~A., {Becker}, A.~C., {Kowalski}, A.~F., {Hawley}, S.~L.,
+  {Schmidt}, S.~J., {Hilton}, E.~J., {Sesar}, B.,  \& {Cutri}, R. 2012, \apj,
+  748, 58
+
+\bibitem[\protect\citeauthoryear{{Davenport} et~al.}{{Davenport}
+  et~al.}{2013}]{2013ApJ...764...62D}
+{Davenport}, J.~R.~A., et~al. 2013, \apj, 764, 62
 
 \bibitem[\protect\citeauthoryear{{Foreman-Mackey} et~al.}{{Foreman-Mackey}
   et~al.}{2013}]{2013PASP..125..306F}
@@ -26,6 +41,21 @@ Gelman, A.,  \& Rubin, D. 1992, Statistical Science, 7, 457
 \bibitem[\protect\citeauthoryear{{Holman} \& {Murray}}{{Holman} \&
   {Murray}}{2005}]{2005Sci...307.1288H}
 {Holman}, M.~J.,  \& {Murray}, N.~W. 2005, Science, 307, 1288
+
+\bibitem[\protect\citeauthoryear{{Kundurthy} et~al.}{{Kundurthy}
+  et~al.}{2011}]{2011ApJ...731..123K}
+{Kundurthy}, P., {Agol}, E., {Becker}, A.~C., {Barnes}, R., {Williams}, B.,  \&
+  {Mukadam}, A. 2011, \apj, 731, 123
+
+\bibitem[\protect\citeauthoryear{{Kundurthy} et~al.}{{Kundurthy}
+  et~al.}{2013a}]{2013arXiv1304.5713K}
+{Kundurthy}, P., {Barnes}, R., {Becker}, A.~C., {Agol}, E., {Williams}, B.~F.,
+  {Gorelick}, N.,  \& {Rose}, A. 2013a, ArXiv e-prints
+
+\bibitem[\protect\citeauthoryear{{Kundurthy} et~al.}{{Kundurthy}
+  et~al.}{2013b}]{2013ApJ...764....8K}
+{Kundurthy}, P., {Becker}, A.~C., {Agol}, E., {Barnes}, R.,  \& {Williams}, B.
+  2013b, \apj, 764, 8
 
 \bibitem[\protect\citeauthoryear{{Mandel} \& {Agol}}{{Mandel} \&
   {Agol}}{2002}]{2002ApJ...580L.171M}

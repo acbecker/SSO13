@@ -366,10 +366,47 @@ Use KOI 701.01 as a benchmark
 \addcontentsline{toc}{subsection}{IV. Team Qualifications and Previous NASA Support}
 \smallskip
 
+PI Becker was was PI on NASA OSS grant NNX09AB32G, ``3.5m Transit
+Timing Observations at 100\% Duty Cycle'', which observed multiple
+transiting exoplanet systems for evidence of transit timing variations
+\citep{2011ApJ...731..123K, 2013ApJ...764....8K, 2013ApJ...764L..17B,
+  2013arXiv1304.5713K}.  Much of the software developed for that
+project has been modified to operate with the Kepler data, and used in
+the analyses presented here.  He has considerable expertise in using
+modern software packages implemented on distributed systems to model
+multi--dimensional systems.  Relevant examples include the work done
+under NASA ADP grant NNX09AC77G, ``Time Domain Studies of the 2MASS
+Calibration Point Source Working Database'', for which he is also PI
+\citep{2012ApJ...748...58D,2013ApJ...764...62D}.
+
+Co--I Barnes
+
+Co--I Agol
+
 \bigskip
 \centerline{\bf V. Relevance to NASA Programs}
 \addcontentsline{toc}{subsection}{V. Relevance to NASA Programs}
 \smallskip
+
+This project addresses directly multiple objectives that are in--scope
+for the Origins of Solar Systems call for proposals, including:
+\begin{itemize}
+
+\item {\bf Observations related to the formation and evolution of
+  planetary systems}: Explain.
+
+\item {\bf Theoretical investigations related to the formation and
+  evolution of planetary systems}: Explain.
+
+\item {\bf Characterization of extra-solar planets to explain
+  observations of extra-solar planets}: Explain.
+
+\item {\bf Characterization of extra-solar planets to improve
+  understanding of the origins of planetary systems}: Explain.
+
+\end{itemize}
+
+
 
 \bigskip
 \centerline{\bf VI. Project Development Plan}
@@ -394,30 +431,38 @@ theory, which is a powerful combination and one not seen often enough
 in the field.  We consider this dual--aspect training a strong
 component of this project.
 
-{\bf Year 1 (2014):} This first year of the project will start by
-bringing the student up to speed in modeling transit lightcurves, in
-leaning Bayesian techniques, and in implementing a robust application
-of the {\tt emcee} package (or other affine--invariant sampler, if
-needed).  Making the software robust to detrending errors, missing
-data, and initial conditions for the samplers is a non--trivial
-exercise.  Discovering and understanding the failure modes will be a
-main focus of this first computationally--intensive first year.  The
-generation of the MCMC chains is expected to take {\tt XXX}
-CPU--hours, or {\tt YYY} calendar--hours on {\tt ZZZ}. The validation
-of these chains (Gelman--Rubin $\hat{\rm R}$ and effective chain
-lengths) is expected to take a comparable amount of time, as some
-chains are expected to have to be re--run for more steps.  The goal of
-this first year is to have finalized the MCMC chains on $t_0,
-\beta_0^2, \tau, \zeta$ for all the relevant KOIs.  We will make these
-publicly available through a {\tt github} site specifically designed
-for this project.  Our modeling software will also be released via
-{\tt github}.
+{\bf Year 1 (2014):} This first year of the project will start with PI
+Becker bringing the student up to speed in modeling transit
+lightcurves, in leaning Bayesian techniques, and in implementing a
+robust application of the {\tt emcee} package (or other
+affine--invariant sampler, if needed).  Making the software robust to
+detrending errors, missing data, and initial conditions for the
+samplers is a non--trivial exercise.  Discovering and understanding
+the failure modes will be a main focus of this first
+computationally--intensive first year.  Becker will lead this effort,
+and transition the student into lead during the year.  The generation
+of the MCMC chains is expected to take {\tt XXX} CPU--hours, or {\tt
+  YYY} calendar--hours on {\tt ZZZ}. The validation of these chains
+(Gelman--Rubin $\hat{\rm R}$ and effective chain lengths) is expected
+to take a comparable amount of time, as some chains are expected to
+have to be re--run for more steps.  The goal of this first year is to
+have finalized the MCMC chains on $t_0, \beta_0^2, \tau, \zeta$ for
+all the relevant KOIs.  We will make these publicly available through
+a {\tt github} site specifically designed for this project.  Our
+modeling software will also be released via {\tt github}.
 
-{\bf Year 2 (2015):} The second year will involve MCMC analysis of the
-periods
+{\bf Year 2 (2015):} The second year is expected to start with the
+MCMC analyses of the times of transit, and a transition to theoretical
+interpretation of the systems.  We will start with linear ephemeris
+models for all systems to estimate periods; for those systems where
+this model is insufficient, we will examine transit timing models with
+more complicated ephemerides.  We anticipate that this effort will
+result in the publication of 1 or more papers on the transit timings
+of the systems under study, with assistance from Agol on the
+interpretation of the results.  We then hand off to Rory.
 
 {\bf Year 3 (2016):} 
-
+Rory.
 
 \bigskip
 \centerline{\bf VII. Data Sharing Plan}
