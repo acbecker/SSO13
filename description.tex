@@ -73,7 +73,7 @@ orbital periods less than 10 days, and that may experience significant
 tidal evolution \cite{Rasio96,Jackson08a,Matsumura10}.
 
 In the equilibrium tide model
-\citep{Darwin1880,Jeffries56,MacDonald64,GoldreichSoter66,Hut81,FerrazMello08,Leconte10},
+\citep{Darwin1880,MacDonald64,GoldreichSoter66,Hut81,FerrazMello08,Leconte10},
 the figure of a tidally deformed body is a superposition of surface
 waves with different frequencies.  The sum of these waves corresponds
 to the tidally--deformed figure, and allows for the relatively simple
@@ -153,7 +153,7 @@ absolute value of $e_{min}$ in our discussions below.
 That transit data provide a minimum eccentricity while tidal theory
 damps eccentricity to zero is crucial for our proposed research. If
 $e_{min} = 0$, \textit{then the orbit is circular}.  Of course circular
-orbits could be primordial, but \cite{Jackson08a,Matsumura10} showed
+orbits could be primordial, but \cite{Jackson08,Matsumura10} showed
 that the observed radial--velocity--detected planets in tight orbits
 could have formed with eccentricities consistent with the more distant
 planets and were subsequently tidally damped in both the CPL and CTL
@@ -203,7 +203,7 @@ the density is 1 g/cm$^3$, and a tidal $Q$ in the range
 [$10^6$,$10^7$].  The initial eccentricity is drawn from the currently
 observed distribution of distant planets ($a > 0.2$~AU).  We then
 integrate the system forward for the randomly chosen age and assume we
-observe the system in that final configuration. In Fig.~\ref{fig:ecc},
+observe the system in that final configuration. In Fig.~\ref{fig:radper},
 we show the resulting average eccentricities of these planes as a
 function of planetary radius, $R_p$, and orbital period, $P$.  The
 small values of $e$ at low $R_p$ and $P$ shows this effect.
@@ -215,6 +215,21 @@ days and below 2~\rearth.  Thus in this simple model, we see three
 constraints for three unknowns, yielding the possibility that the
 right observations may be able to provide values to these elusive
 quantities.
+
+\begin{figure}[h]
+\centering
+\begin{minipage}{2.7in}
+%\resizebox{2.7in}{!}{\includegraphics{figures/radper.ps}} 
+\end{minipage}
+\begin{minipage}{2.7in}
+\caption{\label{fig:radper}Average final eccentricity of a suite of 25,000
+systems of one star and one planet. Planets larger than 2~\rearth~are gaseous, and 
+those smaller are rocky. The binsize is 0.5~\rearth in radius and 0.5 d in period.
+Gaseous planets retain a residual eccentricity if $P > 1.5$ d, while rocky planets require
+$P > 4$ d. The transition occurs at 2~\rearth, which in this case is $R_{crit}$. }
+\end{minipage}
+\end{figure}
+
 
 However, \kepler~data do not provide eccentricity, but rather the
 minimum eccentricity. We must therefore transform these data into a
@@ -274,7 +289,7 @@ the theory below.
 
 First, we note that additional companions can pump eccentricity
 through mutual gravitational interactions, even if tidal damping is
-ongoing \citep{vanLaerhovenGreenberg13,Bolmont13}.  Therefore we must
+ongoing \citep{MardlingLin02,Bolmont13}.  Therefore we must
 be cautious when interpreting Fig.~\ref{fig:pilot}, as additional
 companions, both seen and unseen, can maintain non--zero
 eccentricities.  However, \cite{Bolmont13} showed that planet--planet
@@ -697,7 +712,7 @@ include alternative tidal models.  The pilot study (25,000 simulations
 of $\sim 5$ Gyr each) requires about 4 hours on a modern workstation,
 and therefore many such trials are easily tractable.  Co--I Barnes is
 an expert in tidal effects on exoplanets
-\cite{Barnes08,Jackson08a,Barnes09,Barnes12}, and will use his
+\cite{Barnes08,Jackson08,Barnes09,Barnes12}, and will use his
 existing code \texttt{eqtide} that follows the prescriptions in
 \cite{Barnes12}.  The free parameters are the mass--radius
 relationship for both rocky and gaseous bodies, the value of
@@ -707,7 +722,7 @@ eccentricity distribution, and the age distribution of \kepler~stars.
 The choices in the pilot study were necessarily limited, and we will
 explore many more options during this proposal.  While we assumed that
 rocky bodies were Earth--like in their composition, other scaling laws
-are possible, e.g.  \cite{Seager07,Fortney07,Lissauer10}.  We will use
+are possible, e.g.  \cite{Seager07,Fortney07,Lissauer11}.  We will use
 these other scalings for the masses of the rocky planets, as well as
 mixing the models to allow for a range of compositions.  For the
 gaseous planets, we will assume different densities in the range 0.5
@@ -719,7 +734,7 @@ models for $Q$($R$), the tidal $Q$ as a function of planetary radius.
 First we will use the same differences as in the pilot study, but we
 will also consider a three--tiered model, in which intermediate mass
 planets have intermediate $Q$s.  Neptune, and possible even Saturn,
-have a $Q$ value of $10^4$ \citep{Hamliton04,Makarov12}, and hence we
+have a $Q$ value of $10^4$ \citep{ZhangHamliton07,Lainey12}, and hence we
 must consider this possibility, too.  This also introduces a new
 radius cut--off, $R_{mid}$, which we will allow to move from 2 to
 5~\rearth.  The $Q$ range for these systems will have values between
@@ -752,7 +767,7 @@ Many of the \kepler~systems are multiple.  Its likely that many
 singletons are as well, but with non--transiting companions.  Mutual
 gravitational interactions between planets can maintain an
 eccentricity, even in the presence of strong tidal damping
-\citep{AdamsLaughlin05,Correia12,vanLaerhovenGreenberg13}.  While this
+\citep{MardlingLin02,GreenbergVanLAerhoven11,Correia12}.  While this
 pumping cannot explain the discrepancy in Fig.~\ref{fig:emin}, it can
 still prevent some planets from reaching $e_{min} = 0$, and lead to an
 incorrect determination of $R_{crit}$.  To assess this possibility, we
@@ -767,9 +782,9 @@ Gyr can be computed in seconds.  The second order theory is
 insufficient for many of the cases we consider, which will have
 eccentricities up to 0.9.  Therefore, we will use higher order
 theories, which have been previously developed
-\citep[e.g.][]{Ford01,VerasArmitage04,LibertHenrard06}.  We may also
+\citep[e.g.][]{Ford00,VerasArmitage04,LibertHenrard06}.  We may also
 take advantage of the high degree of coplanarity of close--in
-\kepler~systems \cite{Fabrycky10}, and ignore all terms involving
+\kepler~systems \cite{Fabrycky12}, and ignore all terms involving
 inclination.  As each of these models is computationally cheap, we can
 safely use the 12th order theory of \cite{LibertHenrard} to evaluate
 the evolution.  
@@ -823,7 +838,7 @@ two--speed evolution.
 We will employ the classic mass loss of model of \cite{Watson81} in
 which XUV photons liberate hydrogen atoms in the upper atmosphere.
 Mass loss can be a very complicated process
-\citep{Yelle04,Lammer07,Khodachenko07,Lammer10,Leitzinger11}, and with
+\citep{Yelle04,Lammer07,Khodachenko07,Leitzinger11,Lammer13}, and with
 so many unknowns for any given planet, this simple model is most
 appropriate.  The key parameter in this formulation is the efficiency
 of transforming incident XUV radiation into escaping atoms,
@@ -835,7 +850,7 @@ derived in \cite{Ribas05} for G dwarfs.  While this formulation is not
 strictly valid for F and K dwarfs, analogous studies do not exist for
 those spectral types, and the Ribas model is probably a close
 approximation.  The Watson and Ribas models are already in
-\texttt{eqtide} \citep{Barnes12}, and hence minimal code improvements
+\texttt{eqtide} \citep{Barnes13}, and hence minimal code improvements
 are required for this step.  This final theoretical task requires
 about 2--3 times more computational resources than the other two
 combined, but is still dwarfed by the \kepler~lightcurve analysis, and
@@ -876,7 +891,12 @@ Domain Studies of the 2MASS Calibration Point Source Working
 Database'', for which he is also PI
 \citep{2012ApJ...748...58D,2013ApJ...764...62D}.
 
-Co--I Barnes...
+Co--I Barnes was a Co--I on NASA OSS grant 811073.02.07.01.15 ``Simulating the Initial Planetesimal 
+Disk'' which produced the first N-body simulation of 1 km planetesimal accretion
+\citep{Barnes09_1km}. As part of this effort, Barnes used several hundred thousand hours of
+CPU time at NASA HPC facilities, such as the Columbia and Plaiedes supercomputers.
+He has published many papers ($\sim 50$) on tidal theory and orbital dynamics, focusing 
+on exoplanets \citep[\eg][]{BarnesQuinn01,BarnesRaymond04,BarnesGreenberg06a,Barnes11,Barnes13}. He 
 
 Co--I Agol...
 
@@ -963,8 +983,7 @@ systems where this model is insufficient, we will examine transit
 timing models with more complicated ephemerides.  We anticipate that
 this effort will result in the publication of 1 or more ancillary
 papers on the transit timings of the systems under study, with
-assistance from Agol on the interpretation of the results.  We then
-hand off to \rory{XXX}.
+assistance from Agol on the interpretation of the results.
 
 {\bf Year 3 (2016):} 
 \rory{XXX}
