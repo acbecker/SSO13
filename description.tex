@@ -407,7 +407,7 @@ All factors of the minimum impact parameter $\beta_0$ cancel out,
 which is fortuitous as this is typically the least constrained of all
 system parameters, especially for the long--cadence \kepler data.
 While the uncertainty in $\beta_0$ will affect our knowledge of the
-other system parameters, this uncertainty may be marginalized out by
+other system parameters, this uncertainty may be marginalized over by
 examining the posterior distributions, which drives us to use
 Markov--Chain Monte Carlo (MCMC) modeling (described below).
 
@@ -487,7 +487,7 @@ and fitting a low order spline to the result.  The goodness of fit is
 determined by comparing the product of the spline and the model to the
 data.  Figure~\ref{fig-koi70101} provides an example model fit
 determined in this manner.  The data used are the {\tt PDCSAP} fluxes
-and uncertainties.  We were able to reduce the first 42 transits in
+and uncertainties.  We were able to reduce the first 33 transits in
 this manner for this proposal.
 
 \begin{figure*}[t] 
@@ -537,19 +537,22 @@ For each transit, we evaluated the joint and marginalized
 distributions of fitted parameters $\zeta$ and $\tau$.
 Figure~\ref{fig-joint} demonstrates how the joint distribution evolves
 from fitting 1 transit (dashed contours, which represent 68.3\%,
-95.5\%, and 99.7\% confidence limits), to fitting all 42 transits
-(solid contours, at the same confidence limits), for KOI 701.01.  We
-then marginalized over all other parameters, to examine the
-per--parameter confidence limits.  Figure~\ref{fig-marg} demonstrates
-how our marginalized constraints on $\zeta$ (left panel) and $\tau$
-(right panel) evolved as a function of the number of transits used in
-the fit for 701.01.  The solid line provides the maximum of the
-posterior distribution, and the dashed line indicates its median.  The
-shaded area encloses 68.3\% of the distribution.  In this manner, we
-find value of $\tau = 0.056_{0.003}^{0.002}$, which is directly fitted
-for.  This may be contrasted to a value $\tau = 0.049 \pm 0.003 $
-derived from reported \cite{2013arXiv1304.7387B} parameters, using 171
-transits.
+95.5\%, and 99.7\% confidence limits), to fitting 33 transits (solid
+contours, at the same confidence limits), for KOI 701.01.  We then
+marginalized over all other parameters, to examine the per--parameter
+confidence limits.  Figure~\ref{fig-marg} demonstrates how our
+marginalized constraints on $\zeta$ (left panel) and $\tau$ (right
+panel) evolved as a function of the number of transits used in the fit
+for 701.01.  The solid line provides the maximum of the posterior
+distribution, and the dashed line indicates its median.  The shaded
+area encloses 68.3\% of the distribution.  In this manner, we find
+value of $\tau = 0.056_{0.003}^{0.002}$, which is directly fitted for.
+This may be contrasted to a value $\tau = 0.049 \pm 0.003 $ derived
+from reported \cite{2013arXiv1304.7387B} parameters, using 171
+transits.  For completeness, we note our confidence limits on $\zeta =
+.01767_{0.00011}^{0.00048}$ vs \cite{2013arXiv1304.7387B} $\zeta =
+0.0188 \pm 0.0003$.
+
 
 \begin{figure*}[t] 
   \begin{minipage}[c]{0.47\textwidth}
