@@ -331,26 +331,26 @@ can become a super--Earth with its associated change in tidal $Q$.
 \addcontentsline{toc}{subsection}{III. Technical Approach and Methodology}
 \smallskip
 
+%\medskip
+%{\centerline{\ub{\sc Transit Duration}}}
+%\smallskip
+%
+%What is this definition?  Center of planet crossing?
+%
+%\begin{eqnarray}
+%\Delta t_{circ} & = & {{P}\over{\pi}}~{{\sqrt{R_*^2 - b_0^2}}\over{a}} \nonumber \\
+%                & = & {{P}\over{\pi}}~{{\sqrt{1 - \beta_0^2}}\over{\alpha}}
+%\label{eq-tcirc}
+%\end{eqnarray}
+%where $P$ is the orbital period in cgs units, $R_*$ the stellar radius
+%in cgs, $b_0$ the minimum planetary impact parameter in cgs, $\beta_0$
+%a unitless measure of the minimum impact parameter (scaled by the
+%stellar radius), $a$ the planetary semi--major axis in cgs, and
+%$\alpha$ this value scaled by the stellar radius.
+
+
 \medskip
-{\centerline{\ub{\sc Transit Duration}}}
-\smallskip
-
-What is this definition?  Center of planet crossing?
-
-\begin{eqnarray}
-\Delta t_{circ} & = & {{P}\over{\pi}}~{{\sqrt{R_*^2 - b_0^2}}\over{a}} \nonumber \\
-                & = & {{P}\over{\pi}}~{{\sqrt{1 - \beta_0^2}}\over{\alpha}}
-\label{eq-tcirc}
-\end{eqnarray}
-where $P$ is the orbital period in cgs units, $R_*$ the stellar radius
-in cgs, $b_0$ the minimum planetary impact parameter in cgs, $\beta_0$
-a unitless measure of the minimum impact parameter (scaled by the
-stellar radius), $a$ the planetary semi--major axis in cgs, and
-$\alpha$ this value scaled by the stellar radius.
-
-
-\medskip
-{\centerline{\ub{\sc Fitted Transit Model}}}
+{\centerline{\ub{\sc Transit Model}}}
 \smallskip
 
 To avoid a dependency between the fitted model and a physical model
@@ -366,7 +366,7 @@ the impact parameter of the planet ($\beta \equiv b/R_*$).  This
 variable is a function of time due to the objects' relative motion.
 This function is dependent on the chord that the planet takes across
 the stellar disk, itself typically estimated using the orbital
-parameters semi--major axis and inclination.
+parameters semi--major axis ($\alpha \equiv a/R_*$) and inclination.
 
 Instead we use here a purely geometric parameterization, represented
 in Figure~\ref{fig-schem}.  We describe the impact parameter as a
@@ -385,20 +385,20 @@ impact parameter as a function of time:
 \end{eqnarray}
 which is then used along with $\zeta$ to generate a model transit
 lightcurve.
-
-The transit duration $\Delta t$ may be found from the 2 solutions to
-$\beta(t) = 1$, and represents the time between the center of the
-planet crossing each limb of the star:
-\begin{eqnarray}
-\Delta t & = & 2 * \tau \sqrt{1 - \beta_0^2}.
-\label{eq-dt}
-\end{eqnarray}
 This model yields a 4--parameter fit to each transit: $t_0, \beta_0^2,
 \tau, \zeta$.  The system period $P$ may be determined using the
 ensemble of $t_{0;i=1...N}$.
+The transit duration $T$ may be found from the 2 solutions to
+$\beta(t) = 1$, and represents the time between the center of the
+planet crossing each limb of the star:
+\begin{eqnarray}
+T & = & 2 * \tau \sqrt{1 - \beta_0^2}.
+\label{eq-dt}
+\end{eqnarray}
 
-Combining Equation~\ref{eq-dt} with Equation~\ref{eq-emin}, we express
-$e_{min}$ in terms of our model parameters:
+Combining Equations~\ref{eq:tdd}--\ref{eq:emin} with
+Equation~\ref{eq-dt}, we express $e_{min}$ in terms of our model
+parameters:
 \begin{eqnarray}
 e_{min} & = & \pm \frac{P^{2} - 4 \pi^{2} \alpha^{2} \tau^{2}}{P^{2} + 4 \pi^{2} \alpha^{2} \tau^{2}}
 \label{eq-emin2}
@@ -408,7 +408,7 @@ which is fortuitous as this is typically the least constrained of all
 system parameters, especially for the long--cadence \kepler data.
 While the uncertainty in $\beta_0$ will affect our knowledge of the
 other system parameters, this uncertainty may be marginalized out by
-examining the posterior distributions, and drives us to use
+examining the posterior distributions, which drives us to use
 Markov--Chain Monte Carlo (MCMC) modeling (described below).
 
 Equation~\ref{eq-emin2} indicates that $e_{min}$ is purely a function
@@ -445,50 +445,50 @@ $\Xi~e_{min}$ = 1.
   \end{minipage}
 \end{figure*}
 
-\medskip
-{\centerline{\ub{\sc Simulations}}}
-\smallskip
-
-We use the system inclination, semi--major axis, planet--to--star
-radius ratio, and period (along with two limb darkening parameters) to
-generate fake system lightcurves using the method of
-\cite{2002ApJ...580L.171M}.  The system lightcurve is evaluated once
-each minute and integrated over 30 evaluations to approximate a single
-\kepler long--cadence observation.  This is done for a window of 1 day
-on either side of the given transit midpoint to ensure significant
-out--of--transit data to include in the fit.  We perform these
-evaluations for all transits for 14 ``quarters'' of \kepler
-observations, or approximately 1280 days.
-
-A white--noise component is added to each lightcurve for each of 4
-magnitude bins, using the precisions in parts--per--million (ppm)
-given on the \kepler calibration
-webpage \footnote{http://keplergo.arc.nasa.gov/CalibrationSN.shtml}.
-We evaluate each lightcurve separately for magnitude 8/10/12/14
-objects, adding a random contribution of amplitude 11.3/29/80/296 ppm
-(respectively) to each datapoint as generated above.  We do not
-include red noise, or other transient gaps and features known to exist
-in the \kepler data.  This yields a set of 4 lightcurves per simulated
-system, each having hundreds of individual transits to fit.
+%\medskip
+%{\centerline{\ub{\sc Simulations}}}
+%\smallskip
+%
+%We use the system inclination, semi--major axis, planet--to--star
+%radius ratio, and period (along with two limb darkening parameters) to
+%generate fake system lightcurves using the method of
+%\cite{2002ApJ...580L.171M}.  The system lightcurve is evaluated once
+%each minute and integrated over 30 evaluations to approximate a single
+%\kepler long--cadence observation.  This is done for a window of 1 day
+%on either side of the given transit midpoint to ensure significant
+%out--of--transit data to include in the fit.  We perform these
+%evaluations for all transits for 14 ``quarters'' of \kepler
+%observations, or approximately 1280 days.
+%
+%A white--noise component is added to each lightcurve for each of 4
+%magnitude bins, using the precisions in parts--per--million (ppm)
+%given on the \kepler calibration
+%webpage \footnote{http://keplergo.arc.nasa.gov/CalibrationSN.shtml}.
+%We evaluate each lightcurve separately for magnitude 8/10/12/14
+%objects, adding a random contribution of amplitude 11.3/29/80/296 ppm
+%(respectively) to each datapoint as generated above.  We do not
+%include red noise, or other transient gaps and features known to exist
+%in the \kepler data.  This yields a set of 4 lightcurves per simulated
+%system, each having hundreds of individual transits to fit.
 
 \medskip
 {\centerline{\ub{\sc KOI 701.01}}}
 \smallskip
 
-We validate the results of our simulations by analyzing \kepler data
-from KOI 701.01 \citep[Kepler 62--b;][]{2013arXiv1304.7387B}.  This
-planet has a period of 5.715 days, $\zeta = 0.018$ (R$_p$ $\sim$ 1.3
-R$_E$), and a transit depth of $4 \times 10^{-4}$~\%.  We use the limb
-darkening parameters for the host star from
-\cite{2010A&A...510A..21S}.  The \kepler data have correlated noise
-that is not included in our simulated data above, which is an
-additional complication to the analysis.  To account for this, we
-perform a local detrending by first dividing the data by the proposed
-model, and fitting a low order spline to the result.  The goodness of
-fit is determined by comparing the product of the spline and the model
-to the data.  Figure~\ref{fig-koi70101} provides an example model fit
+We validate our propsed methodology by analyzing \kepler data from KOI
+701.01 \citep[Kepler 62--b;][]{2013arXiv1304.7387B}.  This planet has
+a period of 5.715 days, $\zeta = 0.018$ (R$_p$ $\sim$ 1.3 R$_E$), and
+a transit depth of $4 \times 10^{-4}$~\%.  We use the limb darkening
+parameters for the host star from
+\cite{2010A&A...510A..21S}.  The \kepler data have correlated (red) noise
+which we must account for before model fitting.  To do so, we perform
+a local detrending by first dividing the data by the proposed model,
+and fitting a low order spline to the result.  The goodness of fit is
+determined by comparing the product of the spline and the model to the
+data.  Figure~\ref{fig-koi70101} provides an example model fit
 determined in this manner.  The data used are the {\tt PDCSAP} fluxes
-and uncertainties.
+and uncertainties.  We were able to reduce the first 42 transits in
+this manner for this proposal.
 
 \begin{figure*}[t] 
   \begin{minipage}[c]{0.6\textwidth}
@@ -507,50 +507,49 @@ and uncertainties.
   \end{minipage}
 \end{figure*}
 
-\medskip
-{\centerline{\ub{\sc Model Evaluation}}}
-\smallskip
-
 To examine how our knowledge of system parameters evolves as a
 function of number of transits, we have fit {\it all} the data up to
-the time of each transit, for all $N$ transits in each lightcurve.
-This means that for transit $n \leq N$, we have common model
-parameters $\beta_{0}^2, \tau, \zeta$ and per--transit parameters
-$t_{0;i=1..n}$, for a total of $n+3$ model parameters.  This yields an
-ensemble of $N$ system models per lightcurve, each incorporating one
-more transit than the previous one.
+the time of each transit, for all $N = 43$ transits in each
+lightcurve.  This means that for transit $n \leq N$, we have common
+model parameters $\beta_{0}^2, \tau, \zeta$ and per--transit
+parameters $t_{0;i=1..n}$, for a total of $n+3$ model parameters.
+This yields an ensemble of $N$ system models per lightcurve, each
+incorporating one more transit than the previous one.
 
-We use the affine--invariant MCMC sampler {\tt emcee}
+We used the affine--invariant MCMC sampler {\tt emcee}
 \citep{2013PASP..125..306F} to sample the posterior distribution of
 the model parameters.  This program uses the method of
 \cite{Goodman-Weare} to achieve high sampling performance independent
 of the aspect ratio of the posterior distribution, meaning covariances
 between parameters are less important to the efficacy of the MCMC
-sampling.  This provides a set of MCMC chains that we examine to
-determine our constraints on the fitted parameters.  We use the
+sampling.  This provided a set of MCMC chains that we examine to
+determine our constraints on the fitted parameters.  We used the
 Gelman--Rubin $\hat{\rm R}$--static \citep{Gelman92} to assure that
-each chain sufficiently samples model space, and require effective
+each chain sufficiently samples model space, and required effective
 chain lengths larger than $10^4$ to ensure sufficient mixing in the
 MCMC sample \cite[e.g.][]{2004PhRvD..69j3501T}.  Our trial runs using
-KOI 701.01 indicate that our chains typically have autocorrelation
+KOI 701.01 indicated that our chains typically have autocorrelation
 lengths of $\sim 100$, requiring a total number of steps per chain of
-$10^6$.  We use burn--in times having 10\% the requested number of
+$10^6$.  We used burn--in times having 10\% the requested number of
 steps, which are then discarded before the final chain commences.
 
-For each transit, we evaluate the joint and marginalized distributions
-of $\zeta$ and $\tau$.  Figure~\ref{fig-joint} demonstrates how the
-joint distribution evolves from fitting 1 transit (dashed contours,
-which represent 68.3\%, 95.5\%, and 99.7\% confidence limits), to
-fitting all transits (solid contours, at the same confidence limits),
-for KOI 701.01.  We then marginalize over all other parameters, and
-examine the per--parameter confidence limits.  Figure~\ref{fig-marg}
-demonstrates how our marginalized constraints on $\zeta$ (left panel)
-and $\tau$ (right panel) evolve as a function of the number of
-transits used in the fit for 701.01.  The solid line provides the
-maximum of the posterior distribution, and the dashed line indicates
-its median.  The shaded area encloses 68.3\% of the distribution.  In
-this way we quantify $\delta \tau$, as this is necessary to understand
-our ability to constrain $e_{min}$ via Equation~\ref{eq-emin3}.
+For each transit, we evaluated the joint and marginalized
+distributions of fitted parameters $\zeta$ and $\tau$.
+Figure~\ref{fig-joint} demonstrates how the joint distribution evolves
+from fitting 1 transit (dashed contours, which represent 68.3\%,
+95.5\%, and 99.7\% confidence limits), to fitting all 42 transits
+(solid contours, at the same confidence limits), for KOI 701.01.  We
+then marginalized over all other parameters, to examine the
+per--parameter confidence limits.  Figure~\ref{fig-marg} demonstrates
+how our marginalized constraints on $\zeta$ (left panel) and $\tau$
+(right panel) evolved as a function of the number of transits used in
+the fit for 701.01.  The solid line provides the maximum of the
+posterior distribution, and the dashed line indicates its median.  The
+shaded area encloses 68.3\% of the distribution.  In this manner, we
+find value of $\tau = 0.056_{0.003}^{0.002}$, which is directly fitted
+for.  This may be contrasted to a value $\tau = 0.049 \pm 0.003 $
+derived from reported \cite{2013arXiv1304.7387B} parameters, using 171
+transits.
 
 \begin{figure*}[t] 
   \begin{minipage}[c]{0.47\textwidth}
@@ -590,11 +589,11 @@ our ability to constrain $e_{min}$ via Equation~\ref{eq-emin3}.
 \end{center} 
 \end{figure*}
 
-To examine our constraints on the system period, we use the
+To examine our constraints on the system period, we used the
 $t_{0;1..n}$ posterior distributions from the fits described above.
-We use {\tt emcee} to sample the posterior space of (nuisance
+We used {\tt emcee} to sample the posterior space of (nuisance
 parameter) $t_{0;1}$ and period $P$.  For a given trial ($t_{0;1}, P$)
-pair, the likelihood is determined through:
+pair, the likelihood was determined through:
 \begin{eqnarray}
 \mathcal{L}(t_{0;1}, P) & = & \prod_{i=1}^{i=n} \kappa_i(t_{0;1} + P * (i-1))
 \end{eqnarray}
@@ -606,6 +605,16 @@ using a more complex ephemeris model at this stage of the analysis,
 such as may be expected from transit timing variations
 \citep{2005MNRAS.359..567A,2005Sci...307.1288H}.  The results of this
 analysis for KOI 701.01 are presented in Figure~\ref{fig-period}.
+
+For the derived period, we find $P = X_{X}^{X}$.  This may be
+constrasted to $P = 5.714932 \pm 0.000009$ days
+from \cite{2013arXiv1304.7387B}.
+
+The differences
+in $e_{min}$ are more substantial, as our value (using the 
+
+
+
 
 \begin{figure*}[t] 
   \begin{minipage}[c]{0.47\textwidth}
@@ -692,8 +701,12 @@ natively able to use multiprocessing capabilities, making this trivial
 to implement on a multi--core system.  However, with {\tt XXX} systems
 on our analysis path, this will require {\tt YYY} CPU--years of
 computation, requiring the use of NASA's High-End Computing (HEC)
-facilities.  
+facilities.  We will also make use of the local {\tt Hyak} compute
+cluster when it is available.
 
+\medskip
+{\centerline{\ub{\sc Data Interpretation}}}
+\smallskip
 
 In the following sections, we describe the theoretical component of
 our research plan in more detail.  In Task A, we consider systems
@@ -701,7 +714,7 @@ consisting of one star and one planet.  In Task B, we include multiple
 planet systems. In Task C, we incorporate mass loss.
 
 \medskip
-{\centerline{\ub{\sc Theory Task A: Tides in Star--Planet Systems}}}
+{\centerline{\ub{\sc Task A: Tides in Star--Planet Systems}}}
 \smallskip
 
 We begin with the simplest treatment, a single planet orbiting a
@@ -760,7 +773,7 @@ shed light on the frustrating ambiguity in determining the most
 appropriate equilibrium tidal model.
 
 \medskip
-{\centerline{\ub{\sc Theory Task B: Multi--planet Systems}}}
+{\centerline{\ub{\sc Task B: Multi--planet Systems}}}
 \smallskip
 
 Many of the \kepler~systems are multiple.  Its likely that many
@@ -823,7 +836,7 @@ full set and the high metallicity set.  Although this decreases our
 statistical robustness, it may yield the most appropriate comparison.
 
 \medskip
-{\centerline{\ub{\sc Theory Task C: Atmospheric Mass Loss}}}
+{\centerline{\ub{\sc Task C: Atmospheric Mass Loss}}}
 \smallskip
 
 In addition to tidal evolution, close--in exoplanets can also
@@ -895,7 +908,7 @@ Co--I Barnes was a Co--I on NASA OSS grant 811073.02.07.01.15
 ``Simulating the Initial Planetesimal Disk'' which produced the first
 N-body simulation of 1 km planetesimal accretion
 \citep{Barnes09_1km}. As part of this effort, Barnes used several hundred thousand hours of CPU time at NASA HPC facilities, such as the Columbia and Plaiedes supercomputers. He has published $\sim 40$ papers on tidal theory and orbital dynamics, focusing on exoplanets
-\citep[\eg][]{BarnesQuinn01,BarnesRaymond04,BarnesGreenberg06a,Barnes11,Barnes13}. 
+\citep[e.g.][]{BarnesQuinn01,BarnesRaymond04,BarnesGreenberg06a,Barnes11,Barnes13}. 
 
 Co--I Agol...
 
