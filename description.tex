@@ -445,32 +445,6 @@ $\Xi~e_{min}$ = 1.
   \end{minipage}
 \end{figure*}
 
-%\medskip
-%{\centerline{\ub{\sc Simulations}}}
-%\smallskip
-%
-%We use the system inclination, semi--major axis, planet--to--star
-%radius ratio, and period (along with two limb darkening parameters) to
-%generate fake system lightcurves using the method of
-%\cite{2002ApJ...580L.171M}.  The system lightcurve is evaluated once
-%each minute and integrated over 30 evaluations to approximate a single
-%\kepler long--cadence observation.  This is done for a window of 1 day
-%on either side of the given transit midpoint to ensure significant
-%out--of--transit data to include in the fit.  We perform these
-%evaluations for all transits for 14 ``quarters'' of \kepler
-%observations, or approximately 1280 days.
-%
-%A white--noise component is added to each lightcurve for each of 4
-%magnitude bins, using the precisions in parts--per--million (ppm)
-%given on the \kepler calibration
-%webpage \footnote{http://keplergo.arc.nasa.gov/CalibrationSN.shtml}.
-%We evaluate each lightcurve separately for magnitude 8/10/12/14
-%objects, adding a random contribution of amplitude 11.3/29/80/296 ppm
-%(respectively) to each datapoint as generated above.  We do not
-%include red noise, or other transient gaps and features known to exist
-%in the \kepler data.  This yields a set of 4 lightcurves per simulated
-%system, each having hundreds of individual transits to fit.
-
 \medskip
 {\centerline{\ub{\sc KOI 701.01}}}
 \smallskip
@@ -487,7 +461,7 @@ and fitting a low order spline to the result.  The goodness of fit is
 determined by comparing the product of the spline and the model to the
 data.  Figure~\ref{fig-koi70101} provides an example model fit
 determined in this manner.  The data used are the {\tt PDCSAP} fluxes
-and uncertainties.  We were able to reduce the first 33 transits in
+and uncertainties.  We were able to reduce the first 32 transits in
 this manner for this proposal.
 
 \begin{figure*}[t] 
@@ -509,12 +483,12 @@ this manner for this proposal.
 
 To examine how our knowledge of system parameters evolves as a
 function of number of transits, we have fit {\it all} the data up to
-the time of each transit, for all $N = 43$ transits in each
-lightcurve.  This means that for transit $n \leq N$, we have common
-model parameters $\beta_{0}^2, \tau, \zeta$ and per--transit
-parameters $t_{0;i=1..n}$, for a total of $n+3$ model parameters.
-This yields an ensemble of $N$ system models per lightcurve, each
-incorporating one more transit than the previous one.
+the time of each transit, for all $N = 32$ transits.  This means that
+for transit $n \leq N$, we have common model parameters
+$\beta_{0}^2, \tau, \zeta$ and per--transit parameters $t_{0;i=1..n}$,
+for a total of $n+3$ model parameters.  This yields an ensemble of $N$
+system models per lightcurve, each incorporating one more transit than
+the previous one.
 
 We used the affine--invariant MCMC sampler {\tt emcee}
 \citep{2013PASP..125..306F} to sample the posterior distribution of
@@ -550,7 +524,7 @@ value of $\tau = 0.056_{0.003}^{0.002}$, which is directly fitted for.
 This may be contrasted to a value $\tau = 0.049 \pm 0.003 $ derived
 from reported \cite{2013arXiv1304.7387B} parameters, using 171
 transits.  For completeness, we note our confidence limits on $\zeta =
-.01767_{0.00011}^{0.00048}$ vs \cite{2013arXiv1304.7387B} $\zeta =
+0.0182_{0.0003}^{0.0006}$ vs \cite{2013arXiv1304.7387B} $\zeta =
 0.0188 \pm 0.0003$.
 
 
@@ -563,7 +537,7 @@ transits.  For completeness, we note our confidence limits on $\zeta =
       701.01.  The {\it dashed} lines show the distribution when
       fitting 1 transit, with contours at the 68.3\%, 95.5\%, and
       99.7\% confidence limits.  The {\it solid} lines show the
-      distribution when fitting $N$ transits simultaneously.}
+      distribution when fitting 32 transits simultaneously.}
     \label{fig-joint}
     \hspace*{\fill}  
     \hrule
@@ -618,7 +592,6 @@ in $e_{min}$ are more substantial, as our value (using the
 
 
 
-
 \begin{figure*}[t] 
   \begin{minipage}[c]{0.47\textwidth}
     \includegraphics[width=\textwidth]{figures/period.eps}
@@ -637,39 +610,77 @@ in $e_{min}$ are more substantial, as our value (using the
   \end{minipage}
 \end{figure*}
 
+\medskip
+{\centerline{\ub{\sc Lightcurve Simulations}}}
+\smallskip
 
-For our simulated data, Table~\ref{tab-taurun} lists the numbers of
-transits that are needed to recover $\tau$ to 10\% as a function of
-the system brightness and transit depth.
+To examine how our abilities to constrain system parameters (in
+particular, $\tau$) as a function of transit depth and
+signal--to--noise, we generated simulated lightcurves at the \kepler
+cadence.  We used a subset of 6 of the synthetic systems described in
+the first section of this proposal.  These were chosen to have transit
+depths of [5e-5/1e-4/5e-4/1e-3/5e-3/1e-2] precent.  We use the system
+inclination, semi--major axis, planet--to--star radius ratio, and
+period (along with two limb darkening parameters) to generate fake
+system lightcurves using the method of
+\cite{2002ApJ...580L.171M}.  The system lightcurve is evaluated once
+each minute and integrated over 30 evaluations to approximate a single
+\kepler long--cadence observation.  This is done for a window of 1 day
+on either side of the given transit midpoint to ensure significant
+out--of--transit data to include in the fit.
 
-\begin{table}[t]
-\begin{center}
-\caption{\label{tab-taurun} Number of transits needed to recover $\tau$ to 10\%}
-\begin{tabular}{c|cccc}
-\hline \hline
-Transit Depth (\%) & Magnitude=8 & Mag=10 & Mag=12 & Mag=14\\
-\hline
-5e-5 & x & x & x & x \\
-1e-4 & x & x & x & x \\
-5e-4 & x & x & x & x \\
-1e-3 & x & x & x & x \\
-5e-3 & x & x & x & x \\
-1e-2 & x & x & x & x \\
-\hline
-\end{tabular}
-\end{center}
-Estimates of the number of transits needed to recover the value of
-$\tau$ to 10\%, based on our simulated systems.  We determine this as
-a function of transit depth, and the signal--to--noise of the
-lightcurve (here, determined solely by the host star brightness).  We
-combine all MCMC chains up to and including the transit listed here to
-determine the multi--transit constraint on the distribution.
-\hspace*{\fill} \\
-\hrule
-\end{table}
+A white--noise component is added to each lightcurve for each of 4
+magnitude bins, using the precisions in parts--per--million (ppm)
+given on the \kepler calibration
+webpage \footnote{http://keplergo.arc.nasa.gov/CalibrationSN.shtml}.
+We evaluate each lightcurve separately for magnitude 8/10/12/14
+objects, adding a random contribution of amplitude 11.3/29/80/296 ppm
+(respectively) to each datapoint as generated above.  We do not
+include red noise, or other transient gaps and features known to exist
+in the \kepler data.  We then model these data using the
+parameterization described above.  Figure~\ref{fig-dtau} outlines how
+our signal--to--noise on $\tau$ scales with the system brightness and
+transit depth {\it after fitting 10 transits only} (due to
+computational constraints).  We are able to recover $\tau$ to better
+than ten percent for all transits deeper than 0.5\% down to 14$^{th}$
+magnitude; for all transits deeper than 0.1\% down to 12$^{th}$; for
+all transits deeper than 0.05\% down to 10$^{th}$; and for all
+transits deeper than 0.01\% down to 8$^{th}$.  This analysis is
+entirely consistent with our more complete results from KOI 701.01,
+where the host star's brightness is 13.6, transit depth is 0.04\%, and
+measured signal--to--noise in $\tau$ is approximately 8 after modeling
+10 transits: $0.0479_{0.0049}^{0.0073}$.  Note this precision
+increases to a signal--to--noise of nearly 20 after 30 transits.
+
+\begin{figure*}[t] 
+  \begin{minipage}[c]{0.47\textwidth}
+    \includegraphics[width=\textwidth]{figures/delta_tau.eps}
+  \end{minipage}\hfill
+  \begin{minipage}[c]{0.5\textwidth}
+    \caption{Grid of signal--to--noise in $\tau$ as a function of host
+    star brightness and transit depth.  The host star brightness sets
+    the signal--to--noise of the photometry.  These values were
+    obtainined after fitting 10 tranits jointly, using the geometric
+    parameterization described within this proposal.  These
+    simulations accurately predict the S/N of $\tau$ measurements in
+    KOI 701.01 after 10 transits.}
+    \label{fig-dtau}
+    \hspace*{\fill}  
+    \hrule
+  \end{minipage}
+\end{figure*}
+
+%[[ 0.79372962  1.07761448  1.79022733  1.82613462  3.16994564  3.73020785]
+% [ 0.62639459  0.76120963  1.43324592  1.59635851  2.69282439  3.42917786]
+% [ 0.06015757  0.32601639  0.96253504  1.07046032  2.24052672  2.9520566 ]
+% [-0.06110349  0.0199895   0.73047463  0.86371544  1.69282439  2.3152345 ]]
+%[[  6.21912976e+00   1.19567868e+01   6.16917835e+01   6.70092293e+01    1.47892328e+03   5.37288880e+03]
+% [  4.23052819e+00   5.77044927e+00   2.71172675e+01   3.94783056e+01    4.92974425e+02   2.68644440e+03]
+% [  1.14857027e+00   2.11844107e+00   9.17349940e+00   1.17614352e+01    1.73990974e+02   8.95481466e+02]
+% [  8.68753383e-01   1.04710322e+00   5.37619028e+00   7.30660176e+00    4.92974425e+01   2.06649569e+02]]
 
 \medskip
-{\centerline{\ub{\sc Kepler Sample Available for Analysis}}}
+{\centerline{\ub{\sc Kepler Objects of Interest}}}
 \smallskip
 
 We need systems that are observed with the short cadence (ummm, maybe
@@ -681,7 +692,7 @@ characteristics of stellar mass and radius, and (ideally) age.
 The detailed \cite{2013arXiv1304.7387B} analysis of Kepler 62--b
 results in an $e_{min}$ value of $0.022 \pm 0.005$.  Contrasting this
 value with distribution of publicly available data in
-Figure~\ref{emin} indicates that this project {\it requires} a
+Figure~\ref{fig:emin} indicates that this project {\it requires} a
 complete re--analysis of relevant systems.
 
 \medskip
