@@ -17,8 +17,12 @@
 {Barnes}, J.~W. 2007, \pasp, 119, 986
 
 \bibitem[\protect\citeauthoryear{{Barnes} \& {Greenberg}}{{Barnes} \&
-  {Greenberg}}{2006}]{BarnesGreenberg06a}
-{Barnes}, R.,  \& {Greenberg}, R. 2006, \apj, 638, 478
+  {Greenberg}}{2006a}]{BarnesGreenberg06b}
+{Barnes}, R.,  \& {Greenberg}, R. 2006a, \apjl, 652, L53
+
+\bibitem[\protect\citeauthoryear{{Barnes} \& {Greenberg}}{{Barnes} \&
+  {Greenberg}}{2006b}]{BarnesGreenberg06a}
+{Barnes}, R.,  \& {Greenberg}, R. 2006b, \apj, 638, 478
 
 \bibitem[\protect\citeauthoryear{{Barnes} et~al.}{{Barnes}
   et~al.}{2011}]{Barnes11}
@@ -54,6 +58,10 @@
   Astrobiology, 8, 557
 
 \bibitem[\protect\citeauthoryear{{Batalha} et~al.}{{Batalha}
+  et~al.}{2011}]{Batalha11}
+{Batalha}, N.~M., et~al. 2011, \apj, 729, 27
+
+\bibitem[\protect\citeauthoryear{{Batalha} et~al.}{{Batalha}
   et~al.}{2013}]{2013ApJS..204...24B}
 {Batalha}, N.~M., et~al. 2013, \apjs, 204, 24
 
@@ -71,6 +79,10 @@
   et~al.}{2013}]{2013arXiv1304.7387B}
 {Borucki}, W.~J., et~al. 2013, ArXiv e-prints
 
+\bibitem[\protect\citeauthoryear{{Correia}, {Bou{\'e}}, \& {Laskar}}{{Correia}
+  et~al.}{2012}]{Correia12}
+{Correia}, A.~C.~M., {Bou{\'e}}, G.,  \& {Laskar}, J. 2012, \apjl, 744, L23
+
 \bibitem[\protect\citeauthoryear{{Darwin}}{{Darwin}}{1880}]{Darwin1880}
 {Darwin}, G.~H. 1880, Royal Society of London Philosophical Transactions Series
   I, 171, 713
@@ -84,6 +96,10 @@
 \bibitem[\protect\citeauthoryear{{Davenport} et~al.}{{Davenport}
   et~al.}{2013}]{2013ApJ...764...62D}
 {Davenport}, J.~R.~A., et~al. 2013, \apj, 764, 62
+
+\bibitem[\protect\citeauthoryear{{Dawson} \& {Murray-Clay}}{{Dawson} \&
+  {Murray-Clay}}{2013}]{DawsonMurrayClay13}
+{Dawson}, R.~I.,  \& {Murray-Clay}, R.~A. 2013, \apjl, 767, L24
 
 \bibitem[\protect\citeauthoryear{{Fabrycky} et~al.}{{Fabrycky}
   et~al.}{2012}]{Fabrycky12}
@@ -102,6 +118,10 @@
   et~al.}{2013}]{2013PASP..125..306F}
 {Foreman-Mackey}, D., {Hogg}, D.~W., {Lang}, D.,  \& {Goodman}, J. 2013, \pasp,
   125, 306
+
+\bibitem[\protect\citeauthoryear{{Fortney}, {Marley}, \& {Barnes}}{{Fortney}
+  et~al.}{2007}]{Fortney07}
+{Fortney}, J.~J., {Marley}, M.~S.,  \& {Barnes}, J.~W. 2007, \apj, 659, 1661
 
 \bibitem[\protect\citeauthoryear{Gelman \& Rubin}{Gelman \&
   Rubin}{1992}]{Gelman92}
@@ -189,6 +209,11 @@ Gelman, A.,  \& Rubin, D. 1992, Statistical Science, 7, 457
   et~al.}{2011}]{Leitzinger11}
 {Leitzinger}, M., et~al. 2011, \planss, 59, 1472
 
+\bibitem[\protect\citeauthoryear{{Libert} \& {Henrard}}{{Libert} \&
+  {Henrard}}{2005}]{LibertHenrard05}
+{Libert}, A.-S.,  \& {Henrard}, J. 2005, Celestial Mechanics and Dynamical
+  Astronomy, 93, 187
+
 \bibitem[\protect\citeauthoryear{{Lissauer} et~al.}{{Lissauer}
   et~al.}{2011}]{Lissauer11}
 {Lissauer}, J.~J., et~al. 2011, \nat, 470, 53
@@ -264,6 +289,12 @@ Gelman, A.,  \& Rubin, D. 1992, Statistical Science, 7, 457
 \bibitem[\protect\citeauthoryear{{Veras} \& {Armitage}}{{Veras} \&
   {Armitage}}{2004}]{VerasArmitage04}
 {Veras}, D.,  \& {Armitage}, P.~J. 2004, \icarus, 172, 349
+
+\bibitem[\protect\citeauthoryear{{Vidal-Madjar} et~al.}{{Vidal-Madjar}
+  et~al.}{2003}]{VidalMadjar03}
+{Vidal-Madjar}, A., {Lecavelier des Etangs}, A., {D{\'e}sert}, J.-M.,
+  {Ballester}, G.~E., {Ferlet}, R., {H{\'e}brard}, G.,  \& {Mayor}, M. 2003,
+  \nat, 422, 143
 
 \bibitem[\protect\citeauthoryear{{Watson}, {Donahue}, \& {Walker}}{{Watson}
   et~al.}{1981}]{Watson81}
