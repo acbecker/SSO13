@@ -175,23 +175,23 @@ difference between the $Q$s dominates.  We therefore hypothesize that
 the TDD may be able to identify the radius that separates gaseous
 planets from rocky planets.
 
-\begin{figure}[h]
-\centering
-\begin{minipage}{2.7in}
-\resizebox{2.7in}{!}{\includegraphics{figures/compq.ps}} 
-\end{minipage}
-\begin{minipage}{2.7in}
-\caption{\label{fig:compareQ}Comparison of the tidal evolution of a
+\begin{figure*}[t] 
+  \begin{minipage}[c]{0.39\textwidth}
+    \includegraphics[width=\textwidth]{figures/compq.ps}
+  \end{minipage}\hfill
+  \begin{minipage}[c]{0.6\textwidth}
+    \caption{Comparison of the tidal evolution of a
   2~\rearth mini--Neptune (solid line; for 10 Gyr) and a 2~\rearth
   super--Earth (circles; in 100 Myr intervals).  The mini--Neptune
   experiences little orbital evolution, but the super--Earth
   circularizes in about 1 Gyr.  This discrepancy is due to the 4
   orders of magnitude difference in tidal dissipation between gaseous
   and rocky planets.}
+    \label{fig:compareQ}
     \hspace*{\fill}  
     \hrule
-\end{minipage}
-\end{figure}
+  \end{minipage}
+\end{figure*}
 
 To test this possibility, we performed the following test. We created
 25,000 synthetic star--planet configurations with initial semi--major
@@ -217,21 +217,21 @@ we see three constraints for three unknowns, yielding the possibility
 that the right observations may be able to provide values for these
 elusive quantities.
 
-\begin{figure}[h]
-\centering
-\begin{minipage}{2.7in}
-\resizebox{2.7in}{!}{\includegraphics{figures/radper.ps}} 
-\end{minipage}
-\begin{minipage}{2.7in}
-\caption{\label{fig:radper}Average final eccentricity of a suite of 25,000
+\begin{figure*}[t] 
+  \begin{minipage}[c]{0.39\textwidth}
+    \includegraphics[width=\textwidth]{figures/radper.ps}
+  \end{minipage}\hfill
+  \begin{minipage}[c]{0.6\textwidth}
+    \caption{Average final eccentricity of a suite of 25,000
 systems of one star and one planet. Planets larger than 2~\rearth~are gaseous, and 
 those smaller are rocky. The binsizes are 0.5~\rearth in radius and 0.5 d in period.
 Gaseous planets retain a residual eccentricity if $P > 1.5$ d, while rocky planets require
 $P > 4$ d. The transition occurs at 2~\rearth, which in this case is $R_{crit}$. }
+    \label{fig:radper}
     \hspace*{\fill}  
     \hrule
-\end{minipage}
-\end{figure}
+  \end{minipage}
+\end{figure*}
 
 
 However, \kepler data do not provide eccentricity, but rather the
@@ -251,13 +251,13 @@ days. \textit{Despite the order of magnitude ranges for each physical
   signal in $\avg{e_{min}}$ that distinguishes the rocky and gaseous
   planets. }
 
-\begin{figure}[h]
-\centering
-\begin{minipage}{2.7in}
-\resizebox{2.7in}{!}{\includegraphics{figures/compare.emin.ps}} 
-\end{minipage}
-\begin{minipage}{2.7in}
-\caption{\label{fig:emin}Average minimum eccentricities for transiting
+
+\begin{figure*}[t] 
+  \begin{minipage}[c]{0.39\textwidth}
+    \includegraphics[width=\textwidth]{figures/compare.emin.ps}
+  \end{minipage}\hfill
+  \begin{minipage}[c]{0.6\textwidth}
+    \caption{Average minimum eccentricities for transiting
   exoplanets as a function of period and radius.  Solid curves
   correspond to a theoretical study of 25,000 star--planet
   configurations in which planets with $R < 2$\rearth are rocky and
@@ -269,10 +269,11 @@ days. \textit{Despite the order of magnitude ranges for each physical
   well--characterized, and hence a proper re--analysis of the
   \kepler planets is required to identify the radius that separates
   rocky and gaseous planets, as well as both values of tidal $Q$.}
+    \label{fig:emin}
     \hspace*{\fill}  
     \hrule
-\end{minipage}
-\end{figure}
+  \end{minipage}
+\end{figure*}
 
 This pilot study is encouraging, but its feasibility rests on the
 precision of the models of the \kepler data.  Specifically, impact
@@ -360,6 +361,25 @@ constrain system parameters and validation of this technique using a
 known exoplanet system, and how we will fold these results into tidal
 theory to understand $R_{crit}$, $Q_{r}$ and $Q_{g}$.
 
+\medskip
+{\centerline{\ub{\sc Transit Model}}}
+\smallskip
+
+To avoid a dependency between the fitted model and a physical model
+that includes orbital dynamics, we parameterize the lightcurve model
+in purely geometric terms.  To do so, we adopt the quadratic
+limb--darkened model of \cite{2002ApJ...580L.171M}, which describes
+transit lightcurves in terms of two (nuisance) limb--darkening
+coefficients and two (important) system parameters.  The first of the
+system parameters is the planetary radius divided by the stellar
+radius ($\zeta \equiv Rp/R_*$), which determines the fractional area
+of the stellar disk that may be occulted by the planet.  The second is
+the impact parameter of the planet ($\beta \equiv b/R_*$).  This
+variable is a function of time, due to the objects' relative motion.
+This function is dependent on the chord that the planet takes across
+the stellar disk, itself typically estimated using the orbital
+parameters semi--major axis ($\alpha \equiv a/R_*$) and inclination.
+
 \begin{figure*}[t] 
   \begin{minipage}[c]{0.37\textwidth}
     \includegraphics[width=\textwidth]{figures/schem.eps}
@@ -379,25 +399,6 @@ theory to understand $R_{crit}$, $Q_{r}$ and $Q_{g}$.
     \hrule
   \end{minipage}
 \end{figure*}
-
-\medskip
-{\centerline{\ub{\sc Transit Model}}}
-\smallskip
-
-To avoid a dependency between the fitted model and a physical model
-that includes orbital dynamics, we parameterize the lightcurve model
-in purely geometric terms.  To do so, we adopt the quadratic
-limb--darkened model of \cite{2002ApJ...580L.171M}, which describes
-transit lightcurves in terms of two (nuisance) limb--darkening
-coefficients and two (important) system parameters.  The first of the
-system parameters is the planetary radius divided by the stellar
-radius ($\zeta \equiv Rp/R_*$), which determines the fractional area
-of the stellar disk that may be occulted by the planet.  The second is
-the impact parameter of the planet ($\beta \equiv b/R_*$).  This
-variable is a function of time, due to the objects' relative motion.
-This function is dependent on the chord that the planet takes across
-the stellar disk, itself typically estimated using the orbital
-parameters semi--major axis ($\alpha \equiv a/R_*$) and inclination.
 
 Instead we use here a purely geometric parameterization, represented
 in Figure~\ref{fig-schem}.  We describe the impact parameter as a
@@ -701,6 +702,8 @@ approximately 20 after 32 transits (Figure~\ref{fig-marg}).
 
 \rory{Enumerate what is out there to analyze}.  We need $\alpha$ for $R_{crit}$, and ages for $Q$.
 
+890+ KOIs.  Which have supporting information on the host star density
+and age.
 
 \medskip
 {\centerline{\ub{\sc Computational Requirements}}}
@@ -716,12 +719,12 @@ parameter in the model).  If we scale these chains up to $10^6$ total
 steps, which should yield effective chain lengths of $\sim 10^4$, we
 find a linear relationship in the computation time required to reach
 $10^6$ steps: $time_{10^6}(n) = -1105 + 5943 \times n$ seconds.  For a
-typical short--period system having 500 transits \andy{How many
-quarters are there, and how many transits for 5 day period}, this
-comes out to approximately 35 CPU--days of analysis.  The {\tt emcee}
-code is natively able to use multiprocessing capabilities, making this
-trivial to implement on a multi--core system.  However, with {\tt XXX}
-systems on our analysis path, this will require {\tt YYY} CPU--years
+5--day period system having $\sim$ 300 transits over the assumed
+17--quarter operational lifetime of \kepler, this comes out to
+approximately 21 CPU--days of analysis.  The {\tt emcee} code is
+natively able to use multiprocessing capabilities, making this trivial
+to implement on a multi--core system.  However, with $\sim 1000$
+systems on our analysis path, this will require $\sim 60$ CPU--years
 of computation, requiring the use of NASA's High-End Computing (HEC)
 facilities.  We will also make use of the local {\tt Hyak} compute
 cluster when it is available.
@@ -997,8 +1000,10 @@ samplers is a non--trivial exercise.  Discovering and understanding
 the failure modes will be a main focus of this
 computationally--intensive first year.  Becker will lead this effort,
 and transition the student into lead during the year.  The generation
-of the MCMC chains is expected to take {\tt XXX} CPU--hours, or {\tt
-YYY} calendar--hours on {\tt ZZZ}. The validation of these chains
+of the MCMC chains is expected to take $\sim 60$ CPU--years, requiring
+the use of high--end computing facilities to allow hundreds of
+parallelized, multi--core jobs, which should reduce this computation
+time trivially to calendar--months. The validation of these chains
 (Gelman--Rubin $\hat{\rm R}$ and effective chain lengths) is expected
 to take a comparable amount of time, as some chains are expected to
 have to be re--run or extended.  The goal of this first year is to
