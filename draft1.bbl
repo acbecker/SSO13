@@ -5,6 +5,54 @@
 {Agol}, E., {Steffen}, J., {Sari}, R.,  \& {Clarkson}, W. 2005, \mnras, 359,
   567
 
+\bibitem[\protect\citeauthoryear{{Aksnes} \& {Franklin}}{{Aksnes} \&
+  {Franklin}}{2001}]{AksnesFranklin01}
+{Aksnes}, K.,  \& {Franklin}, F.~A. 2001, \aj, 122, 2734
+
+\bibitem[\protect\citeauthoryear{{Anglada-Escud{\'e}}
+  et~al.}{{Anglada-Escud{\'e}} et~al.}{2012}]{AngladaEscude12}
+{Anglada-Escud{\'e}}, G., et~al. 2012, \apjl, 751, L16
+
+\bibitem[\protect\citeauthoryear{{Barnes}}{{Barnes}}{2007}]{Barnes07}
+{Barnes}, J.~W. 2007, \pasp, 119, 986
+
+\bibitem[\protect\citeauthoryear{{Barnes} \& {Greenberg}}{{Barnes} \&
+  {Greenberg}}{2006}]{BarnesGreenberg06a}
+{Barnes}, R.,  \& {Greenberg}, R. 2006, \apj, 638, 478
+
+\bibitem[\protect\citeauthoryear{{Barnes} et~al.}{{Barnes}
+  et~al.}{2011}]{Barnes11}
+{Barnes}, R., {Greenberg}, R., {Quinn}, T.~R., {McArthur}, B.~E.,  \&
+  {Benedict}, G.~F. 2011, \apj, 726, 71
+
+\bibitem[\protect\citeauthoryear{{Barnes} et~al.}{{Barnes}
+  et~al.}{2009a}]{Barnes09}
+{Barnes}, R., {Jackson}, B., {Greenberg}, R.,  \& {Raymond}, S.~N. 2009a,
+  \apjl, 700, L30
+
+\bibitem[\protect\citeauthoryear{{Barnes} et~al.}{{Barnes}
+  et~al.}{2013}]{Barnes13}
+{Barnes}, R., {Mullins}, K., {Goldblatt}, C., {Meadows}, V.~S., {Kasting},
+  J.~F.,  \& {Heller}, R. 2013, Astrobiology, 13, 225
+
+\bibitem[\protect\citeauthoryear{{Barnes} \& {Quinn}}{{Barnes} \&
+  {Quinn}}{2001}]{BarnesQuinn01}
+{Barnes}, R.,  \& {Quinn}, T. 2001, \apj, 550, 884
+
+\bibitem[\protect\citeauthoryear{{Barnes} et~al.}{{Barnes}
+  et~al.}{2009b}]{Barnes09_1km}
+{Barnes}, R., {Quinn}, T.~R., {Lissauer}, J.~J.,  \& {Richardson}, D.~C. 2009b,
+  \icarus, 203, 626
+
+\bibitem[\protect\citeauthoryear{{Barnes} \& {Raymond}}{{Barnes} \&
+  {Raymond}}{2004}]{BarnesRaymond04}
+{Barnes}, R.,  \& {Raymond}, S.~N. 2004, \apj, 617, 569
+
+\bibitem[\protect\citeauthoryear{{Barnes} et~al.}{{Barnes}
+  et~al.}{2008}]{Barnes08}
+{Barnes}, R., {Raymond}, S.~N., {Jackson}, B.,  \& {Greenberg}, R. 2008,
+  Astrobiology, 8, 557
+
 \bibitem[\protect\citeauthoryear{{Batalha} et~al.}{{Batalha}
   et~al.}{2013}]{2013ApJS..204...24B}
 {Batalha}, N.~M., et~al. 2013, \apjs, 204, 24
@@ -14,9 +62,18 @@
 {Becker}, A.~C., {Kundurthy}, P., {Agol}, E., {Barnes}, R., {Williams}, B.~F.,
   \& {Rose}, A.~E. 2013, \apjl, 764, L17
 
+\bibitem[\protect\citeauthoryear{{Bolmont} et~al.}{{Bolmont}
+  et~al.}{2013}]{Bolmont13}
+{Bolmont}, E., {Selsis}, F., {Raymond}, S.~N., {Leconte}, J., {Hersant}, F.,
+  {Maurin}, A.-S.,  \& {Pericaud}, J. 2013, ArXiv e-prints
+
 \bibitem[\protect\citeauthoryear{{Borucki} et~al.}{{Borucki}
   et~al.}{2013}]{2013arXiv1304.7387B}
 {Borucki}, W.~J., et~al. 2013, ArXiv e-prints
+
+\bibitem[\protect\citeauthoryear{{Darwin}}{{Darwin}}{1880}]{Darwin1880}
+{Darwin}, G.~H. 1880, Royal Society of London Philosophical Transactions Series
+  I, 171, 713
 
 \bibitem[\protect\citeauthoryear{{Davenport} et~al.}{{Davenport}
   et~al.}{2012}]{2012ApJ...748...58D}
@@ -28,6 +85,19 @@
   et~al.}{2013}]{2013ApJ...764...62D}
 {Davenport}, J.~R.~A., et~al. 2013, \apj, 764, 62
 
+\bibitem[\protect\citeauthoryear{{Fabrycky} et~al.}{{Fabrycky}
+  et~al.}{2012}]{Fabrycky12}
+{Fabrycky}, D.~C., et~al. 2012, ArXiv e-prints
+
+\bibitem[\protect\citeauthoryear{{Ferraz-Mello}, {Rodr{\'{\i}}guez}, \&
+  {Hussmann}}{{Ferraz-Mello} et~al.}{2008}]{FerrazMello08}
+{Ferraz-Mello}, S., {Rodr{\'{\i}}guez}, A.,  \& {Hussmann}, H. 2008, Celestial
+  Mechanics and Dynamical Astronomy, 101, 171
+
+\bibitem[\protect\citeauthoryear{{Ford}, {Kozinsky}, \& {Rasio}}{{Ford}
+  et~al.}{2000}]{Ford00}
+{Ford}, E.~B., {Kozinsky}, B.,  \& {Rasio}, F.~A. 2000, \apj, 535, 385
+
 \bibitem[\protect\citeauthoryear{{Foreman-Mackey} et~al.}{{Foreman-Mackey}
   et~al.}{2013}]{2013PASP..125..306F}
 {Foreman-Mackey}, D., {Hogg}, D.~W., {Lang}, D.,  \& {Goodman}, J. 2013, \pasp,
@@ -37,14 +107,50 @@
   Rubin}{1992}]{Gelman92}
 Gelman, A.,  \& Rubin, D. 1992, Statistical Science, 7, 457
 
+\bibitem[\protect\citeauthoryear{{Goldreich} \& {Soter}}{{Goldreich} \&
+  {Soter}}{1966}]{GoldreichSoter66}
+{Goldreich}, P.,  \& {Soter}, S. 1966, \icarus, 5, 375
+
+\bibitem[\protect\citeauthoryear{{Gomes} et~al.}{{Gomes}
+  et~al.}{2005}]{Gomes05}
+{Gomes}, R., {Levison}, H.~F., {Tsiganis}, K.,  \& {Morbidelli}, A. 2005, \nat,
+  435, 466
+
 \bibitem[\protect\citeauthoryear{{Goodman} \& {Weare}}{{Goodman} \&
   {Weare}}{2010}]{Goodman-Weare}
 {Goodman}, J.,  \& {Weare}, J. 2010, Communications in Applied Mathematics and
   Computational Science, 5, 65
 
+\bibitem[\protect\citeauthoryear{{Greenberg}}{{Greenberg}}{2009}]{Greenberg09}
+{Greenberg}, R. 2009, \apjl, 698, L42
+
+\bibitem[\protect\citeauthoryear{{Greenberg} \& {Van Laerhoven}}{{Greenberg} \&
+  {Van Laerhoven}}{2011}]{GreenbergVanLaerhoven11}
+{Greenberg}, R.,  \& {Van Laerhoven}, C. 2011, \apj, 733, 8
+
 \bibitem[\protect\citeauthoryear{{Holman} \& {Murray}}{{Holman} \&
   {Murray}}{2005}]{2005Sci...307.1288H}
 {Holman}, M.~J.,  \& {Murray}, N.~W. 2005, Science, 307, 1288
+
+\bibitem[\protect\citeauthoryear{{Hut}}{{Hut}}{1981}]{Hut81}
+{Hut}, P. 1981, \aap, 99, 126
+
+\bibitem[\protect\citeauthoryear{{Jackson}, {Barnes}, \& {Greenberg}}{{Jackson}
+  et~al.}{2009}]{Jackson09}
+{Jackson}, B., {Barnes}, R.,  \& {Greenberg}, R. 2009, \apj, 698, 1357
+
+\bibitem[\protect\citeauthoryear{{Jackson}, {Greenberg}, \& {Barnes}}{{Jackson}
+  et~al.}{2008}]{Jackson08}
+{Jackson}, B., {Greenberg}, R.,  \& {Barnes}, R. 2008, \apj, 678, 1396
+
+\bibitem[\protect\citeauthoryear{{Jackson} et~al.}{{Jackson}
+  et~al.}{2010}]{Jackson10}
+{Jackson}, B., {Miller}, N., {Barnes}, R., {Raymond}, S.~N., {Fortney}, J.~J.,
+  \& {Greenberg}, R. 2010, \mnras, 407, 910
+
+\bibitem[\protect\citeauthoryear{{Khodachenko} et~al.}{{Khodachenko}
+  et~al.}{2007}]{Khodachenko07}
+{Khodachenko}, M.~L., et~al. 2007, Astrobiology, 7, 167
 
 \bibitem[\protect\citeauthoryear{{Kundurthy} et~al.}{{Kundurthy}
   et~al.}{2011}]{2011ApJ...731..123K}
@@ -61,15 +167,110 @@ Gelman, A.,  \& Rubin, D. 1992, Statistical Science, 7, 457
 {Kundurthy}, P., {Becker}, A.~C., {Agol}, E., {Barnes}, R.,  \& {Williams}, B.
   2013b, \apj, 764, 8
 
+\bibitem[\protect\citeauthoryear{{Lainey} et~al.}{{Lainey}
+  et~al.}{2012}]{Lainey12}
+{Lainey}, V., et~al. 2012, \apj, 752, 14
+
+\bibitem[\protect\citeauthoryear{{Lammer} et~al.}{{Lammer}
+  et~al.}{2013}]{Lammer13}
+{Lammer}, H., {Erkaev}, N.~V., {Odert}, P., {Kislyakova}, K.~G., {Leitzinger},
+  M.,  \& {Khodachenko}, M.~L. 2013, \mnras, 430, 1247
+
+\bibitem[\protect\citeauthoryear{{Lammer} et~al.}{{Lammer}
+  et~al.}{2007}]{Lammer07}
+{Lammer}, H., et~al. 2007, Astrobiology, 7, 185
+
+\bibitem[\protect\citeauthoryear{{Leconte} et~al.}{{Leconte}
+  et~al.}{2010}]{Leconte10}
+{Leconte}, J., {Chabrier}, G., {Baraffe}, I.,  \& {Levrard}, B. 2010, \aap,
+  516, A64
+
+\bibitem[\protect\citeauthoryear{{Leitzinger} et~al.}{{Leitzinger}
+  et~al.}{2011}]{Leitzinger11}
+{Leitzinger}, M., et~al. 2011, \planss, 59, 1472
+
+\bibitem[\protect\citeauthoryear{{Lissauer} et~al.}{{Lissauer}
+  et~al.}{2011}]{Lissauer11}
+{Lissauer}, J.~J., et~al. 2011, \nat, 470, 53
+
+\bibitem[\protect\citeauthoryear{{Lopez}, {Fortney}, \& {Miller}}{{Lopez}
+  et~al.}{2012}]{Lopez12}
+{Lopez}, E.~D., {Fortney}, J.~J.,  \& {Miller}, N. 2012, \apj, 761, 59
+
+\bibitem[\protect\citeauthoryear{{MacDonald}}{{MacDonald}}{1964}]{MacDonald64}
+{MacDonald}, G.~J.~F. 1964, Reviews of Geophysics and Space Physics, 2, 467
+
 \bibitem[\protect\citeauthoryear{{Mandel} \& {Agol}}{{Mandel} \&
   {Agol}}{2002}]{2002ApJ...580L.171M}
 {Mandel}, K.,  \& {Agol}, E. 2002, \apjl, 580, L171
 
+\bibitem[\protect\citeauthoryear{{Mardling} \& {Lin}}{{Mardling} \&
+  {Lin}}{2002}]{MardlingLin02}
+{Mardling}, R.~A.,  \& {Lin}, D.~N.~C. 2002, \apj, 573, 829
+
+\bibitem[\protect\citeauthoryear{{Matsumura}, {Peale}, \& {Rasio}}{{Matsumura}
+  et~al.}{2010}]{Matsumura10}
+{Matsumura}, S., {Peale}, S.~J.,  \& {Rasio}, F.~A. 2010, \apj, 725, 1995
+
+\bibitem[\protect\citeauthoryear{{McArthur} et~al.}{{McArthur}
+  et~al.}{2010}]{McArthur10}
+{McArthur}, B.~E., {Benedict}, G.~F., {Barnes}, R., {Martioli}, E.,
+  {Korzennik}, S., {Nelan}, E.,  \& {Butler}, R.~P. 2010, \apj, 715, 1203
+
+\bibitem[\protect\citeauthoryear{{Owen} \& {Wu}}{{Owen} \&
+  {Wu}}{2013}]{OwenWu13}
+{Owen}, J.~E.,  \& {Wu}, Y. 2013, ArXiv e-prints
+
+\bibitem[\protect\citeauthoryear{{Poppenhaeger} et~al.}{{Poppenhaeger}
+  et~al.}{2012}]{Poppenhaeger12}
+{Poppenhaeger}, K., {Czesla}, S., {Schr{\"o}ter}, S., {Lalitha}, S., {Kashyap},
+  V.,  \& {Schmitt}, J.~H.~M.~M. 2012, \aap, 541, A26
+
+\bibitem[\protect\citeauthoryear{{Rasio} et~al.}{{Rasio}
+  et~al.}{1996}]{Rasio96}
+{Rasio}, F.~A., {Tout}, C.~A., {Lubow}, S.~H.,  \& {Livio}, M. 1996, \apj, 470,
+  1187
+
+\bibitem[\protect\citeauthoryear{{Reffert} \& {Quirrenbach}}{{Reffert} \&
+  {Quirrenbach}}{2011}]{ReffertQuirrenbach11}
+{Reffert}, S.,  \& {Quirrenbach}, A. 2011, \aap, 527, A140
+
+\bibitem[\protect\citeauthoryear{{Ribas} et~al.}{{Ribas}
+  et~al.}{2005}]{Ribas05}
+{Ribas}, I., {Guinan}, E.~F., {G{\"u}del}, M.,  \& {Audard}, M. 2005, \apj,
+  622, 680
+
+\bibitem[\protect\citeauthoryear{{Seager} et~al.}{{Seager}
+  et~al.}{2007}]{Seager07}
+{Seager}, S., {Kuchner}, M., {Hier-Majumder}, C.~A.,  \& {Militzer}, B. 2007,
+  \apj, 669, 1279
+
 \bibitem[\protect\citeauthoryear{{Sing}}{{Sing}}{2010}]{2010A&A...510A..21S}
 {Sing}, D.~K. 2010, \aap, 510, A21
+
+\bibitem[\protect\citeauthoryear{{Sotin}, {Grasset}, \& {Mocquet}}{{Sotin}
+  et~al.}{2007}]{Sotin07}
+{Sotin}, C., {Grasset}, O.,  \& {Mocquet}, A. 2007, \icarus, 191, 337
 
 \bibitem[\protect\citeauthoryear{{Tegmark} et~al.}{{Tegmark}
   et~al.}{2004}]{2004PhRvD..69j3501T}
 {Tegmark}, M., et~al. 2004, \prd, 69, 103501
+
+\bibitem[\protect\citeauthoryear{{Valencia} et~al.}{{Valencia}
+  et~al.}{2010}]{Valencia10}
+{Valencia}, D., {Ikoma}, M., {Guillot}, T.,  \& {Nettelmann}, N. 2010, \aap,
+  516, A20
+
+\bibitem[\protect\citeauthoryear{{Veras} \& {Armitage}}{{Veras} \&
+  {Armitage}}{2004}]{VerasArmitage04}
+{Veras}, D.,  \& {Armitage}, P.~J. 2004, \icarus, 172, 349
+
+\bibitem[\protect\citeauthoryear{{Watson}, {Donahue}, \& {Walker}}{{Watson}
+  et~al.}{1981}]{Watson81}
+{Watson}, A.~J., {Donahue}, T.~M.,  \& {Walker}, J.~C.~G. 1981, \icarus, 48,
+  150
+
+\bibitem[\protect\citeauthoryear{{Yelle}}{{Yelle}}{2004}]{Yelle04}
+{Yelle}, R.~V. 2004, \icarus, 170, 167
 
 \end{thebibliography}
