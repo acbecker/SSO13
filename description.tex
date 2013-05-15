@@ -4,21 +4,21 @@
 
 
 The discovery of an inhabited planet is a primary goal of exoplanetary
-science. The \kepler~spacecraft has now found several small candidates
+science. The \kepler spacecraft has now found several small candidates
 in potentially habitable orbits, \cite[e.g. Kepler--62
   f;][]{2013arXiv1304.7387B}, and radial velocity surveys are also detecting
 apparently low--mass planets in habitable zones (HZs), e.g. Gl 667C c
 \citep{AngladaEscude12}.  While the location of an orbit with respect
-to the HZ is an important first cut, the composition of the planet is
-at least as important.  Life as we understand it cannot survive on
-gaseous planets, yet we do not know the mass and/or radius that
-separates gaseous from terrestrial planets.  In particular, the
-identification of the critical radius between the two, $R_{crit}$,
-would provide crucial information for \kepler's primary mission to
-discover a terrestrial planet in the HZ of a G dwarf.
+to the HZ is an important first cut on habitability, the composition
+of the planet is at least as important.  Life as we understand it
+cannot survive on gaseous planets, yet we do not know the mass and/or
+radius that separates gaseous from terrestrial planets.  In
+particular, the identification of the critical radius between the two,
+$R_{crit}$, would provide crucial information for \kepler's primary
+mission to discover a terrestrial planet in the HZ of a G dwarf.
 
 The primary goal of this proposal is to determine this critical
-planetary radius between rocky and gaseous bodies using \kepler~data.
+planetary radius between rocky and gaseous bodies using \kepler data.
 We will exploit the expected discrepancy in tidal dissipation of
 gaseous and rocky bodies to determine the largest orbital periods at
 which the two classes of bodies circularize.  We will use the
@@ -28,28 +28,26 @@ the minimum eccentricity permitted from the transit data.  We will
 also include the effects of additional planetary companions and
 atmospheric mass loss, as they also influence the evolution of
 eccentricity.  In order to successfully constrain these theoretical
-results from \kepler~data, we require robust characterization of each
-candidate, and hence we will perform state--of--the--art transit
-modeling of all relevant \kepler~transits.  To optimize our
-sensitivity to these effects, we will examine only those systems with
-short periods (less than 10 days) and having planetary radii near the
-anticipated boundary (less than 4 \rearth).  Our proposed research
-offers the best route to determine which \kepler~candidates are rocky,
-independent of mass measurements, which is vital information in
+results from \kepler data, we require robust characterization of each
+candidate, and hence we will perform state--of--the--art modeling of
+all relevant \kepler transits.  To optimize our sensitivity to these
+effects, we will examine only those systems with short periods (less
+than 10 days) and having planetary radii near the anticipated boundary
+(less than 4 \rearth).  Our proposed research offers the best route to
+determine which \kepler candidates are rocky, independent of mass
+measurements, which is vital information in
 \kepler's quest to discover potentially habitable planets orbiting G
 dwarfs.  In summary:
 
 \par\smallskip\noindent
 \centerline{
-  \begin{minipage}[c]{0.9\textwidth}
-    {\bf We propose to exploit the observed minimum eccentricity, tidal
-      theory, and a reanalysis of \kepler~data to determine $R_{crit}$, as
-      well as constrain the tidal quality factors of both rocky and
-      gaseous planets ($Q_r$ and $Q_g$, respectively), and the efficiency
-      of hydrogen loss for close in small gaseous exoplanets in the
-      \kepler~field.}
-  \end{minipage}
-}
+  \begin{minipage}[c]{0.9\textwidth} {\bf We propose to use the
+    observed minimum eccentricity and theory of tidal dynamics to
+    determine the critical radius between rocky and gaseous exoplanets
+    $R_{crit}$, constrain their tidal quality factors ($Q_r$ and
+    $Q_g$, respectively), and understand the efficiency of hydrogen
+    loss for close in small gaseous exoplanets, using \kepler
+    lightcurves.}  \end{minipage} }
 \par\smallskip\noindent
 
 \bigskip
@@ -64,10 +62,11 @@ dwarfs.  In summary:
 Tidal dissipation is celestial bodies in extremely challenging to
 measure
 \citep{GoldreichSoter66,Hut81,AksnesFranklin01,Jackson08a,Jackson09,Lainey12}
-due to 1) the dearth of worlds in highly dissipative configurations,
-2) the long timescales involved (Gyrs), and 3) the intractability of
-derivations based on first principles.  However, the \kepler~ space
-telescope has now discovered thousands of exoplanet candidates
+due to 1) the dearth of known worlds in highly dissipative
+configurations, 2) the long timescales involved (Gyrs), and 3) the
+intractability of derivations based on first principles.  However,
+the \kepler space telescope has now discovered thousands of exoplanet
+candidates
 \citep{2013ApJS..204...24B}, of which about 1000 orbit FGK stars with
 orbital periods less than 10 days, and that may experience significant
 tidal evolution \citep{Rasio96,Jackson08a,Matsumura10}.
@@ -88,7 +87,7 @@ gaseous bodies.  This disparity implies that rocky planets will evolve
 much more rapidly than gaseous bodies and we expect rocky exoplanets
 to be tidally circularized on larger orbits than for gaseous bodies.
 As we show below, the canonical values for $Q_g$ of $10^6$ and $Q_r$
-of 100 should be measurable in the \kepler~field, if the transit data
+of 100 should be measurable in the \kepler field, if the transit data
 and stellar properties can be known to sufficient accuracy.  The key
 is to recognize that gaseous bodies will tidally circularize more
 slowly than rocky planets, and may still retain non--zero
@@ -103,7 +102,7 @@ which we outline below.
 The transit duration is the time required for a planet to traverse the
 disk of its parent star, and to first order is:
 \begin{equation}\label{eq:duration}
-T = \frac{2 * \sqrt{R_*^2 - b^2}}{v},
+T = \frac{2 \sqrt{R_*^2 - b^2}}{v},
 \end{equation}
 where $R_*$ is the radius of the star, $b$ is the impact parameter,
 and $v$ is the instantaneous velocity of the planet. On a circular
@@ -143,32 +142,32 @@ then we find that
 \begin{equation}\label{eq:emin}
 e_{min} = \begin{dcases} \frac{\Delta'^2 - 1}{\Delta'^2 + 1} & T_c < T \\ \frac{1 - \Delta'^2}{1 + \Delta'^2} & T_c > T \end{dcases}
 \end{equation}
-is the minimum eccentricity permitted by transit data.  We use the
-absolute value of $e_{min}$ in our discussions below.
+is the minimum eccentricity permitted by transit data.  
 
 \medskip
 {\centerline{\ub{\sc The Boundary Between Rocky and Gaseous Planets}}}
 \smallskip
 
-That transit data provide a minimum eccentricity while tidal theory
-damps eccentricity to zero is crucial for our proposed research. If
-$e_{min} = 0$, \textit{then the orbit is circular}.  Of course circular
-orbits could be primordial, but \cite{Jackson08,Matsumura10} showed
-that the observed radial--velocity--detected planets in tight orbits
-could have formed with eccentricities consistent with the more distant
-planets and were subsequently tidally damped in both the CPL and CTL
-framework.  If $e_{min} > 0$ then tides have not tidally damped the
-eccentricity, and, if we know the age of the system, then we can
-estimate the tidal $Q$ (or in the CTL model, the time lag factor).
+That transit data provide a minimum eccentricity, while tidal theory
+damps eccentricity to zero, is crucial for our proposed research. If
+$e_{min} = 0$, \textit{then the orbit is circular}.  Of course
+circular orbits could be primordial, but \cite{Jackson08}
+and \cite{Matsumura10} showed that the observed
+radial--velocity--detected planets in tight orbits could have formed
+with eccentricities consistent with the more distant planets and were
+subsequently tidally damped in both the CPL and CTL framework.  If
+$e_{min} > 0$ then tides have not tidally damped the eccentricity,
+and, if we know the age of the system, then we can estimate the tidal
+$Q$ (or in the CTL model, the time lag factor).
 
-As an example consider the two curves in Fig.~\ref{fig:compareQ}.
-Both these planets begin with the same orbit around the same star.
-The line shows 10 Gyr of tidal evolution of a 2~\rearth planet with a
+As an example consider the two curves in Fig.~\ref{fig:compareQ}.  The
+line shows 10 Gyr of tidal evolution of a 2~\rearth planet with a
 density of 1 g/cm$^3$ and tidal $Q$ of $10^6$ (i.e. a 3.8~\mearth
 ``mini-Neptune''), while the filled circles represent the orbit of a
 2~\rearth planet with a mass of 10~\mearth and a tidal $Q$ of 100
-(i.e. a ``super-Earth'') every 100 Myr.  The super--Earth circularizes
-in about 1 Gyr; the mini--Neptune does not evolve significantly, even
+(i.e. a ``super-Earth'') every 100 Myr.  Both objects start with the
+same orbital initial conditions.  The super--Earth circularizes in
+about 1 Gyr; the mini--Neptune does not evolve significantly, even
 after 10 Gyr.  This discrepancy is evident despite the fact that
 equilibrium tidal models predict that evolution scales as mass to the
 3/2 power and radius to the fifth power -- instead, the large
@@ -205,18 +204,18 @@ the density is 1 g/cm$^3$, and a tidal $Q$ in the range
 [$10^6$,$10^7$].  The initial eccentricity is drawn from the currently
 observed distribution of distant planets ($a > 0.2$~AU).  We then
 integrate the system forward for the randomly chosen age and assume we
-observe the system in that final configuration. In Fig.~\ref{fig:radper},
-we show the resulting average eccentricities of these planes as a
-function of planetary radius, $R_p$, and orbital period, $P$.  The
-small values of $e$ at low $R_p$ and $P$ shows this effect.
-Furthermore, we can see the features that correspond directly to three
-parameters that are currently very poorly constrained: $R_{crit}$ via
-the rapid rise in $\avg{e}$ at 2~\rearth; $Q_g$ via the rapid rise in
-$\avg{e}$ at 1 day above 2~\rearth; and $Q_r$ via the rapid rise at 4
-days and below 2~\rearth.  Thus in this simple model, we see three
-constraints for three unknowns, yielding the possibility that the
-right observations may be able to provide values to these elusive
-quantities.
+observe the system in that final configuration. In
+Fig.~\ref{fig:radper}, we show the resulting average eccentricities of
+these planes as a function of planetary radius, $R_p$, and orbital
+period, $P$.  The small values of $e$ at low $R_p$ and $P$ shows this
+effect.  Furthermore, we can see the features that correspond directly
+to three parameters that are currently very poorly constrained:
+$R_{crit}$ via the rapid rise in $\avg{e}$ at 2~\rearth; $Q_g$ via the
+rapid rise in $\avg{e}$ at 1 day above 2~\rearth; and $Q_r$ via the
+rapid rise at 4 days and below 2~\rearth.  Thus in this simple model,
+we see three constraints for three unknowns, yielding the possibility
+that the right observations may be able to provide values for these
+elusive quantities.
 
 \begin{figure}[h]
 \centering
@@ -235,15 +234,16 @@ $P > 4$ d. The transition occurs at 2~\rearth, which in this case is $R_{crit}$.
 \end{figure}
 
 
-However, \kepler~data do not provide eccentricity, but rather the
-minimum eccentricity. We must therefore transform these data into a
-form that is directly comparable to an observable, e.g. $e_{min}$. In
-order to calculate $e_{min}$, we choose a random value for $\theta$
-and calculate the velocity according to Eq.~\ref{eq:velocity}. We
-calculate the average minimum eccentricity, $\avg{e_{min}}$ in
-1~\rearth~planetary radius bins and 1 day orbital period bins and plot
-$\avg{e_{min}}$ as a function of orbital period for different radii as
-solid lines in Fig.~\ref{fig:emin}. For $R < 2$~\rearth, $\avg{e_{min}}
+However, \kepler data do not provide eccentricity, but rather the
+minimum eccentricity. We must therefore transform these simulations
+into a form that is directly comparable to an observable,
+e.g. $e_{min}$. In order to calculate $e_{min}$, we choose a random
+value for $\theta$ and calculate the velocity according to
+Eq.~\ref{eq:velocity}. We calculate the average minimum eccentricity,
+$\avg{e_{min}}$ in 1~\rearth~planetary radius bins and 1 day orbital
+period bins and plot $\avg{e_{min}}$ as a function of orbital period
+for different radii as solid lines in Fig.~\ref{fig:emin}. For $R <
+2$~\rearth, $\avg{e_{min}}
 \sim 0$ up to about a 4 day period. However, for larger radii,
 circular orbits are only guaranteed for periods less than about 2
 days. \textit{Despite the order of magnitude ranges for each physical
@@ -264,10 +264,10 @@ days. \textit{Despite the order of magnitude ranges for each physical
   larger planets are gaseous.  Note that gaseous planets have
   non--zero eccentricities if the period is larger than 1.5 days,
   whereas rocky planet periods must be larger than 4 days.  Filled
-  squares are the values for observed \kepler~planets as provided by
-  JPL's \kepler~website.  The observed systems appear to be not
+  squares are the values for observed \kepler planets as provided by
+  JPL's \kepler website.  The observed systems appear to be not
   well--characterized, and hence a proper re--analysis of the
-  \kepler~planets is required to identify the radius that separates
+  \kepler planets is required to identify the radius that separates
   rocky and gaseous planets, as well as both values of tidal $Q$.}
     \hspace*{\fill}  
     \hrule
@@ -275,16 +275,16 @@ days. \textit{Despite the order of magnitude ranges for each physical
 \end{figure}
 
 This pilot study is encouraging, but its feasibility rests on the
-precision of the models of the \kepler~data.  Specifically, impact
+precision of the models of the \kepler data.  Specifically, impact
 parameters, stellar and planetary radii, orbital period, and stellar
 mass must be known and their uncertainties well--modeled.  The first
 four properties are measurable from transit data alone, while the
-fifth must be estimated by other means.  The \kepler~team has provided
+fifth must be estimated by other means.  The \kepler team has provided
 these data in various publications and websites.  The solid squares
 show the values of $\avg{e_{min}}$ with quantities from the
-\kepler~Planet Candidate Data
-Explorer\footnote{http://planetquest.jpl.nasa.gov/kepler}.  All the
-observed data are above the predictions. There are two possible
+\kepler Planet Candidate Data
+Explorer\footnote{http://planetquest.jpl.nasa.gov/kepler}.  Nearly all
+the observed data are above the predictions. There are two possible
 explanations for this discrepancy: 1) The theory is wrong, or 2) the
 reported model parameters are of poor quality.  We outline limits of
 the theory below.
@@ -295,21 +295,21 @@ the theory below.
 
 First, we note that additional companions can pump eccentricity
 through mutual gravitational interactions, even if tidal damping is
-ongoing \citep{MardlingLin02,Bolmont13}.  Therefore we must
-be cautious when interpreting Fig.~\ref{fig:pilot}, as additional
+ongoing \citep{MardlingLin02,Bolmont13}.  Therefore we must be
+cautious when interpreting Fig.~\ref{fig:emin}, as additional
 companions, both seen and unseen, can maintain non--zero
-eccentricities.  However, \cite{Bolmont13} showed that planet--planet
-interactions cannot maintain 55 Cnc e's eccentricity above 0.1.  That
-system is particularly relevant as there are many close--in planets
-orbiting G dwarfs.  Therefore, we can conclude that discrepancy
-between the observed and simulated systems is not due to
-planet--planet interactions.
+eccentricities.  However, there are limits: \cite{Bolmont13} showed
+that planet--planet interactions cannot maintain the eccentricity of
+55 Cnc e above 0.1.  That system is particularly relevant as there are
+many close--in planets orbiting G dwarfs.  Therefore, we can conclude
+that discrepancy between the observed and simulated systems is not due
+to planet--planet interactions.
 
 Another possibility is that stellar winds and activity can strip an
 atmosphere, reducing the mass and radius, and potentially changing the
 planet from a mini--Neptune to a super--Earth
 \citep{Jackson10,Valencia10,Leitzinger11,Poppenhaeger12}.  Recently,
-\cite{OwenWu13} argued that the \kepler~sample is consistent with
+\cite{OwenWu13} argued that the \kepler sample is consistent with
 hydrodyanmic mass loss, and that some low--mass planets could have
 formed with substantially more mass.  Mass loss should decrease the
 time to circularize the orbit, assuming the radius doesn't become very
@@ -319,7 +319,7 @@ but not for super--Earths.  Although few radial velocity measurements
 exist, planets with radii less than $\sim 1.5$~\rearth~ have densities
 consistent with silicate compositions \citep{Batalha10}.  Thus, mass
 loss seems unlikely to explain the discrepancy seen for the smallest
-candidates in the \kepler~field.
+candidates in the \kepler field.
 
 Other effects, such as stellar mass loss or the galactic tide will be
 negligible, but to properly treat the problem, planetary mass loss and
@@ -418,10 +418,10 @@ which is then used along with $\zeta$ to generate a model transit
 lightcurve.
 This model yields a 4--parameter fit to each transit: $t_0, \beta_0^2,
 \tau, \zeta$.  The system period $P$ may be determined using the
-ensemble of $t_{0;i=1...N}$.
-The transit duration $T$ may be found from the 2 solutions to
-$\beta(t) = 1$, and represents the time between the center of the
-planet crossing each limb of the star:
+multiple ($N$) transits and the ensemble of $t_{0;i=1...N}$.  The
+transit duration $T$ may be found from the 2 solutions to $\beta(t) =
+1$, and represents the time between the center of the planet crossing
+each limb of the star:
 \begin{eqnarray}
 T & = & 2 * \tau \sqrt{1 - \beta_0^2}.
 \label{eq-dt}
@@ -443,10 +443,10 @@ examining the posterior distributions, which drives us to use
 Markov--Chain Monte Carlo (MCMC) modeling (described below).
 
 Equation~\ref{eq-emin2} indicates that $e_{min}$ is purely a function
-of the fitted parameter $\tau$, the derived period $P$, and an assumed
-semi--major axis for the planet (in units of the stellar radius)
-$\alpha$.  The uncertainty in $e_{min}$ scales as below for all 3
-parameters:
+of the fitted parameter $\tau$, the derived period $P$, and an
+externally estimated semi--major axis for the planet (in units of the
+stellar radius) $\alpha$.  The uncertainty in $e_{min}$ scales as
+below for all 3 parameters:
 
 \begin{eqnarray}
 \Xi & \equiv & \frac{16 \pi^{2} \alpha^{2} \tau^{2} P^{2}}{16 \pi^{4} \alpha^{4} \tau^{4} - P^{4}} \\
@@ -472,7 +472,7 @@ and fitting a low order spline to the result.  The goodness of fit is
 determined by comparing the product of the spline and the model to the
 data.  Figure~\ref{fig-koi70101} provides an example model fit
 determined in this manner.  The data used are the {\tt PDCSAP} fluxes
-and uncertainties.  We were able to model the first 32 transits for
+and uncertainties.  We were able to so model the first 32 transits for
 this proposal.
 
 \begin{figure*}[t] 
@@ -498,8 +498,8 @@ the time of each transit, for each of $N = 32$ transits.  This means
 that for transit $n \leq N$, we have common model parameters
 $\beta_{0}^2, \tau, \zeta$ and per--transit parameters $t_{0;i=1..n}$,
 for a total of $n+3$ model parameters.  This yields an ensemble of $N$
-system models per lightcurve, each incorporating one more transit than
-the previous one.
+system models, each incorporating one more transit than the previous
+one.
 
 We used the affine--invariant MCMC sampler {\tt emcee}
 \citep{2013PASP..125..306F} to sample the posterior distribution of
@@ -530,9 +530,9 @@ marginalized constraints on $\zeta$ (left panel) and $\tau$ (right
 panel) evolved as a function of the number of transits used in the fit
 for 701.01.  The solid line provides the maximum of the posterior
 distribution, and the dashed line indicates its median.  The shaded
-area encloses 68.3\% of the distribution.  In this manner, we find
-value of $\tau = 0.051_{0.002}^{0.003}$.  This may be contrasted to a
-value $\tau = 0.049 \pm 0.003 $ derived from
+area encloses 68.3\% of the distribution.  In this manner, we find a
+maximum likelihood value of $\tau = 0.051_{0.002}^{0.003}$.  This may
+be contrasted to $\tau = 0.049 \pm 0.003 $ derived from
 reported \cite{2013arXiv1304.7387B} parameters, where they used 171
 transits.  For completeness, we note our confidence limits on $\zeta =
 0.0182_{0.0003}^{0.0006}$ vs the \cite{2013arXiv1304.7387B} result
@@ -597,19 +597,22 @@ such as may be expected from transit timing variations
 analysis for KOI 701.01 are presented in Figure~\ref{fig-period}.
 
 For the derived period after 32 transits, we find $P =
-5.71484_{0.00015}^{0.00009}$.  The uncertainty in the period scales as
-a power law with an e--folding timescale of approximately 15 transits.
-This may be contrasted to $P = 5.714932 \pm 0.000009$ days reported
-in \cite{2013arXiv1304.7387B}.  The differences in $e_{min}$ are more
-substantial.  Using their reported value of $\alpha = 18.7 \pm 0.5$,
-we derive $e_{min} = 0.043 \pm 0.009$, while we find $e_{min} =
-0.021 \pm 0.005$ using the \cite{2013arXiv1304.7387B} results.  
+5.71484_{0.00015}^{0.00009}$.  The uncertainty in the period roughly
+scales as a power law with an e--folding timescale of approximately 15
+transits.  This may be contrasted to $P = 5.714932 \pm 0.000009$ days
+reported in \cite{2013arXiv1304.7387B}.  The differences in $e_{min}$
+are more substantial.  Using their reported value of $\alpha =
+18.7 \pm 0.5$, we derive $e_{min} = 0.043 \pm 0.009$, compared to
+$e_{min} = 0.021 \pm 0.005$ using the \cite{2013arXiv1304.7387B}
+results.  This difference is almost entirely driven by the (1--sigma)
+differences in $\tau$, which makes it of utmost importance to model
+this parameter directly.
 
 \begin{figure*}[t] 
-  \begin{minipage}[c]{0.47\textwidth}
+  \begin{minipage}[c]{0.57\textwidth}
     \includegraphics[width=\textwidth]{figures/period.eps}
   \end{minipage}\hfill
-  \begin{minipage}[c]{0.5\textwidth}
+  \begin{minipage}[c]{0.4\textwidth}
     \caption{The evolution of the posterior distribution on orbital
       period $P$ (y--axis) based upon the results of modeling $n$
       times--of--transit (x--axis) separately.  The period posterior
@@ -649,18 +652,18 @@ We evaluate each lightcurve separately for magnitude 8/10/12/14
 objects, adding a random contribution of amplitude 11.3/29/80/296 ppm
 (respectively) to each datapoint as generated above.  We do not
 include red noise, or other transient gaps and features known to exist
-in the \kepler data.  We then model these data using the
-parameterization described above.  Figure~\ref{fig-dtau} outlines how
-our signal--to--noise on $\tau$ scales with the system brightness and
+in the \kepler data.  We then model these data using the geometric
+parameterization.  Figure~\ref{fig-dtau} outlines how our
+signal--to--noise on $\tau$ scales with the system brightness and
 transit depth {\it after fitting 10 transits only} (due to
 computational constraints).  We are able to recover $\tau$ to better
 than ten percent for all transits deeper than 0.5\% down to 14$^{th}$
 magnitude; for all transits deeper than 0.1\% down to 12$^{th}$; for
 all transits deeper than 0.05\% down to 10$^{th}$; and for all
 transits deeper than 0.01\% down to 8$^{th}$.  This analysis is
-entirely consistent with our results from KOI 701.01, where the host
-star's magnitude is 13.6, the transit depth is 0.04\%, and measured
-S/N in $\tau$ is $\sim$ 7.8 after modeling 10 transits:
+consistent with our results from KOI 701.01, where the host star's
+magnitude is 13.6, the transit depth is 0.04\%, and measured S/N in
+$\tau$ is $\sim$ 7.8 after modeling 10 transits:
 $0.0479_{0.0049}^{0.0073}$.  Figure~\ref{fig-dtau} predicts a S/N of
 5--6.  Note the measured precision in $\tau$ increases to a S/N of
 approximately 20 after 32 transits (Figure~\ref{fig-marg}).
@@ -696,17 +699,8 @@ approximately 20 after 32 transits (Figure~\ref{fig-marg}).
 {\centerline{\ub{\sc Kepler Objects of Interest}}}
 \smallskip
 
-We need systems that are observed with the short cadence (ummm, maybe
-not since we marginalize over $\beta_0$), are bright enough to resolve
-$e_{min}$ to within 0.1, and have short period planets (less than 4
-days).  From this sample, we will need to know the physical
-characteristics of stellar mass and radius, and (ideally) age.
+\rory{Enumerate what is out there to analyze}.  We need $\alpha$ for $R_{crit}$, and ages for $Q$.
 
-The detailed \cite{2013arXiv1304.7387B} analysis of Kepler 62--b
-results in an $e_{min}$ value of $0.022 \pm 0.005$.  Contrasting this
-value with distribution of publicly available data in
-Figure~\ref{fig:emin} indicates that this project {\it requires} a
-complete re--analysis of relevant systems.
 
 \medskip
 {\centerline{\ub{\sc Computational Requirements}}}
@@ -722,12 +716,13 @@ parameter in the model).  If we scale these chains up to $10^6$ total
 steps, which should yield effective chain lengths of $\sim 10^4$, we
 find a linear relationship in the computation time required to reach
 $10^6$ steps: $time_{10^6}(n) = -1105 + 5943 \times n$ seconds.  For a
-typical short--period system having 500 transits, this comes out to
-approximately 35 CPU--days of analysis.  The {\tt emcee} code is
-natively able to use multiprocessing capabilities, making this trivial
-to implement on a multi--core system.  However, with {\tt XXX} systems
-on our analysis path, this will require {\tt YYY} CPU--years of
-computation, requiring the use of NASA's High-End Computing (HEC)
+typical short--period system having 500 transits \andy{How many
+quarters are there, and how many transits for 5 day period}, this
+comes out to approximately 35 CPU--days of analysis.  The {\tt emcee}
+code is natively able to use multiprocessing capabilities, making this
+trivial to implement on a multi--core system.  However, with {\tt XXX}
+systems on our analysis path, this will require {\tt YYY} CPU--years
+of computation, requiring the use of NASA's High-End Computing (HEC)
 facilities.  We will also make use of the local {\tt Hyak} compute
 cluster when it is available.
 
@@ -752,38 +747,38 @@ include alternative tidal models.  The pilot study (25,000 simulations
 of $\sim 5$ Gyr each) requires about 4 hours on a modern workstation,
 and therefore many such trials are easily tractable.  Co--I Barnes is
 an expert in tidal effects on exoplanets
-\cite{Barnes08,Jackson08,Barnes09,Barnes12}, and will use his
+\citep{Barnes08,Jackson08,Barnes09,Barnes12}, and will use his
 existing code \texttt{eqtide} that follows the prescriptions in
 \cite{Barnes12}.  The free parameters are the mass--radius
 relationship for both rocky and gaseous bodies, the value of
 $R_{crit}$, the $Q$s of rocky and gaseous bodies, the initial
-eccentricity distribution, and the age distribution of \kepler~stars.
+eccentricity distribution, and the age distribution of \kepler stars.
 
 The choices in the pilot study were necessarily limited, and we will
 explore many more options during this proposal.  While we assumed that
 rocky bodies were Earth--like in their composition, other scaling laws
-are possible, e.g.  \cite{Seager07,Fortney07,Lissauer11}.  We will use
-these other scalings for the masses of the rocky planets, as well as
-mixing the models to allow for a range of compositions.  For the
+are possible \citep[e.g.][]{Seager07,Fortney07,Lissauer11}.  We will
+use these other scalings for the masses of the rocky planets, as well
+as mixing the models to allow for a range of compositions.  For the
 gaseous planets, we will assume different densities in the range 0.5
 -- 3 g/cm$^3$, and also mixed cases where the density is chosen at
 random.  The value of $R_{crit}$ is the parameter we are most
-interested in, and we will examine it finely, varying it from 1 to 2.5
+interested in, and we will grid it finely, varying it from 1 to 2.5
 \rearth in 0.1~\rearth intervals.  We will consider two different
 models for $Q$($R$), the tidal $Q$ as a function of planetary radius.
 First we will use the same differences as in the pilot study, but we
 will also consider a three--tiered model, in which intermediate mass
 planets have intermediate $Q$s.  Neptune, and possible even Saturn,
-have a $Q$ value of $10^4$ \citep{ZhangHamliton07,Lainey12}, and hence we
-must consider this possibility, too.  This also introduces a new
+have a $Q$ value of $10^4$ \citep{ZhangHamliton07,Lainey12}, and hence
+we must consider this possibility, too.  This also introduces a new
 radius cut--off, $R_{mid}$, which we will allow to move from 2 to
 5~\rearth.  The $Q$ range for these systems will have values between
 3000 and 30,000.  We will randomly choose a stellar mass in the range
-0.7--1.4~\msun as we are interested in FGK stars.  {\bf A sentence on
-  the age distribution}. Finally, we will keep the initial
-eccentricity distribution consistent with that of more distant
-exoplanets.  Ultimately we expect to run several hundred of these
-suites of systems, which is easily tractable on a modern multi--core
+0.7--1.4~\msun as we are interested in FGK stars.  \rory{A sentence on
+the age distribution}. Finally, we will keep the initial eccentricity
+distribution consistent with that of more distant exoplanets.
+Ultimately we expect to run several hundred of these suites of
+systems, which is easily tractable on a modern multi--core
 workstation.
 
 The examples in Figs.~\ref{fig:compareQ}--\ref{fig:emin} used one
@@ -793,8 +788,8 @@ perturber is constant regardless of frequency
 assumes that lag angle is instead a function of frequency
 \citep[e.g.][]{Hut81,Matsumura10}.  We will also employ this model
 with the same ranges as described above, and relating $Q$ to the time
-lag $tau$ as $Q = 1/n\tau$, where $n$ is the mean motion, e.g.
-\cite{Correia12}.  In reality there is no general conversion between
+lag $tau$ as $Q = 1/n\tau$, where $n$ is the mean motion
+\citep[e.g.][]{Correia12}.  In reality there is no general conversion between
 the two, but this relation is in common use.  Thus, our work may also
 shed light on the frustrating ambiguity in determining the most
 appropriate equilibrium tidal model.
@@ -803,7 +798,7 @@ appropriate equilibrium tidal model.
 {\centerline{\ub{\sc Task B: Multi--planet Systems}}}
 \smallskip
 
-Many of the \kepler~systems are multiple.  Its likely that many
+Many of the \kepler systems are multiple.  Its likely that many
 singletons are as well, but with non--transiting companions.  Mutual
 gravitational interactions between planets can maintain an
 eccentricity, even in the presence of strong tidal damping
@@ -824,13 +819,13 @@ eccentricities up to 0.9.  Therefore, we will use higher order
 theories, which have been previously developed
 \citep[e.g.][]{Ford00,VerasArmitage04,LibertHenrard06}.  We may also
 take advantage of the high degree of coplanarity of close--in
-\kepler~systems \cite{Fabrycky12}, and ignore all terms involving
+\kepler systems \cite{Fabrycky12}, and ignore all terms involving
 inclination.  As each of these models is computationally cheap, we can
 safely use the 12th order theory of \cite{LibertHenrard} to evaluate
 the evolution.  
 
 More challenging is the choice of initial conditions.  While many
-\kepler~systems are multiple, we do not yet know the underlying
+\kepler systems are multiple, we do not yet know the underlying
 distribution of orbital architectures.  A full exploration of
 parameter space with arbitrary multiplicity and orbital elements would
 be intractable, and would be very challenging to interpret.  We
@@ -848,8 +843,8 @@ Barnes has experience with secular theory
 \citep{BarnesGreenberg06a,BarnesGreenberg06b}, and hence will lead
 this effort.  We will perform numerical tests of stability of initial
 conditions, and will throw out systems that divergently cross strong
-mean motion resonances, such 2:1, 3:1, and 3:2, that lead to system
-break--up \citep[e.g.][]{Gomes05}.
+mean motion resonances -- such 2:1, 3:1, and 3:2 -- that lead to
+system break--up \citep[e.g.][]{Gomes05}.
 
 Additionally, it is likely that many of the close--in systems cannot
 have initial eccentricities comparable to the non--tidally--evolved
@@ -858,7 +853,7 @@ are probably close to their primordial morphologies and experience
 migration during the protoplanetary disk phase.  Recently
 \cite{DawsonMurrayClay13} showed compelling evidence that high
 metallicity stars are more likely to host eccentric planets.
-Therefore, we will make two comparisons with the \kepler~sample: the
+Therefore, we will make two comparisons with the \kepler sample: the
 full set and the high metallicity set.  Although this decreases our
 statistical robustness, it may yield the most appropriate comparison.
 
@@ -867,7 +862,7 @@ statistical robustness, it may yield the most appropriate comparison.
 \smallskip
 
 In addition to tidal evolution, close--in exoplanets can also
-experience mass loss as high energy radiation can liberate hydrogen
+experience mass loss, as high energy radiation can liberate hydrogen
 \citep{Watson81,VidalMadjar04}.  \cite{Jackson10} showed that mass
 loss and tidal evolution are coupled for the case of CoRoT--7 b and
 that both positive and negative feedbacks are possible.  Mass loss is
@@ -893,21 +888,20 @@ approximation.  The Watson and Ribas models are already in
 \texttt{eqtide} \citep{Barnes13}, and hence minimal code improvements
 are required for this step.  This final theoretical task requires
 about 2--3 times more computational resources than the other two
-combined, but is still dwarfed by the \kepler~lightcurve analysis, and
+combined, but is still dwarfed by the \kepler lightcurve analysis, and
 can easily be completed within a few months on a workstation, or on
 UW's local supercomputer.
 
 Unfortunately the inclusion of mass loss leads to a degeneracy in our
-model.  The three parameters we previously discussed, $R_{crit}$,
-$Q_r$ and $Q_g$, are all related to features in Fig.~[plot of
-  $\avg{e}$ as a function of radius and period, that figure I showed
-  you long ago].  Mass loss complicates the picture by blurring these
-boundaries.  On the other hand, it is entirely possible that we will
-fail to reproduce the observed $\avg{e_{min}}$ distribution without
-it.  At the conclusion of Task C, we will have about 2000 suites of
-simulations with different physical parameters to compare to the
-\kepler~planet candidates.  If we succeed in identifying $R_{crit}$,
-then planets found in the HZ of \kepler~targets can be characterized
+model.  The three parameters $R_{crit}$, $Q_r$ and $Q_g$, are all
+related to features in Figure~\ref{fig:emin}.  Mass loss complicates
+the picture by blurring these boundaries.  On the other hand, it is
+entirely possible that we will fail to reproduce the observed
+$\avg{e_{min}}$ distribution without it.  At the conclusion of Task C,
+we will have about 2000 suites of simulations with different physical
+parameters to compare to the
+\kepler planet candidates.  If we succeed in identifying $R_{crit}$,
+then planets found in the HZ of \kepler targets can be characterized
 as gaseous or rocky (and potentially habitable), independent of
 knowledge of their masses.  This is the ultimate goal of this
 proposal.
@@ -988,8 +982,7 @@ attend at least one relevant conference each year, and encouraged to
 give oral presentations on our work.  This will become a requirement
 as the project progresses.  We expect the graduate student to become
 an expert in both areas of this project, both the
-computational/modeling side and the theoretical side.  This student
-will receive a strong dose of both data and theory, which is a
+computational/modeling side and the theoretical side.  This is a
 powerful combination and one not seen often enough in the field.  We
 consider this dual--aspect training a strong component of this
 project.
@@ -1020,7 +1013,7 @@ theoretical interpretation of the systems.  We will start with linear
 ephemeris models for all systems to estimate periods; for those
 systems where this model is insufficient, we will examine transit
 timing models with more complicated ephemerides.  We anticipate that
-this effort will result in the publication of 1 or more ancillary
+this effort may result in the publication of 1 or more ancillary
 papers on the transit timings of the systems under study, with
 assistance from Agol on the interpretation of the results. During this
 year, Barnes will begin working with the graduate student on the
@@ -1033,7 +1026,7 @@ running simulations of multiplanet systems with tidal damping.
 theoretical modeling, including the incorporation of mass loss.  We
 will publish a paper on the role of multiplicity in the $e_{min}$
 distribution. The graduate student will perform a final analysis of
-all available \kepler~data and will compare this final data set to the
+all available \kepler data and will compare this final data set to the
 synthetic data produced by the tides+multiplicity+evaporation model.
 A final paper will summarize the results of the investigation,
 including final values, with error estimates, for $R_{crit}$, $Q_r$,
@@ -1077,7 +1070,7 @@ publications will be released as {\tt
 iPython}\footnote{http://ipython.org} notebooks to help establish
 reproducible research standards in the field.  {\tt iPython} allows
 the exchange of portable environments (notebooks) that enable the user
-to follow the analysis path leading to a given scientific results, and
+to follow the analysis path leading to a given scientific result, and
 also to interact with it at the code level to understand (and verify)
 the methodology.
 
