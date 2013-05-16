@@ -1,0 +1,231 @@
+\documentclass[prd, 12pt, floatfix, tightenlines, times]{article}
+\usepackage[paperwidth=8.5in,paperheight=11in,centering,margin=1in]{geometry}
+\usepackage{subfigure}
+\usepackage{epsfig}
+\usepackage{natbib}
+\usepackage{color}
+\usepackage{amssymb,amsmath}
+\usepackage{sidecap}
+\usepackage{mathtools}
+
+\definecolor{orange}{cmyk}{0,0.4,0.8,0.2}
+\definecolor{darkorange}{rgb}{.71,0.21,0.01}
+\definecolor{darkgreen}{rgb}{.12,.54,.11}
+\definecolor{darkblue}{rgb}{0.1,0.1,0.8}
+\usepackage{hyperref}
+\hypersetup{pdftex,  % needed for pdflatex
+  breaklinks=true,  % so long urls are correctly broken across lines
+  colorlinks=true,
+  urlcolor=blue,
+  linkcolor=darkorange,
+  citecolor=darkgreen,
+  }
+\newcommand{\becker}[1] { \textcolor{darkorange} {
+\ensuremath{\blacksquare} {\bf andy:}  {#1}
+\ensuremath{\blacksquare} } }
+
+\newcommand{\rory}[1] { \textcolor{red} {
+\ensuremath{\bigstar} {\bf rory:}  {#1}
+\ensuremath{\bigstar} } }
+
+
+%\usepackage{bibunits}
+
+% latex draft1.tex; bibtex draft1; latex draft1.tex; latex draft1.tex; xdvi draft1
+
+\pagestyle{plain}
+\topmargin 0in
+\headheight 0in
+\headsep 0in
+\footskip 0.5in
+
+\textheight 9.0in
+%\textwidth 6.7in
+\textwidth 6.5in
+
+\oddsidemargin 0in
+\evensidemargin 0in
+\marginparwidth 0in
+\baselineskip0.2cm
+\parskip0.1cm
+\font\cap=cmcsc10
+
+\def\ni{\noindent}        %No Indent%
+\def\ub{\underbar}
+\def\hi{\noindent \hangindent=2.5em}
+\def\et{{\it et\thinspace al.}}    %et al.%
+\def\hour{^{\rm h}}
+\def\minute{^{\rm m}}
+\def\second{^{\rm s}}
+\def\arcmin{^{\prime}}
+\def\arcsec{^{\prime\prime}}
+\def\pixel{{\rm\,pixel}}
+\def\degrees{{\rm\,degrees}}
+\def\pc{{\rm\,pc}}
+\def\cm{{\rm\,cm}}
+\def\kms{{\rm\,km/s}}
+\def\kpc{{\rm\,kpc}}
+\def\hkpc{{\rm\,$h_{50}^{-1}$\,kpc}}
+\def\hpc{{\rm\,$h_{50}^{-1}$\,pc}}
+\def\Mpc{{\rm\,Mpc}}
+\def\mpc{{\rm\,Mpc}}
+\def\Gyr{{\rm\,Gyr}}
+\def\kmsec{{\rm\,km/s}}
+\def\hnot{{\rm\,km/s/Mpc}}
+\def\msun{{\rm\,M_\odot}}
+\def\lsun{{\rm\,L_\odot}}
+\def\mdot{{\rm\,M_\odot}}
+\def\surfb{{\rm\,mag/arcsec^2}}
+
+% AASTEX
+\def\aj{{\it AJ}}                   % Astronomical Journal
+\def\actaa{{\it Acta Astron.}}      % Acta Astronomica
+\def\araa{{\it ARA\&A}}             % Annual Review of Astron and Astrophys
+\def\apj{{\it ApJ}}                 % Astrophysical Journal
+\def\apjl{{\it ApJ}}                % Astrophysical Journal, Letters
+\def\apjs{{\it ApJS}}               % Astrophysical Journal, Supplement
+\def\ao{{\it Appl.~Opt.}}           % Applied Optics
+\def\apss{{\it Ap\&SS}}             % Astrophysics and Space Science
+\def\aap{{\it A\&A}}                % Astronomy and Astrophysics
+\def\aapr{{\it A\&A~Rev.}}          % Astronomy and Astrophysics Reviews
+\def\aaps{{\it A\&AS}}              % Astronomy and Astrophysics, Supplement
+\def\azh{{\it AZh}}                 % Astronomicheskii Zhurnal
+\def\baas{{\it BAAS}}               % Bulletin of the AAS
+\def\bac{{\it Bull. astr. Inst. Czechosl.}}
+                % Bulletin of the Astronomical Institutes of Czechoslovakia 
+\def\caa{{\it Chinese Astron. Astrophys.}}
+                % Chinese Astronomy and Astrophysics
+\def\cjaa{{\it Chinese J. Astron. Astrophys.}}
+                % Chinese Journal of Astronomy and Astrophysics
+\def\icarus{{\it Icarus}}           % Icarus
+\def\jcap{{\it J. Cosmology Astropart. Phys.}}
+                % Journal of Cosmology and Astroparticle Physics
+\def\jrasc{{\it JRASC}}             % Journal of the RAS of Canada
+\def\memras{{\it MmRAS}}            % Memoirs of the RAS
+\def\mnras{{\it MNRAS}}             % Monthly Notices of the RAS
+\def\na{{\it New A}}                % New Astronomy
+\def\nar{{\it New A Rev.}}          % New Astronomy Review
+\def\pra{{\it Phys.~Rev.~A}}        % Physical Review A: General Physics
+\def\prb{{\it Phys.~Rev.~B}}        % Physical Review B: Solid State
+\def\prc{{\it Phys.~Rev.~C}}        % Physical Review C
+\def\prd{{\it Phys.~Rev.~D}}        % Physical Review D
+\def\pre{{\it Phys.~Rev.~E}}        % Physical Review E
+\def\prl{{\it Phys.~Rev.~Lett.}}    % Physical Review Letters
+\def\pasa{{\it PASA}}               % Publications of the Astron. Soc. of Australia
+\def\pasp{{\it PASP}}               % Publications of the ASP
+\def\pasj{{\it PASJ}}               % Publications of the ASJ
+\def\rmxaa{{\it Rev. Mexicana Astron. Astrofis.}}%
+                % Revista Mexicana de Astronomia y Astrofisica
+\def\qjras{{\it QJRAS}}             % Quarterly Journal of the RAS
+\def\skytel{{\it S\&T}}             % Sky and Telescope
+\def\solphys{{\it Sol.~Phys.}}      % Solar Physics
+\def\sovast{{\it Soviet~Ast.}}      % Soviet Astronomy
+\def\ssr{{\it Space~Sci.~Rev.}}     % Space Science Reviews
+\def\zap{{\it ZAp}}                 % Zeitschrift fuer Astrophysik
+\def\nat{{\it Nature}}              % Nature
+\def\iaucirc{{\it IAU~Circ.}}       % IAU Cirulars
+\def\aplett{{\it Astrophys.~Lett.}} % Astrophysics Letters
+\def\apspr{{\it Astrophys.~Space~Phys.~Res.}}
+                % Astrophysics Space Physics Research
+\def\bain{{\it Bull.~Astron.~Inst.~Netherlands}} 
+                % Bulletin Astronomical Institute of the Netherlands
+\def\fcp{{\it Fund.~Cosmic~Phys.}}  % Fundamental Cosmic Physics
+\def\gca{{\it Geochim.~Cosmochim.~Acta}}   % Geochimica Cosmochimica Acta
+\def\grl{{\it Geophys.~Res.~Lett.}} % Geophysics Research Letters
+\def\jcp{{\it J.~Chem.~Phys.}}      % Journal of Chemical Physics
+\def\jgr{{\it J.~Geophys.~Res.}}    % Journal of Geophysics Research
+\def\jqsrt{{\it J.~Quant.~Spec.~Radiat.~Transf.}}
+                % Journal of Quantitiative Spectroscopy and Radiative Transfer
+\def\memsai{{\it Mem.~Soc.~Astron.~Italiana}}
+                % Mem. Societa Astronomica Italiana
+\def\nphysa{{\it Nucl.~Phys.~A}}   % Nuclear Physics A
+\def\physrep{{\it Phys.~Rep.}}   % Physics Reports
+\def\physscr{{\it Phys.~Scr}}   % Physica Scripta
+\def\planss{{\it Planet.~Space~Sci.}}   % Planetary Space Science
+\def\procspie{{\it Proc.~SPIE}}   % Proceedings of the SPIE
+
+
+
+\def\kepler{{\it Kepler~}}
+\def\mearth{M$_\oplus$}
+\def\rearth{R$_\oplus$}
+\def\msun{{M$_\odot$}}
+%
+% \lta and \gta produce > and < signs with twiddle underneath
+%
+\def\spose#1{\hbox to 0pt{#1\hss}}
+\def\lta{\mathrel{\spose{\lower 3pt\hbox{$\mathchar"218$}}
+     \raise 2.0pt\hbox{$\mathchar"13C$}}}
+\def\gta{\mathrel{\spose{\lower 3pt\hbox{$\mathchar"218$}}
+     \raise 2.0pt\hbox{$\mathchar"13E$}}}
+
+% also mine!
+\def\gsim{\,\lower3pt\hbox{$\sim$}\llap{\raise2pt\hbox{$>$}}\,}
+\def\lsim{\,\lower3pt\hbox{$\sim$}\llap{\raise2pt\hbox{$<$}}\,}
+
+% marina
+\newcommand{\beqas}{\begin{eqnarray*}}
+\newcommand{\eeqas}{\end{eqnarray*}}
+\newcommand{\beqa}{\begin{eqnarray}}
+\newcommand{\eeqa}{\end{eqnarray}}
+\newcommand{\xdelta}{\ensuremath{x^\Delta}}
+\newcommand{\comment}[1]{}
+
+\def\xdeltax#1{\ensuremath{x^{\Delta #1}}}
+
+\newcommand{\epss}{\ensuremath{\varepsilon}}
+\newcommand{\epsz}{\ensuremath{\varepsilon^0}}
+\newcommand{\epstild}{\ensuremath{\tilde{\varepsilon}}}
+\newcommand{\psf}{\ensuremath{P\!S\!F\!}}
+\newcommand{\SN}{S\!N}
+\newcommand{\VS}{V\!S}
+\newcommand{\KBO}{K\!B\!O\!}
+\newcommand{\avg}[1]{\left< #1 \right>} % for average
+
+\newlength{\boxwidth}
+\newlength{\boxdown}
+\newlength{\boxheight}
+
+\begin{document}
+
+% Proposal Cover Page - Fastlane
+%\centerline{\bf A. Cover Page}
+%\addcontentsline{toc}{part}{A.\hspace {1em}Cover Page}
+
+% Project Summary
+\setcounter{page}{1}
+\input{summary.tex}
+\vfill
+\break
+
+% Table of Contents - Autogenerated
+
+% 15 pages
+\setcounter{page}{1}
+%\centerline{\bf Project Description}
+\input{description.tex}
+\vfill
+\break
+
+% N pages
+\setcounter{page}{1}
+\bibliographystyle{apj}
+\bibliography{refs,acb_refereed,acb_non-refereed,tides}
+\vfill
+\eject
+
+% Biographical sketches - 2 pages per-person
+
+% Current and Pending Support - Generate mine here
+
+% Budget - Front office
+
+% Budget Justification - 
+\setcounter{page}{1}
+\centerline{\bf Budget Justification}
+\input{budget.tex}
+\vfill
+\eject
+
+
+\end{document}
