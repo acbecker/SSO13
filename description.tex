@@ -696,7 +696,7 @@ approximately 20 after 32 transits (Figure~\ref{fig-marg}).
 \smallskip
 
 We have examined the KOI list and produced a preliminary target list. Suitable objects have published values for $T$, $b$ XXX, $R_*/a$ and $R_p$, and have a mass estimate between 0.7 and 1.4 \msun, i.e. FGK stars. These cuts left
-890.  We expect characterization of these host stars to improve rapidly, and will apply relevant models, e.g. the \cite{Torres08} stellar relation models, to poorly constrained systems to maximize the number of systems we can analyze. At the same time we expect some false positives to be identified, too. We therefore expect to analyze about 1000 KOIs.
+890.  We expect characterization of these host stars to improve rapidly, and will apply relevant models, e.g. the \cite{Torres10} stellar relation models, to poorly constrained systems to maximize the number of systems we can analyze. At the same time we expect some false positives to be identified, too. We therefore expect to analyze about 1000 KOIs.
 
 \medskip
 {\centerline{\ub{\sc Computational Requirements}}}
@@ -765,7 +765,7 @@ models for $Q$($R$), the tidal $Q$ as a function of planetary radius.
 First we will use the same differences as in the pilot study, but we
 will also consider a three--tiered model, in which intermediate mass
 planets have intermediate $Q$s.  Neptune, and possible even Saturn,
-have a $Q$ value of $10^4$ \citep{ZhangHamliton08,Lainey12}, and hence
+have a $Q$ value of $10^4$ \citep{ZhangHamilton08,Lainey12}, and hence
 we must consider this possibility, too.  This also introduces a new
 radius cut--off, $R_{mid}$, which we will allow to move from 2 to
 5~\rearth.  The $Q$ range for these systems will have values between
@@ -781,10 +781,10 @@ The examples in Figs.~\ref{fig:compareQ}--\ref{fig:emin} used one
 tidal model, in which the lag angle between the tidal bulge and the
 perturber is constant regardless of frequency
 \citep[e.g.][]{GoldreichSoter66,Jackson08}.  Another popular model
-assumes that lag angle is instead a function of frequency
+assumes that the lag angle is instead a function of frequency
 \citep[e.g.][]{Hut81,Matsumura10}.  We will also employ this model
 with the same ranges as described above, and relating $Q$ to the time
-lag $tau$ as $Q = 1/n\tau$, where $n$ is the mean motion
+lag $\tau$ as $Q = 1/n\tau$, where $n$ is the mean motion
 \citep[e.g.][]{Correia12}.  In reality there is no general conversion between
 the two, but this relation is in common use.  Thus, our work may also
 shed light on the frustrating ambiguity in determining the most
@@ -794,7 +794,7 @@ appropriate equilibrium tidal model.
 {\centerline{\ub{\sc Task B: Multi--planet Systems}}}
 \smallskip
 
-Many of the \kepler systems are multiple.  Its likely that many
+Many of the \kepler systems are multiple.  It's likely that many
 singletons are as well, but with non--transiting companions.  Mutual
 gravitational interactions between planets can maintain an
 eccentricity, even in the presence of strong tidal damping
@@ -808,7 +808,7 @@ damping.
 Ideally these simulations would couple an N--body integrator to the
 tidal models, as the former can be very accurate.  Unfortunately the
 timescales are so long that such an approach is intractable.  We
-therefore must use classical secular theory in which the evolution for
+therefore must use classical secular theory in which the evolution over
 Gyr can be computed in seconds.  The second order theory is
 insufficient for many of the cases we consider, which will have
 eccentricities up to 0.9.  Therefore, we will use higher order
@@ -845,7 +845,7 @@ system break--up \citep[e.g.][]{Gomes05}.
 Additionally, it is likely that many of the close--in systems cannot
 have initial eccentricities comparable to the non--tidally--evolved
 planets because they would be unstable.  In those cases, the orbits
-are probably close to their primordial morphologies and experience
+are probably close to their primordial morphologies and experienced
 migration during the protoplanetary disk phase.  Recently
 \cite{DawsonMurrayClay13} showed compelling evidence that high
 metallicity stars are more likely to host eccentric planets.
@@ -879,7 +879,7 @@ increment of 0.05 and apply these to the configurations of Task A and
 Task B.  For the XUV flux, we will use the empirical relationship
 derived in \cite{Ribas05} for G dwarfs.  While this formulation is not
 strictly valid for F and K dwarfs, analogous studies do not exist for
-those spectral types, and the Ribas model is probably a close
+those spectral types, and the Ribas \etal model is probably a close
 approximation.  The Watson and Ribas models are already in
 \texttt{eqtide} \citep{Barnes13}, and hence minimal code improvements
 are required for this step.  This final theoretical task requires
