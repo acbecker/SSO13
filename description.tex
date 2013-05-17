@@ -103,7 +103,7 @@ disk of its parent star, and to first order is:
 \begin{equation}\label{eq:duration}
 T = \frac{2 \sqrt{R_*^2 - b^2}}{v},
 \end{equation}
-where $R_*$ is the radius of the star, $b$ is the impact parameter,
+where $R_*$ is the radius of the star, $b$ is the minimum impact parameter,
 and $v$ is the instantaneous velocity of the planet. On a circular
 orbit, $v$ is constant and we expect
 \begin{equation}\label{eq:durcirc}
@@ -143,7 +143,15 @@ then we find that
 %e_{min} = \begin{dcases} \frac{\Delta'^2 - 1}{\Delta'^2 + 1} & T_c < T \\ \frac{1 - \Delta'^2}{1 + \Delta'^2} & T_c > T \end{dcases}
 e_{min} = \left|\frac{\Delta'^2 - 1}{\Delta'^2 + 1}\right|
 \end{equation}
-is the minimum eccentricity permitted by transit data.  
+is the minimum eccentricity permitted by transit data.  Note that in
+the ratio $T/T_c$, the minimum impact parameter cancels out, leaving
+$e_{min}$ a function of 4 parameters: $P$, $a$, $v$, and $R_*$.  We
+will use the \kepler lightcurves to constrain $P$ and $v/R_*$, meaning
+that we must determine though other means the semi--major axis and
+stellar radius.  The semi--major axis, and also the reference circular
+velocity, may be determined through the host star mass, making it
+critical that we are able to estimate the stellar mass and radius
+reliably.
 
 \medskip
 {\centerline{\ub{\sc The Boundary Between Rocky and Gaseous Planets}}}
@@ -368,6 +376,35 @@ constrain system parameters and a validation of this technique using a
 known exoplanet system, and outline how we will fold these results
 into tidal theory to understand $R_{crit}$, $Q_{r}$ and $Q_{g}$.
 
+We will use the quadratic limb--darkened model
+of \cite{2002ApJ...580L.171M} to describe the lightcurves.  We
+emphasize that at its core, the Mandel \& Agol model is a purely
+geometric one that describes an opaque disk (the planet) occulting a
+limb--darkened stellar disk.  Many applications of this technique use
+planetary orbital parameters such as semi--major axis and inclination
+as inputs to the model, along with frequent assumptions of zero
+eccentricity, {\it but this need not be the case}.  Instead we use a
+purely geometric implementation of \cite{2002ApJ...580L.171M} whose
+only assumption is that the planet has constant transverse velocity
+during transit.  This generalization is especially important for our
+proposal, as we need to compare our observed model with one that would
+be observed in the zero--eccentricity limit.
+
+The main observable in this model is the time it takes the planet to
+cross the stellar equator, $\tau$ (this may also be thought of as a
+measure of the transverse velocity, $v = R_*/\tau$).  This allows us
+to cast $e_{min}$ in terms of $\tau$, period $P$, and the (unknown)
+ratio of the planet's semi--major axis to stellar radius.  As
+mentioned previously, all factors of the minimum impact parameter
+cancel out, which is fortuitous as this is typically the least
+constrained of all system parameters, especially for the
+long--cadence \kepler data.  While the uncertainty in impact parameter
+will affect our knowledge of the other system parameters through
+covariance, this uncertainty may be marginalized over by examining
+posterior distributions, which drives us to use Markov--Chain Monte
+Carlo (MCMC) modeling in our analysis, described below.
+
+
 \medskip
 {\centerline{\ub{\sc Transit Model}}}
 \smallskip
@@ -441,13 +478,6 @@ parameters:
 e_{min} & = & \left| \frac{P^{2} - 4 \pi^{2} \alpha^{2} \tau^{2}}{P^{2} + 4 \pi^{2} \alpha^{2} \tau^{2}} \right|.
 \label{eq-emin2}
 \end{eqnarray}
-All factors of the minimum impact parameter $\beta_0$ cancel out,
-which is fortuitous as this is typically the least constrained of all
-system parameters, especially for the long--cadence \kepler data.
-While the uncertainty in $\beta_0$ will affect our knowledge of the
-other system parameters, this uncertainty may be marginalized over by
-examining the posterior distributions, which drives us to use
-Markov--Chain Monte Carlo (MCMC) modeling.
 
 Equation~\ref{eq-emin2} indicates that $e_{min}$ is purely a function
 of the fitted parameter $\tau$, the derived period $P$, and an
@@ -604,7 +634,7 @@ pair, the likelihood was determined through:
 where $\kappa_i$ is a kernel density estimate of each posterior
 distribution $t_{0;i}$, which is evaluated at the predicted time of
 transit $t_0 + P * (i-1)$.  By modeling the times of transit
-separately in the original MCMC analysis, we open the possibility of
+separately in the original MCMC analysis, we allow the possibility of
 using a more complex ephemeris model at this stage of the analysis,
 such as may be expected from transit timing variations
 \citep{2005MNRAS.359..567A,2005Sci...307.1288H}.  The results of this
