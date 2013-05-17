@@ -33,7 +33,7 @@ candidate, and hence we will perform state--of--the--art modeling of
 all relevant \kepler transits.  To optimize our sensitivity to these
 effects, we will examine only those systems with short periods (less
 than 10 days) and having planetary radii near the anticipated boundary
-(less than 4 \rearth).  Our proposed research offers the best route to
+(less than 10 \rearth).  Our proposed research offers the best route to
 determine which \kepler candidates are rocky, independent of mass
 measurements, which is vital information in
 \kepler's quest to discover potentially habitable planets orbiting G
@@ -41,11 +41,11 @@ dwarfs.  In summary:
 
 \par\smallskip\noindent
 \centerline{
-  \begin{minipage}[c]{0.9\textwidth} {\bf We propose to use the
-    observed minimum eccentricity and theory of tidal dynamics to
+  \begin{minipage}[c]{0.95\textwidth} {\bf We propose to use the
+    observed minimum eccentricity and the theory of tidal dynamics to
     determine the critical radius between rocky and gaseous exoplanets
-    $R_{crit}$, constrain their tidal quality factors ($Q_r$ and
-    $Q_g$, respectively), and understand the efficiency of hydrogen
+    $R_{crit}$, to constrain their tidal quality factors ($Q_r$ and
+    $Q_g$, respectively), and to understand the efficiency of hydrogen
     loss for close--in, small, gaseous exoplanets, using \kepler
     lightcurves.}  \end{minipage} }
 \par\smallskip\noindent
@@ -62,8 +62,8 @@ dwarfs.  In summary:
 Tidal dissipation in celestial bodies in extremely challenging to
 measure
 \citep{GoldreichSoter66,Hut81,AksnesFranklin01,Jackson08,Jackson09,Lainey12}
-due to 1) the dearth of known worlds in highly dissipative
-configurations, 2) the long timescales involved (Gyrs), and 3) the
+due to the dearth of known worlds in highly dissipative
+configurations, the long timescales involved (Gyrs), and the
 intractability of derivations based on first principles.  However,
 the \kepler space telescope has now discovered thousands of exoplanet
 candidates
@@ -92,8 +92,7 @@ and stellar properties can be known to sufficient accuracy.  The key
 is to recognize that gaseous bodies will tidally circularize more
 slowly than rocky planets, and may still retain non--zero
 eccentricities after Gyrs.  While transit data cannot measure the
-eccentricity \citep{Barnes07}, they {\it can} provide a lower limit,
-which we outline below.
+eccentricity \citep{Barnes07}, they {\it can} provide a lower limit.
 
 \medskip
 {\centerline{\ub{\sc The Transit Duration Deviation (TDD)}}}
@@ -132,15 +131,17 @@ deviation from the circular velocity is at least as large as the
 measured velocity, and hence $e$ must be at least a certain value. If
 we define the transit duration deviation, $\Delta$, as
 \begin{equation}\label{eq:tdd}
-\Delta = \begin{dcases} \frac{T-T_c}{T_c} & T_c < T \\ \frac{T_c - T}{T_c} & T_c > T, \end{dcases}
+%\Delta = \begin{dcases} \frac{T-T_c}{T_c} & T_c < T \\ \frac{T_c - T}{T_c} & T_c > T, \end{dcases}
+\Delta = \left|\frac{T-T_c}{T_c}\right|
 \end{equation}
-and then for ease of notation,
-\begin{equation}\label{eq:deltaprime}
-\Delta' \equiv \begin{cases} \Delta + 1 & T_c < T \\ \Delta - 1 & T_c > T, \end{cases}
-\end{equation}
+and for ease of notation, $\Delta' \equiv T/T_c$,
+%\begin{equation}\label{eq:deltaprime}
+%\Delta' \equiv \begin{cases} \Delta + 1 & T_c < T \\ \Delta - 1 & T_c > T, \end{cases}
+%\end{equation}
 then we find that
 \begin{equation}\label{eq:emin}
-e_{min} = \begin{dcases} \frac{\Delta'^2 - 1}{\Delta'^2 + 1} & T_c < T \\ \frac{1 - \Delta'^2}{1 + \Delta'^2} & T_c > T \end{dcases}
+%e_{min} = \begin{dcases} \frac{\Delta'^2 - 1}{\Delta'^2 + 1} & T_c < T \\ \frac{1 - \Delta'^2}{1 + \Delta'^2} & T_c > T \end{dcases}
+e_{min} = \left|\frac{\Delta'^2 - 1}{\Delta'^2 + 1}\right|
 \end{equation}
 is the minimum eccentricity permitted by transit data.  
 
@@ -169,7 +170,7 @@ density of 1 g/cm$^3$ and tidal $Q$ of $10^6$ (i.e. a 3.8~\mearth~
 about 1 Gyr; the mini--Neptune does not evolve significantly, even
 after 10 Gyr.  This discrepancy is evident despite the fact that
 equilibrium tidal models predict that evolution scales as mass to the
-3/2 power and radius to the fifth power -- instead, the large
+3/2 power and radius to the $5^{th}$ power -- instead, the large
 difference between the $Q$s dominates.  We therefore hypothesize that
 the TDD may be able to identify the radius that separates gaseous
 planets from rocky planets.
@@ -256,9 +257,18 @@ days. \textit{Despite the order of magnitude ranges for each physical
     \includegraphics[width=\textwidth]{figures/compare.emin2.ps}
   \end{minipage}\hfill
   \begin{minipage}[c]{0.6\textwidth}
-    \caption{Average minimum eccentricities for transiting
-  exoplanets as a function of period and radius.  The solid curve and filled squares represent planets with radii below the selected critical radius of 2~\rearth, while the dashed curve and open circles are larger planets. The lines are the relationships for the simulated data set, symbols for KOIs. The latter all have values near 0.3--0.4 days regardless of period, whereas model gaseous planets have
-  non--zero eccentricities if the period is larger than 1.5 days, and rocky planets at larger than 4. If tidal dissipation is a function of radius, it should be detectable. However, tidal circularization appears not to be present in the \kepler~data, in sharp contradiction with the radial velocity exoplanet sample.  Publicly available fits to \kepler~data are therefore inadequate to identify $R_{crit}$ and tidal $Q$s, and a state--of--the--art statistical re--analysis of \kepler~photometry is required to determine these fundamental parameters.}
+
+    \caption{Average minimum eccentricities for transiting exoplanets
+  as a function of period and radius.  The solid curve and filled
+  squares represent planets with radii below the selected critical
+  radius of 2~\rearth, while the dashed curve and open circles are
+  larger planets. The lines are the relationships for the simulated
+  data set, symbols for KOIs. The latter all have values near 0.3--0.4
+  days regardless of period, whereas model gaseous planets have
+  non--zero eccentricities if the period is larger than 1.5 days, and
+  rocky planets at larger than 4. If tidal dissipation is a function
+  of exoplanet radius, it should be detectable. }
+
     \label{fig:emin}
     \hspace*{\fill}  
     \hrule
@@ -278,7 +288,7 @@ Explorer\footnote{http://planetquest.jpl.nasa.gov/kepler}.  Nearly all
 the observed data are above the predictions. There are two possible
 explanations for this discrepancy: 1) The theory is wrong, or 2) the
 reported model parameters are of poor quality.  We outline limits of
-the theory below.
+the theory next.
 
 \medskip
 {\centerline{\ub{\sc Non--Tidal Effects}}}
@@ -316,11 +326,19 @@ negligible, but to properly treat the problem, planetary mass loss and
 planet--planet perturbations must be considered.  On the theoretical
 side, the path forward to determine $R_{crit}$, $Q_{r}$ and $Q_{g}$ is
 clear: We must first model the full range of plausible values for
-these three parameters to calculate $\avg{e_{min}}$($R_p,P$).  We must
-then include the planet--planet interactions of multiple planet
-systems over the lifetimes of the systems.  Finally, we must
-incorporate mass loss, including the possibility that a mini--Neptune
-can become a super--Earth with its associated change in tidal $Q$.
+these three parameters to calculate $\avg{e_{min}}$($R_p,P$); include
+the planet--planet interactions of multiple planet systems over the
+lifetimes of the systems; and incorporate mass loss, including the
+possibility that a mini--Neptune can become a super--Earth with its
+associated change in tidal $Q$.
+
+In summary, the effects of tidal circularization appear not to be
+present in publicly available fits to the \kepler data, in sharp
+contradiction with the radial velocity exoplanet sample \citep{XXX}.
+These fits are therefore inadequate to identify $R_{crit}$ and tidal
+$Q$s, meaning a state--of--the--art statistical re--analysis
+of \kepler photometry is required to determine these fundamental
+parameters.
 
 \bigskip
 \centerline{\bf III. Technical Approach and Methodology}
@@ -346,9 +364,9 @@ can become a super--Earth with its associated change in tidal $Q$.
 
 We describe below our technical approach to the re--analysis of Kepler
 data, including simulations to understand how we will be able to
-constrain system parameters and validation of this technique using a
-known exoplanet system, and how we will fold these results into tidal
-theory to understand $R_{crit}$, $Q_{r}$ and $Q_{g}$.
+constrain system parameters and a validation of this technique using a
+known exoplanet system, and outline how we will fold these results
+into tidal theory to understand $R_{crit}$, $Q_{r}$ and $Q_{g}$.
 
 \medskip
 {\centerline{\ub{\sc Transit Model}}}
@@ -417,8 +435,7 @@ T & = & 2 * \tau \sqrt{1 - \beta_0^2}.
 \label{eq-dt}
 \end{eqnarray}
 
-Combining Equations~\ref{eq:tdd}--\ref{eq:emin} with
-Equation~\ref{eq-dt}, we express $e_{min}$ in terms of our model
+Combining Equations~\ref{eq:tdd},\ref{eq:emin} and \ref{eq-dt} we express $e_{min}$ in terms of our model
 parameters:
 \begin{eqnarray}
 e_{min} & = & \left| \frac{P^{2} - 4 \pi^{2} \alpha^{2} \tau^{2}}{P^{2} + 4 \pi^{2} \alpha^{2} \tau^{2}} \right|.
@@ -430,7 +447,7 @@ system parameters, especially for the long--cadence \kepler data.
 While the uncertainty in $\beta_0$ will affect our knowledge of the
 other system parameters, this uncertainty may be marginalized over by
 examining the posterior distributions, which drives us to use
-Markov--Chain Monte Carlo (MCMC) modeling (described below).
+Markov--Chain Monte Carlo (MCMC) modeling.
 
 Equation~\ref{eq-emin2} indicates that $e_{min}$ is purely a function
 of the fitted parameter $\tau$, the derived period $P$, and an
@@ -439,12 +456,12 @@ stellar radius) $\alpha$.  The uncertainty in $e_{min}$ scales as
 below for all 3 parameters:
 
 \begin{eqnarray}
-\Xi & \equiv & \frac{16 \pi^{2} \alpha^{2} \tau^{2} P^{2}}{16 \pi^{4} \alpha^{4} \tau^{4} - P^{4}} \\
-\frac{\delta e_{min}}{\delta \xi} & = & \frac{\Xi~e_{min}}{\xi} ~~~~~ \left[\xi = \tau; P; \alpha \right].\nonumber
+\frac{\delta e_{min}}{\delta \xi} & = & \frac{\Xi~e_{min}}{\xi} ~~~~~ \left[\xi = \tau; P; \alpha \right] \\
+{\rm where}~~~~~\Xi & \equiv & \frac{16 \pi^{2} \alpha^{2} \tau^{2} P^{2}}{16 \pi^{4} \alpha^{4} \tau^{4} - P^{4}}.\nonumber
 \label{eq-emin3}
 \end{eqnarray}
 In the limit of a circular orbit ($P \rightarrow 2 \pi \alpha \tau$),
-$\Xi~e_{min}$ = 1.
+the product $\Xi~e_{min}$ = 1.
 
 \medskip
 {\centerline{\ub{\sc KOI 701.01}}}
@@ -510,44 +527,47 @@ lengths of $\sim 100$, requiring a total number of steps per chain of
 $10^6$.  We used burn--in times having 10\% the requested number of
 steps, which are then discarded before the final chain commences.
 
-For each transit, we evaluated the joint and marginalized
-distributions of fitted parameters $\zeta$ and $\tau$.
-Figure~\ref{fig-joint} demonstrates how the joint distribution evolves
-from fitting 1 transit (dashed contours, which represent 68.3\%,
-95.5\%, and 99.7\% confidence limits), to fitting 32 transits (solid
-contours, at the same confidence limits), for KOI 701.01.  We then
-marginalized over all other parameters, to examine the per--parameter
-confidence limits.  Figure~\ref{fig-marg} demonstrates how our
-marginalized constraints on $\zeta$ (left panel) and $\tau$ (right
-panel) evolved as a function of the number of transits used in the fit
-for 701.01.  The solid line provides the maximum of the posterior
-distribution, and the dashed line indicates its median.  The shaded
-area encloses 68.3\% of the distribution.  In this manner, we find a
-maximum likelihood value of $\tau = 0.051_{0.002}^{0.003}$.  This may
-be contrasted to $\tau = 0.049 \pm 0.003 $ derived from
-reported \cite{2013arXiv1304.7387B} parameters, where they used 171
-transits.  For completeness, we note our confidence limits on $\zeta =
-0.0182_{0.0003}^{0.0006}$ vs the \cite{2013arXiv1304.7387B} result
-$\zeta = 0.0188 \pm 0.0003$.
+%For each transit, we evaluated the joint and marginalized
+%distributions of fitted parameters $\zeta$ and $\tau$.
+%
+%Figure~\ref{fig-joint} demonstrates how the joint distribution evolves
+%from fitting 1 transit (dashed contours, which represent 68.3\%,
+%95.5\%, and 99.7\% confidence limits), to fitting 32 transits (solid
+%contours, at the same confidence limits), for KOI 701.01.
+%
+%We then marginalized over all other parameters, to examine the
+For each transit, we marginalized over all other parameters, to
+examine the per--parameter confidence limits.  Figure~\ref{fig-marg}
+demonstrates how our marginalized constraints on $\tau$ (left panel)
+and $\zeta$ (center panel) evolved as a function of the number of
+transits used in the fit for 701.01.  The solid line provides the
+maximum of the posterior distribution, and the dashed line indicates
+its median.  The shaded area encloses 68.3\% of the distribution.  In
+this manner, we find a maximum likelihood value of $\tau =
+0.051_{0.002}^{0.003}$.  This may be contrasted to $\tau = 0.049 \pm
+0.003 $ derived from reported \cite{2013arXiv1304.7387B} parameters,
+where they used 171 transits.  For completeness, we note our
+confidence limits on $\zeta = 0.0182_{0.0003}^{0.0006}$ vs
+the \cite{2013arXiv1304.7387B} result $\zeta = 0.0188 \pm 0.0003$.
 
 % tau 32 0.0508 - 0.0023 + 0.0026
 % zeta 32 0.01821 - 0.00029 + 0.0006
 
-\begin{figure*}[t] 
-  \begin{minipage}[c]{0.47\textwidth}
-    \includegraphics[width=\textwidth]{figures/joint.eps}
-  \end{minipage}\hfill
-  \begin{minipage}[c]{0.5\textwidth}
-    \caption{The joint distribution of $\tau$ vs. $\zeta$ for KOI
-      701.01.  The {\it dashed} lines show the distribution when
-      fitting 1 transit, with contours at the 68.3\%, 95.5\%, and
-      99.7\% confidence limits.  The {\it solid} lines show the
-      distribution when fitting 32 transits simultaneously.}
-    \label{fig-joint}
-    \hspace*{\fill}  
-    \hrule
-  \end{minipage}
-\end{figure*}
+%\begin{figure*}[t] 
+%  \begin{minipage}[c]{0.47\textwidth}
+%    \includegraphics[width=\textwidth]{figures/joint.eps}
+%  \end{minipage}\hfill
+%  \begin{minipage}[c]{0.5\textwidth}
+%    \caption{The joint distribution of $\tau$ vs. $\zeta$ for KOI
+%      701.01.  The {\it dashed} lines show the distribution when
+%      fitting 1 transit, with contours at the 68.3\%, 95.5\%, and
+%      99.7\% confidence limits.  The {\it solid} lines show the
+%      distribution when fitting 32 transits simultaneously.}
+%    \label{fig-joint}
+%    \hspace*{\fill}  
+%    \hrule
+%  \end{minipage}
+%\end{figure*}
 
 
 \begin{figure*}[t] 
@@ -563,8 +583,7 @@ $\zeta = 0.0188 \pm 0.0003$.
   $\zeta$ (center panel), and period $P$ (right panel) as a function
   of the number of transits being used, for KOI 701.01.  For each
   transit $n \leq 32$ we use {\it all} data up to and including
-  transit $n$ to constrain $\zeta$ and $\tau$ (along with $\beta_0^2$
-  and times of transit $t_{0;i=1...n}$).  The {\it solid} line
+  transit $n$.  The {\it solid} line
   represents the maximum of the posterior distribution, while the {\it
   dashed} line indicates its median.  The shaded area contains 68.3\%
   of the posterior samples.}
@@ -645,21 +664,20 @@ magnitude bins, using the precisions in parts--per--million (ppm)
 given on the \kepler calibration
 webpage \footnote{http://keplergo.arc.nasa.gov/CalibrationSN.shtml}.
 We evaluate each lightcurve separately for magnitude 8/10/12/14
-objects, adding a random contribution of amplitude 11.3/29/80/296 ppm
-(respectively) to each datapoint as generated above.  We do not
-include red noise, or other transient gaps and features known to exist
-in the \kepler data.  We then model these data using the geometric
-parameterization.  Figure~\ref{fig-dtau} outlines how our
-signal--to--noise on $\tau$ scales with the system brightness and
-transit depth {\it after fitting 10 transits only} (due to
+objects, adding a random draw from a Gaussian with widths
+11.3/29/80/296 ppm (respectively) to each datapoint as generated
+above.  We do not include red noise, or other transient gaps and
+features known to exist in the \kepler data.  We then model these data
+using our geometric parameterization.  Figure~\ref{fig-dtau} outlines
+how our signal--to--noise on $\tau$ scales with the system brightness
+and transit depth {\it after fitting 10 transits only} (due to
 computational constraints).  We are able to recover $\tau$ to better
 than ten percent for all transits deeper than 0.5\% down to 14$^{th}$
-magnitude; for all transits deeper than 0.1\% down to 12$^{th}$; for
-all transits deeper than 0.05\% down to 10$^{th}$; and for all
-transits deeper than 0.01\% down to 8$^{th}$.  This analysis is
-consistent with our results from KOI 701.01, where the host star's
-magnitude is 13.6, the transit depth is 0.04\%, and measured S/N in
-$\tau$ is $\sim$ 7.8 after modeling 10 transits:
+magnitude; deeper than 0.1\% down to 12$^{th}$ mag; deeper than 0.05\%
+down to 10$^{th}$ mag; and deeper than 0.01\% down to 8$^{th}$ mag.
+This analysis is consistent with our results from KOI 701.01, where
+the host star's magnitude is 13.6, the transit depth is 0.04\%, and
+measured S/N in $\tau$ is $\sim$ 7.8 after modeling 10 transits:
 $0.0479_{0.0049}^{0.0073}$.  Figure~\ref{fig-dtau} predicts a S/N of
 5--6.  Note the measured precision in $\tau$ increases to a S/N of
 approximately 20 after 32 transits (Figure~\ref{fig-marg}).
@@ -702,25 +720,30 @@ We have examined the KOI list and produced a preliminary target list. Suitable o
 {\centerline{\ub{\sc Computational Requirements}}}
 \smallskip
 
-Using KOI 701.01 as a benchmark, we find a roughly quadratic
-relationship for the total {\tt emcee} computation time vs the number
-of transits: $time(n) = -12.5 + 32.2 \times n + 11.9 \times n^2$
-seconds (on a single 2.13 GHz core).  This relationship was
-established using a fixed number of 100 burn--in and 1000 ``final''
-steps for each of $2 \times n + 6$ walkers (i.e. 2 walkers for each
-parameter in the model).  If we scale these chains up to $10^6$ total
-steps, which should yield effective chain lengths of $\sim 10^4$, we
-find a linear relationship in the computation time required to reach
-$10^6$ steps: $time_{10^6}(n) = -1105 + 5943 \times n$ seconds.  For a
-5--day period system having $\sim$ 300 transits over the assumed
-17--quarter operational lifetime of \kepler, this comes out to
-approximately 21 CPU--days of analysis.  The {\tt emcee} code is
-natively able to use multiprocessing capabilities, making this trivial
-to implement on a multi--core system.  However, with $\sim 1000$
-systems on our analysis path, this will require $\sim 60$ CPU--years
-of computation, requiring the use of NASA's High-End Computing (HEC)
-facilities.  We will also make use of the local {\tt Hyak} compute
-cluster when it is available.
+%Using KOI 701.01 as a benchmark, we find a roughly quadratic
+%relationship for the total {\tt emcee} computation time vs the number
+%of transits: $time(n) = -12.5 + 32.2 \times n + 11.9 \times n^2$
+%seconds (on a single 2.13 GHz core).  This relationship was
+%established using a fixed number of 100 burn--in and 1000 ``final''
+%steps for each of $2 \times n + 6$ walkers (i.e. 2 walkers for each
+%parameter in the model).  If we scale these chains up to $10^6$ total
+%steps, which should yield effective chain lengths of $\sim 10^4$, we
+%find a linear relationship in the computation time required to reach
+%$10^6$ steps: $time_{10^6}(n) = -1105 + 5943 \times n$ seconds.  
+
+Using KOI 701.01 as a benchmark, we find a linear relationship in the
+computation time required to reach $10^6$ steps vs. the number of
+transits: $time_{10^6}(n) = -1105 + 5943 \times n$ seconds.
+%
+For a 5--day period system having $\sim$ 300 transits over the assumed
+17--quarter operational lifetime of \kepler, this comes out to $\sim$
+21 CPU--days of analysis.  The {\tt emcee} code is natively able to
+use multiprocessing capabilities, making this trivial to implement on
+a multi--core system.  However, with $\sim 1000$ systems on our
+analysis path, this will require $\sim 60$ CPU--years of computation,
+requiring the use of NASA's High-End Computing (HEC) facilities.  We
+will also make use of the local {\tt Hyak} compute cluster when it is
+available.
 
 \medskip
 {\centerline{\ub{\sc Data Interpretation}}}
@@ -773,9 +796,8 @@ radius cut--off, $R_{mid}$, which we will allow to move from 2 to
 0.7--1.4~\msun as we are interested in FGK stars.  \rory{A sentence on
 the age distribution}. Finally, we will keep the initial eccentricity
 distribution consistent with that of more distant exoplanets.
-Ultimately we expect to run several hundred of these suites of
-systems, which is easily tractable on a modern multi--core
-workstation.
+Ultimately we expect to run several hundred suites of systems, easily
+do--able on a modern multi--core workstation.
 
 The examples in Figs.~\ref{fig:compareQ}--\ref{fig:emin} used one
 tidal model, in which the lag angle between the tidal bulge and the
@@ -850,8 +872,7 @@ migration during the protoplanetary disk phase.  Recently
 \cite{DawsonMurrayClay13} showed compelling evidence that high
 metallicity stars are more likely to host eccentric planets.
 Therefore, we will make two comparisons with the \kepler sample: the
-full set and the high metallicity set.  Although this decreases our
-statistical robustness, it may yield the most appropriate comparison.
+full set and the high metallicity set.
 
 \medskip
 {\centerline{\ub{\sc Task C: Atmospheric Mass Loss}}}
@@ -928,6 +949,8 @@ N-body simulation of 1 km planetesimal accretion
 \citep[e.g.][]{BarnesQuinn01,BarnesRaymond04,BarnesGreenberg06a,Barnes11,Barnes13}. 
 
 Co--I Agol...
+
+Co--I Hebb...
 
 \bigskip
 \centerline{\bf V. Relevance to NASA Programs}
@@ -1009,20 +1032,20 @@ all transits of all KOIs.  We will make these publicly available
 through a {\tt github} site specifically designed for this project.
 Our modeling software will also be released via {\tt github}.
 
-{\bf Year 2 (2015):} The second year is expected to begin with the
-MCMC analyses of the periods via times of transit, and transition to
-theoretical interpretation of the systems.  We will start with linear
-ephemeris models for all systems to estimate periods; for those
-systems where this model is insufficient, we will examine transit
-timing models with more complicated ephemerides.  We anticipate that
-this effort may result in the publication of 1 or more ancillary
-papers on the transit timings of the systems under study, with
-assistance from Agol on the interpretation of the results. During this
-year, Barnes will begin working with the graduate student on the
-theoretical aspects of the project. They will design and simulate the
-models described in Task A and publish a preliminary estimate of
-$R_{crit}$, $Q_g$, and $Q_r$. During this year we will also begin
-running simulations of multiplanet systems with tidal damping.
+{\bf Year 2 (2015):} The second year will begin with the MCMC analyses
+of the periods via times of transit, and transition to theoretical
+interpretation of the systems.  We will start with linear ephemeris
+models for all systems to estimate periods; for those systems where
+this model is insufficient, we will examine transit timing models with
+more complicated ephemerides.  We anticipate that this effort may
+result in the publication of ancillary papers on the transit timings
+of the systems under study, with assistance from Agol on the
+interpretation of the results. During this year, Barnes will begin
+working with the graduate student on the theoretical aspects of the
+project. They will design and simulate the models described in Task A
+and publish a preliminary estimate of $R_{crit}$, $Q_g$, and
+$Q_r$. During this year we will also begin running simulations of
+multiplanet systems with tidal damping.
 
 {\bf Year 3 (2016):} During the final year, we will finish all
 theoretical modeling, including the incorporation of mass loss.  We
