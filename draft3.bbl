@@ -281,6 +281,10 @@ Gelman, A.,  \& Rubin, D. 1992, Statistical Science, 7, 457
   et~al.}{2004}]{2004PhRvD..69j3501T}
 {Tegmark}, M., et~al. 2004, \prd, 69, 103501
 
+\bibitem[\protect\citeauthoryear{{Torres}, {Andersen}, \&
+  {Gim{\'e}nez}}{{Torres} et~al.}{2010}]{Torres10}
+{Torres}, G., {Andersen}, J.,  \& {Gim{\'e}nez}, A. 2010, \aapr, 18, 67
+
 \bibitem[\protect\citeauthoryear{{Valencia} et~al.}{{Valencia}
   et~al.}{2010}]{Valencia10}
 {Valencia}, D., {Ikoma}, M., {Guillot}, T.,  \& {Nettelmann}, N. 2010, \aap,
@@ -303,5 +307,9 @@ Gelman, A.,  \& Rubin, D. 1992, Statistical Science, 7, 457
 
 \bibitem[\protect\citeauthoryear{{Yelle}}{{Yelle}}{2004}]{Yelle04}
 {Yelle}, R.~V. 2004, \icarus, 170, 167
+
+\bibitem[\protect\citeauthoryear{{Zhang} \& {Hamilton}}{{Zhang} \&
+  {Hamilton}}{2008}]{ZhangHamilton08}
+{Zhang}, K.,  \& {Hamilton}, D.~P. 2008, \icarus, 193, 267
 
 \end{thebibliography}
