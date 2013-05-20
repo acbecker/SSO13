@@ -35,9 +35,7 @@ effects, we will examine only those systems with short periods (less
 than 10 days) and having planetary radii near the anticipated boundary
 (less than 10 \rearth).  Our proposed research offers the best route to
 determine which \kepler candidates are rocky, independent of mass
-measurements, which is vital information in
-\kepler's quest to discover potentially habitable planets orbiting G
-dwarfs.  In summary:
+measurements.  In summary:
 
 \par\smallskip\noindent
 \centerline{
@@ -81,18 +79,20 @@ While two qualitatively different models have emerged, the
 constant--phase--lag (CPL) and constant--time--lag (CTL) models
 \citep{Greenberg09}, both rely on this assumption of superposition,
 and neither has been rejected observationally.  Both models make a
-critical prediction that we will exploit in this proposal: The tidal
+critical prediction that we will exploit in this proposal: Tidal
 dissipation in rocky planets is orders of magnitude larger than in
 gaseous bodies.  This disparity implies that rocky planets will evolve
-much more rapidly than gaseous bodies and we expect rocky exoplanets
-to be tidally circularized on larger orbits than for gaseous bodies.
+much more rapidly than gaseous ones and we expect rocky exoplanets to
+be tidally circularized on larger orbits.  The key is to recognize
+that gaseous bodies will tidally circularize more slowly than rocky
+planets, and may still retain non--zero eccentricities after Gyrs.
+%
 As we show below, the canonical values for $Q_g$ of $10^6$ and $Q_r$
-of 100 should be measurable in the \kepler field, if the transit data
-and stellar properties can be known to sufficient accuracy.  The key
-is to recognize that gaseous bodies will tidally circularize more
-slowly than rocky planets, and may still retain non--zero
-eccentricities after Gyrs.  While transit data cannot measure the
-eccentricity \citep{Barnes07,Burke08,Ford08}, they {\it can} provide a lower limit.
+of 100 should be measurable, if the transit data and stellar
+properties can be known to sufficient accuracy.  While transit data
+cannot measure the
+eccentricity \citep{Barnes07,Burke08,2008ApJ...678.1407F}, they {\it
+can} provide a lower limit.
 
 \medskip
 {\centerline{\ub{\sc The Transit Duration Deviation (TDD)}}}
@@ -158,16 +158,16 @@ star mass, making it critical that we are able to estimate the stellar
 mass and radius reliably.
 
 As outlined in \cite{2008ApJ...678.1407F}, transit durations that are
-{\it less} than the circular duration may be plausibly due to a poorly
-constrained impact parameter, or eccentricity.  However, transit
+{\it less} than the circular duration may be due to a poorly
+constrained impact parameter or eccentricity.  However, transit
 durations that are {\it longer} than circular may only arise due to
 eccentricity.  For long cadence \kepler data, the impact parameter is
 typically the most poorly known of all model parameters, because its
 primary constraint comes from the ingress/egress durations, which are
 poorly resolved for small planets at a 30--minute cadence.  However,
-with now several hundred transits per system to (each poorly) resolve
-the ingress/egress, our KOI 701.01 analysis below suggests that the
-dependence of other model parameters on $b$ does not compromise our
+there are now several hundred transits per system to resolve
+ingress/egress.  Our KOI 701.01 analysis below suggests that the
+dependence of other model parameters on $b$ does not compromise the
 $e_{min}$ analysis, although we have not fully tested this at large
 impact parameter ($b \sim 1$).
 
@@ -196,9 +196,9 @@ and \cite{Matsumura10} showed that the observed
 radial--velocity--detected planets in tight orbits could have formed
 with eccentricities consistent with the more distant planets and were
 subsequently tidally damped in both the CPL and CTL framework.  If
-$e_{min} > 0$ then tides have not tidally damped the eccentricity,
-and, if we know the age of the system, then we can estimate the tidal
-$Q$ (or in the CTL model, the time lag factor).
+$e_{min} > 0$ then tides have not damped the eccentricity, and, if we
+know the age of the system, then we can estimate the tidal $Q$ (or in
+the CTL model, the time lag factor).
 
 As an example consider the two curves in Fig.~\ref{fig:compareQ}.  The
 line shows 10 Gyr of tidal evolution of a 2~\rearth~planet with a
@@ -276,14 +276,14 @@ $P > 4$ d. The transition occurs at 2~\rearth, which in this case is $R_{crit}$.
 
 However, \kepler data do not provide eccentricity, but rather the
 minimum eccentricity. We must therefore transform these simulations
-into a form that is directly comparable to an observable,
-e.g. $e_{min}$. In order to calculate $e_{min}$ from these synthetic data, we choose a random
+into a form that is directly comparable to an observable. In order to
+calculate $e_{min}$ from these synthetic data, we choose a random
 value for $\theta$ and calculate the velocity according to
-Eq.~\ref{eq:velocity}. We calculate the average minimum eccentricity,
+Eq.~\ref{eq:velocity}. We calculate the average minimum eccentricity
 $\avg{e_{min}}$ for our rocky and gaseous planets in 0.5 day orbital
-period intervals and plot $\avg{e_{min}}$ as a function of orbital period
-for different radii as solid lines in Fig.~\ref{fig:emin}. For $R <
-2$~\rearth, $\avg{e_{min}}
+period intervals and plot $\avg{e_{min}}$ as a function of orbital
+period for different radii as solid lines in Fig.~\ref{fig:emin}. For
+$R < 2$~\rearth, $\avg{e_{min}}
 \sim 0$ up to about a 4 day period. However, for larger radii,
 circular orbits are only guaranteed for periods less than about 2
 days. \textit{Despite the order of magnitude ranges for each physical
@@ -411,7 +411,7 @@ into tidal theory to understand $R_{crit}$, $Q_{r}$ and $Q_{g}$.
 We will use the quadratic limb--darkened model
 of \cite{2002ApJ...580L.171M} to describe the lightcurves.  We
 emphasize that at its core, the Mandel \& Agol model is a purely
-geometric one that describes an opaque disk (the planet) occulting a
+geometric one that describes an opaque planetary disk occulting a
 limb--darkened stellar disk.  Many applications of this technique use
 planetary orbital parameters such as semi--major axis and inclination
 as inputs to the model, along with frequent assumptions of zero
@@ -419,22 +419,19 @@ eccentricity, {\it but this need not be the case}.  Instead we use a
 purely geometric implementation of \cite{2002ApJ...580L.171M} whose
 only assumption is that the planet has constant transverse velocity
 during transit.  This generalization is especially important for our
-proposal, as we need to compare our measured transit duration with the
-one that would be observed in the zero--eccentricity limit.
+proposal, as we need to compare our measured transit duration with
+what would be observed in the zero--eccentricity limit.
 
 The main observable in this model is the time it takes the planet to
 cross the stellar equator, $\tau$ (this may also be thought of as a
 measure of the transverse velocity, $v = R_*/\tau$).  This allows us
 to cast $e_{min}$ in terms of $\tau$, period $P$, and the (unknown)
-ratio of the planet's semi--major axis to stellar radius.  As
-mentioned previously, all factors of the minimum impact parameter
-cancel out, which is fortuitous as this is typically the least
-constrained of all system parameters, especially for the
-long--cadence \kepler data.  While the uncertainty in impact parameter
-will affect our knowledge of the other system parameters through
-covariance, this uncertainty may be marginalized over by examining
-posterior distributions, which drives us to use Markov--Chain Monte
-Carlo (MCMC) modeling in our analysis, described below.
+ratio of the planet's semi--major axis to stellar radius.  While the
+uncertainty in impact parameter will affect our knowledge of the other
+system parameters through covariance, this uncertainty may be
+marginalized over by examining posterior distributions, which drives
+us to use Markov--Chain Monte Carlo (MCMC) modeling in our analysis,
+described below.
 
 
 \medskip
@@ -545,8 +542,8 @@ which we must account for before model fitting.  To do so, we perform
 a local detrending by first dividing the data by the proposed model,
 and fitting a low order spline to the result.  The goodness of fit is
 determined by comparing the product of the spline and the model to the
-data.  We were able to model the first 32 transits for this
-proposal.
+data.  We were able to model the first 32 transits before this
+proposal deadline.
 
 %Figure~\ref{fig-koi70101} provides an example model fit determined in
 %this manner.  The data used are the {\tt PDCSAP} fluxes and
@@ -691,6 +688,23 @@ results.  This difference is almost entirely driven by the (1--sigma)
 differences in $\tau$, which makes it of utmost importance to model
 this parameter directly.
 
+To examine our ability to constrain system parameters as a function of
+transit depth and signal--to--noise (S/N), we generated simulated
+lightcurves at the \kepler cadence.  We used a subset of the synthetic
+systems described in the first section of this proposal.  For each, we
+simulated lightcurves at magnitude 8/10/12/14, adding a random draw
+from a Gaussian with widths 11.3/29/80/296 ppm (respectively) to each
+datapoint to simulate white noise.  We find that after 10 transits, we
+are able to recover $\tau$ to better than ten percent for all transits
+deeper than 0.5\% down to 14$^{th}$ magnitude; deeper than 0.1\% down
+to 12$^{th}$ mag; deeper than 0.05\% down to 10$^{th}$ mag; and deeper
+than 0.01\% down to 8$^{th}$ mag.  This analysis is consistent with
+our results from KOI 701.01, where the host star's magnitude is 13.6,
+the transit depth is 0.04\%, and measured S/N in $\tau$ is $\sim$ 7.8
+after modeling 10 transits: $0.0479_{0.0049}^{0.0073}$.  Note the
+measured precision in $\tau$ increases to a S/N of approximately 20
+after 32 transits (Figure~\ref{fig-marg}).
+
 %\begin{figure*}[t] 
 %  \begin{minipage}[c]{0.57\textwidth}
 %    \includegraphics[width=\textwidth]{figures/period.eps}
@@ -708,65 +722,65 @@ this parameter directly.
 %  \end{minipage}
 %\end{figure*}
 
-\medskip
-{\centerline{\ub{\sc Lightcurve Simulations}}}
-\smallskip
+%\medskip
+%{\centerline{\ub{\sc Lightcurve Simulations}}}
+%\smallskip
 
-To examine our ability to constrain system parameters (in
-particular, $\tau$) as a function of transit depth and
-signal--to--noise (S/N), we generated simulated lightcurves at
-the \kepler cadence.  We used a subset of 6 of the synthetic systems
-described in the first section of this proposal.  These were chosen to
-have transit depths of [5e-5/1e-4/5e-4/1e-3/5e-3/1e-2] percent.  We
-use the system inclination, semi--major axis, planet--to--star radius
-ratio, and period (along with two limb darkening parameters) to
-generate fake system lightcurves using the method of
-\cite{2002ApJ...580L.171M}.  The system lightcurve is evaluated once
-each minute and integrated over 30 evaluations to approximate a single
-\kepler long--cadence observation.  This is done for a window of 1 day
-on either side of the given transit midpoint to ensure significant
-out--of--transit data to include in the fit.
+%To examine our ability to constrain system parameters (in
+%particular, $\tau$) as a function of transit depth and
+%signal--to--noise (S/N), we generated simulated lightcurves at
+%the \kepler cadence.  We used a subset of 6 of the synthetic systems
+%described in the first section of this proposal.  These were chosen to
+%have transit depths of [5e-5/1e-4/5e-4/1e-3/5e-3/1e-2] percent.  We
+%use the system inclination, semi--major axis, planet--to--star radius
+%ratio, and period (along with two limb darkening parameters) to
+%generate fake system lightcurves using the method of
+%\cite{2002ApJ...580L.171M}.  The system lightcurve is evaluated once
+%each minute and integrated over 30 evaluations to approximate a single
+%\kepler long--cadence observation.  This is done for a window of 1 day
+%on either side of the given transit midpoint to ensure significant
+%out--of--transit data to include in the fit.
 
-A white--noise component is added to each lightcurve for each of 4
-magnitude bins, using the precisions in parts--per--million (ppm)
-given on the \kepler calibration
-webpage \footnote{http://keplergo.arc.nasa.gov/CalibrationSN.shtml}.
-We evaluate each lightcurve separately for magnitude 8/10/12/14
-objects, adding a random draw from a Gaussian with widths
-11.3/29/80/296 ppm (respectively) to each datapoint as generated
-above.  We do not include red noise, or other transient gaps and
-features known to exist in the \kepler data.  We then model these data
-using our geometric parameterization.  Figure~\ref{fig-dtau} outlines
-how our signal--to--noise on $\tau$ scales with the system brightness
-and transit depth {\it after fitting 10 transits only} (due to
-computational constraints).  We are able to recover $\tau$ to better
-than ten percent for all transits deeper than 0.5\% down to 14$^{th}$
-magnitude; deeper than 0.1\% down to 12$^{th}$ mag; deeper than 0.05\%
-down to 10$^{th}$ mag; and deeper than 0.01\% down to 8$^{th}$ mag.
-This analysis is consistent with our results from KOI 701.01, where
-the host star's magnitude is 13.6, the transit depth is 0.04\%, and
-measured S/N in $\tau$ is $\sim$ 7.8 after modeling 10 transits:
-$0.0479_{0.0049}^{0.0073}$.  Figure~\ref{fig-dtau} predicts a S/N of
-5--6.  Note the measured precision in $\tau$ increases to a S/N of
-approximately 20 after 32 transits (Figure~\ref{fig-marg}).
+%A white--noise component is added to each lightcurve for each of 4
+%magnitude bins, using the precisions in parts--per--million (ppm)
+%given on the \kepler calibration
+%webpage \footnote{http://keplergo.arc.nasa.gov/CalibrationSN.shtml}.
+%We evaluate each lightcurve separately for magnitude 8/10/12/14
+%objects, adding a random draw from a Gaussian with widths
+%11.3/29/80/296 ppm (respectively) to each datapoint as generated
+%above.  We do not include red noise, or other transient gaps and
+%features known to exist in the \kepler data.  We then model these data
+%using our geometric parameterization.  Figure~\ref{fig-dtau} outlines
+%how our signal--to--noise on $\tau$ scales with the system brightness
+%and transit depth {\it after fitting 10 transits only} (due to
+%computational constraints).  We are able to recover $\tau$ to better
+%than ten percent for all transits deeper than 0.5\% down to 14$^{th}$
+%magnitude; deeper than 0.1\% down to 12$^{th}$ mag; deeper than 0.05\%
+%down to 10$^{th}$ mag; and deeper than 0.01\% down to 8$^{th}$ mag.
+%This analysis is consistent with our results from KOI 701.01, where
+%the host star's magnitude is 13.6, the transit depth is 0.04\%, and
+%measured S/N in $\tau$ is $\sim$ 7.8 after modeling 10 transits:
+%$0.0479_{0.0049}^{0.0073}$.  Figure~\ref{fig-dtau} predicts a S/N of
+%5--6.  Note the measured precision in $\tau$ increases to a S/N of
+%approximately 20 after 32 transits (Figure~\ref{fig-marg}).
 
-\begin{figure*}[t] 
-  \begin{minipage}[c]{0.47\textwidth}
-    \includegraphics[width=\textwidth]{figures/delta_tau.eps}
-  \end{minipage}\hfill
-  \begin{minipage}[c]{0.5\textwidth}
-    \caption{Grid of signal--to--noise in $\tau$ as a function of host
-    star brightness and transit depth, derived from fitting our
-    geometric model to simulated noisy lightcurves.  The host star
-    brightness sets the S/N of the photometry.  These
-    values were obtained after modeling 10 transits jointly.  These
-    simulations accurately predict the S/N of $\tau$ measurements in
-    KOI 701.01 after 10 transits.}
-    \label{fig-dtau}
-    \hspace*{\fill}  
-    \hrule
-  \end{minipage}
-\end{figure*}
+%\begin{figure*}[t] 
+%  \begin{minipage}[c]{0.47\textwidth}
+%    \includegraphics[width=\textwidth]{figures/delta_tau.eps}
+%  \end{minipage}\hfill
+%  \begin{minipage}[c]{0.5\textwidth}
+%    \caption{Grid of signal--to--noise in $\tau$ as a function of host
+%    star brightness and transit depth, derived from fitting our
+%    geometric model to simulated noisy lightcurves.  The host star
+%    brightness sets the S/N of the photometry.  These
+%    values were obtained after modeling 10 transits jointly.  These
+%    simulations accurately predict the S/N of $\tau$ measurements in
+%    KOI 701.01 after 10 transits.}
+%    \label{fig-dtau}
+%    \hspace*{\fill}  
+%    \hrule
+%  \end{minipage}
+%\end{figure*}
 
 %[[ 0.79372962  1.07761448  1.79022733  1.82613462  3.16994564  3.73020785]
 % [ 0.62639459  0.76120963  1.43324592  1.59635851  2.69282439  3.42917786]
@@ -783,7 +797,7 @@ approximately 20 after 32 transits (Figure~\ref{fig-marg}).
 
 We have examined the current KOIs to establish a preliminary target
 list.  We find 890 objects with appropriate values of $P$ and $R_p$,
-and have host star mass estimates between 0.7 and 1.4 \msun, i.e. FGK
+and with host star mass estimates between 0.7 and 1.4 \msun, i.e. FGK
 stars.  We expect this list to expand somewhat with on--going study of
 the \kepler data; we anticipate running our pipeline on approximately
 1000 systems.
@@ -803,65 +817,60 @@ temperature ($T_{eff}$), metallicity ([Fe/H]), and gravity ($log~g$),
 as we (L.~Hebb) have done for many other confirmed transiting planets
 with radial velocity measurements \citep[e.g.][]{Hebb2009,Hebb2010}.
 
-Although the stellar parameters are available for all the KOI objects
-in the Kepler Input Catalogue, these values are based on broad band
-colors and are known to have systematic
-problems \citep{Muirhead2012,Pinsonneault2012}.  Therefore, we will
-derive the host star mass using the $T_{eff}$ and [Fe/H] derived
-directly from spectra through stellar characterization techniques.
-While $T_{eff}$ and [Fe/H] can be determined with high precision from
-the stellar spectrum, $log~g$ is usually poorly constrained, and thus
-stellar masses derived from the spectroscopic $log~g$ can have large
-uncertainties and can suffer from systematics.
+%Although the stellar parameters are available for all the KOI objects
+%in the Kepler Input Catalogue, these values are based on broad band
+%colors and are known to have systematic
+%problems \citep{Muirhead2012,Pinsonneault2012}.  Therefore, we will
+%derive the host star mass using the $T_{eff}$ and [Fe/H] derived
+%directly from spectra through stellar characterization techniques.
+%While $T_{eff}$ and [Fe/H] can be determined with high precision from
+%the stellar spectrum, $log~g$ is usually poorly constrained, and thus
+%stellar masses derived from the spectroscopic $log~g$ can have large
+%uncertainties and can suffer from systematics.
 
-To avoid this problem, we will obtain the $log~g$ values based on a
-novel characterization of the high frequency variability in the {\it
-Kepler} light curves (Bastien, Stassun et al.\ 2013, to appear in
-Nature) which has been shown to reproduce the exquisite
-astroseismically measured $log~g$ values \citep{Huber2013} for dwarf
-and subgiant stars.  The authors present a technique that can be used
-to derive $log~g$ values for the majority of Kepler targets with
-uncertainties of $\le 0.1$ by empirically detecting granulation on the
-stellar surface.  This allows for significantly more accurate and
-precise gravity measurements than can be derived from typical modeling
-of broad absorption line wings.
-
-We plan to use the information available in the literature to derive
-the host star mass for our sample.  Several teams have large,
-observing programs to obtain spectra of this important sample.  For
-example, \citet{Everett2013} derived stellar parameters for $\sim 400$
-faint KOIs from low resolution data; approximately 1000 targets have
-been observed with Keck HIRES (J.~Johnson et al.\ in prep) and are
-currently being analyzed with a new Spectroscopy Made Easy (SME)
-pipeline (Cargile, Hebb et al.\ in prep); and the 2.5m Nordic Optical
-Telescope (NOT) has has an ongoing program to derive stellar
-parameters of Kepler KOIs (L. Buchave, PI).  However, if certain
-targets lack observed spectra or derived stellar parameters, we will
-obtain the necessary data with the ARC 3.5m echelle spectrograph
-through the University of Washington's guaranteed access to the Apache
-Point Telescopes.  We will analyze these data as necessary with our
-SME pipeline, as we have done for many other
+We plan to primarily use the information available in the literature
+for $T_{eff}$ and [Fe/H].  Several teams have large, observing programs
+to obtain spectra of KOIs.  \citet{Everett2013} derived stellar
+parameters for $\sim 400$ faint KOIs from low resolution data;
+approximately 1000 targets have been observed with Keck HIRES
+(J.~Johnson et al.\ in prep) and are currently being analyzed with a
+new Spectroscopy Made Easy (SME) pipeline (Cargile, Hebb et al.\ in
+prep); and the 2.5m Nordic Optical Telescope (NOT) has has an ongoing
+program to derive stellar parameters of Kepler KOIs (L. Buchave, PI).
+However, if certain targets lack observed spectra or derived stellar
+parameters, we will obtain the necessary data with the ARC 3.5m
+echelle spectrograph through the University of Washington's guaranteed
+access to the Apache Point Telescopes.  We will analyze these data as
+necessary with our SME pipeline, as we have done for many other
 targets \citep[i.e.][]{Wisniewski2012}.
 
-We will interpolate the Dartmouth models considering the 1$\sigma$
-errors in the photometrically measured $log~g$ and in the
-spectroscopically determined [Fe/H] and $T_{eff}$.  Typical
-uncertainties of $\le 0.1$~dex is [Fe/H], $\le 100$~K in $T_{eff}$,
-and $\le 0.1$ in $log~g$ result in uncertainties on the resulting
-stellar mass of $5-8$\% for well understood F, G and K-dwarf stars.
-This error budget includes the formal errors from the measured
-uncertainties on the parameters and systematic uncertainties arising
-from variation between different stellar evolution models
-\citep[2-4\%;][]{Southworth2009}.  For each target, we will combine the
-extremely precise orbital period determined from our modeling and our
-derived mass to determine the orbital separation, $a$.  Combined with
-the accurate $log~g$ measured from the photometric variability (as
-described above), we will produce a catalogue of $\alpha = a/R_*$
-values for all the short period KOI transiting planet candidates in
-our sample with conservative uncertainties of $\le 10$\%.  Finally,
-our comparison of the stellar parameters to the evolutionary models
-also allows us to estimate stellar age, which is critical to
-understanding the tidal quality factors.
+We will obtain the $log~g$ values based on a novel characterization of
+the high frequency variability in the {\it Kepler} light curves
+(Bastien, Stassun et al.\ 2013, to appear in Nature) which has been
+shown to reproduce the exquisite astroseismically measured $log~g$
+values \citep{Huber2013} for dwarf and subgiant stars.  The authors
+present a technique that can be used to derive $log~g$ values for the
+majority of Kepler targets with uncertainties of $\le 0.1$ by
+empirically detecting granulation on the stellar surface.  This allows
+for significantly more accurate and precise gravity measurements than
+can be derived from typical modeling of broad absorption line wings.
+
+We will interpolate the Dartmouth models considering the uncertainties
+in the photometrically measured $log~g$ and in the spectroscopically
+determined [Fe/H] and $T_{eff}$.  Typical uncertainties of $\le
+0.1$~dex in [Fe/H], $\le 100$~K in $T_{eff}$, and $\le 0.1$ in $log~g$
+result in uncertainties on the resulting stellar mass of $5-8$\% for
+well understood F, G and K-dwarf stars.  This error budget includes
+the formal errors from the measured uncertainties on the parameters,
+and systematic uncertainties arising from variation between different
+stellar evolution models
+\citep[2-4\%;][]{Southworth2009}.  We expect to generate a
+catalogue of $\alpha = a/R_*$ values for all the short period KOI
+transiting planet candidates in our sample with conservative
+uncertainties of $\le 10$\%.  Finally, our comparison of the stellar
+parameters to the evolutionary models also allows us to estimate
+stellar age, which is critical to understanding the tidal quality
+factors.
 
 \medskip
 {\centerline{\ub{\sc Computational Requirements}}}
@@ -1088,11 +1097,13 @@ exoplanet systems for evidence of transit timing variations
 project has been modified to operate with the \kepler data, and used in
 the analyses presented here.  He has considerable expertise in using
 modern software packages implemented on distributed computing
-infrastructures to model multi--dimensional systems.  Relevant
-examples include the work done under NASA ADP grant NNX09AC77G, ``Time
-Domain Studies of the 2MASS Calibration Point Source Working
-Database'', for which he is also PI
-\citep{2012ApJ...748...58D,2013ApJ...764...62D}.
+infrastructures to model multi--dimensional systems.  
+
+%Relevant
+%examples include the work done under NASA ADP grant NNX09AC77G, ``Time
+%Domain Studies of the 2MASS Calibration Point Source Working
+%Database'', for which he is also PI
+%\citep{2012ApJ...748...58D,2013ApJ...764...62D}.
 
 Co--I Barnes was a Co--I on NASA OSS grant 811073.02.07.01.15
 ``Simulating the Initial Planetesimal Disk'' which produced the first
@@ -1100,7 +1111,13 @@ N-body simulation of 1 km planetesimal accretion
 \citep{Barnes09_1km}. As part of this effort, Barnes used several hundred thousand hours of CPU time at NASA HPC facilities, such as the Columbia and Plaiedes supercomputers. He has published $\sim 40$ papers on tidal theory and orbital dynamics, focusing on exoplanets
 \citep[e.g.][]{BarnesQuinn01,BarnesRaymond04,BarnesGreenberg06a,Barnes11,Barnes13}. 
 
-Co--I Agol...
+Co--I Agol has originated several important ideas in the field of
+extrasolar planets, including analytic light curve
+modeling \citep{2002ApJ...580L.171M}, transit timing
+variations \citep{2005MNRAS.359..567A}, and discovery of the smallest
+diameter planet in the habitable zone of another
+star \citep{2013arXiv1304.7387B}.  He is currently a \kepler
+collaborator.
 
 Co--I Hebb is an expert in the field of characterizing exoplanet host
 stars using state-of-the-art stellar evolution
@@ -1140,20 +1157,17 @@ for the Origins of Solar Systems call for proposals, including:
 
 PI Becker will be technical lead the project for the first 1.5 years,
 which will constitute the data analysis (MCMC) portion of the project.
-He will work at 50\% FTE with the graduate student to implement the
-computations on the \kepler sample of data.  Co--I Barnes will serve
-as technical lead for the project for the second 1.5 years, as the
-project transitions from analysis of the data to interpretation and
-constraints on tidal evolution theory.  Co--I Agol has significant
-experience in dealing with the \kepler data, including implementing
-detrending algorithms to correct for correlated noise in the \kepler
-data.  He will advise as--needed throughout the project.  Co--I Hebb
-has extensive experience in inferring the stellar properties of
-exoplanet host stars, and will serve as the lead for determining the
-host stars' mass and radius.  PI Becker will serve as the project lead
-throughout.  We will have weekly meetings at the University of
-Washington to manage progress, and yearly meetings including Hebb to
-focus on host star characterization.
+Co--I Barnes will serve as technical lead for the project for the
+second 1.5 years, as the project transitions from analysis of the data
+to interpretation and constraints on tidal evolution theory.  Co--I
+Agol has significant experience with \kepler data, and will advise
+as--needed throughout the project.  Co--I Hebb has extensive
+experience inferring the stellar properties of exoplanet host stars,
+and will serve as the lead for determining the host stars' mass and
+radius.  PI Becker will serve as the project lead throughout.  We will
+have weekly meetings at the University of Washington to manage
+progress, and yearly meetings including Hebb to focus on host star
+characterization.
 
 We regard the professional development of students as an important
 responsibility of {\it any} research project.  In this regard, the
@@ -1162,48 +1176,38 @@ attend at least one relevant conference each year, and encouraged to
 give oral presentations on our work.  This will become a requirement
 as the project progresses.  We expect the graduate student to become
 an expert in both areas of this project, both the
-computational/modeling side and the theoretical side.  This is a
-powerful combination and one not seen often enough in the field.  We
-consider this dual--aspect training a strong component of this
-project.
+computational/modeling side and the theoretical side, and will work
+full--time with both Becker and Barnes throughout.  This is a powerful
+combination and one not seen often enough in the field.  We consider
+this dual--aspect training a strong component of this project.
 
 {\bf Year 1 (2014):} This first year of the project will start with PI
 Becker bringing the student up to speed in modeling transit
 lightcurves, in leaning Bayesian techniques, and in implementing a
 robust application of the {\tt emcee} package (or other
-affine--invariant sampler, if needed).  Making the software robust to
-detrending errors, missing data, and initial conditions for the
-samplers is a non--trivial exercise.  Discovering and understanding
-the failure modes will be a main focus of this
-computationally--intensive first year.  Becker will lead this effort,
-and transition the student into lead during the year.  The generation
-of the MCMC chains is expected to take $\sim 60$ CPU--years, requiring
-the use of high--end computing facilities to allow hundreds of
-parallelized, multi--core jobs, which should reduce this computation
-time trivially to calendar--months. The validation of these chains
-(Gelman--Rubin $\hat{\rm R}$ and effective chain lengths) is expected
-to take a comparable amount of time, as some chains are expected to
-have to be re--run or extended.  The goal of this first year is to
-have finalized the MCMC chains on $t_0, \beta_0^2, \tau, \zeta$ for
-all transits of all KOIs.  We will make these publicly available
-through a {\tt github} site specifically designed for this project.
-Our modeling software will also be released via {\tt github}.
+affine--invariant sampler, if needed).  This includes making the
+software robust to detrending errors, missing data, and initial
+conditions.  Discovering and understanding the failure modes will be a
+main focus of this computationally--intensive first year.  Becker will
+lead this effort, and transition the student into lead during the
+year.  The generation of the MCMC chains is expected to take $\sim 60$
+CPU--years, requiring the use of high--end computing facilities. The
+validation of these chainsis expected to take a comparable amount of
+time, as some chains are expected to have to be re--run or extended.
+The goal of this first year is to have finalized the MCMC chains on
+$t_0, \beta_0^2, \tau, \zeta$ for all transits of all KOIs.  We will
+make the chains and modeling software publicly available through a {\tt
+github} site specifically designed for this project.
 
 {\bf Year 2 (2015):} The second year will begin with the MCMC analyses
-of the periods via times of transit, include a strong focus on
-characterizing the host star mass and radius, and transition to
-theoretical interpretation of the systems.  We will start with linear
-ephemeris models for all systems to estimate periods; for those
-systems where this model is insufficient, we will examine transit
-timing models with more complicated ephemerides.  We anticipate that
-this effort may result in the publication of ancillary papers on the
-transit timings of the systems under study, with assistance from Agol
-on the interpretation of the results. During this year, Barnes will
-begin working with the graduate student on the theoretical aspects of
-the project. They will design and simulate the models described in
-Task A and publish a preliminary estimate of $R_{crit}$, $Q_g$, and
-$Q_r$. During this year we will also begin running simulations of
-multiplanet systems with tidal damping.
+of the periods, include a strong focus on characterizing the host star
+mass and radius, and transition to theoretical interpretation of the
+systems.  During this year, Barnes will begin working with the
+graduate student on the theoretical components. They will design and
+simulate the models described in Task A and publish preliminary
+estimates of $R_{crit}$, $Q_g$, and $Q_r$. During this year we will
+also begin running simulations of multiplanet systems with tidal
+damping.
 
 {\bf Year 3 (2016):} During the final year, we will finish all
 theoretical modeling, including the incorporation of mass loss.  We
