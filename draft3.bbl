@@ -79,6 +79,9 @@
   et~al.}{2013}]{2013arXiv1304.7387B}
 {Borucki}, W.~J., et~al. 2013, ArXiv e-prints
 
+\bibitem[\protect\citeauthoryear{{Burke}}{{Burke}}{2008}]{Burke08}
+{Burke}, C.~J. 2008, \apj, 679, 1566
+
 \bibitem[\protect\citeauthoryear{{Correia}, {Bou{\'e}}, \& {Laskar}}{{Correia}
   et~al.}{2012}]{Correia12}
 {Correia}, A.~C.~M., {Bou{\'e}}, G.,  \& {Laskar}, J. 2012, \apjl, 744, L23
@@ -113,6 +116,14 @@
 \bibitem[\protect\citeauthoryear{{Ford}, {Kozinsky}, \& {Rasio}}{{Ford}
   et~al.}{2000}]{Ford00}
 {Ford}, E.~B., {Kozinsky}, B.,  \& {Rasio}, F.~A. 2000, \apj, 535, 385
+
+\bibitem[\protect\citeauthoryear{{Ford}, {Quinn}, \& {Veras}}{{Ford}
+  et~al.}{2008a}]{Ford08}
+{Ford}, E.~B., {Quinn}, S.~N.,  \& {Veras}, D. 2008a, \apj, 678, 1407
+
+\bibitem[\protect\citeauthoryear{{Ford}, {Quinn}, \& {Veras}}{{Ford}
+  et~al.}{2008b}]{2008ApJ...678.1407F}
+{Ford}, E.~B., {Quinn}, S.~N.,  \& {Veras}, D. 2008b, \apj, 678, 1407
 
 \bibitem[\protect\citeauthoryear{{Foreman-Mackey} et~al.}{{Foreman-Mackey}
   et~al.}{2013}]{2013PASP..125..306F}
@@ -242,9 +253,17 @@ Gelman, A.,  \& Rubin, D. 1992, Statistical Science, 7, 457
 {McArthur}, B.~E., {Benedict}, G.~F., {Barnes}, R., {Martioli}, E.,
   {Korzennik}, S., {Nelan}, E.,  \& {Butler}, R.~P. 2010, \apj, 715, 1203
 
+\bibitem[\protect\citeauthoryear{{Moorhead} et~al.}{{Moorhead}
+  et~al.}{2011}]{Moorhead11}
+{Moorhead}, A.~V., et~al. 2011, \apjs, 197, 1
+
 \bibitem[\protect\citeauthoryear{{Owen} \& {Wu}}{{Owen} \&
   {Wu}}{2013}]{OwenWu13}
 {Owen}, J.~E.,  \& {Wu}, Y. 2013, ArXiv e-prints
+
+\bibitem[\protect\citeauthoryear{{Plavchan}, {Bilinski}, \&
+  {Currie}}{{Plavchan} et~al.}{2012}]{Plavchan12}
+{Plavchan}, P., {Bilinski}, C.,  \& {Currie}, T. 2012, ArXiv e-prints
 
 \bibitem[\protect\citeauthoryear{{Poppenhaeger} et~al.}{{Poppenhaeger}
   et~al.}{2012}]{Poppenhaeger12}

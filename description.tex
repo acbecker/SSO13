@@ -103,9 +103,9 @@ disk of its parent star, and to first order is:
 \begin{equation}\label{eq:duration}
 T = \frac{2 \sqrt{R_*^2 - b^2}}{v},
 \end{equation}
-where $R_*$ is the radius of the star, $b$ is the minimum impact parameter,
-and $v$ is the instantaneous velocity of the planet. On a circular
-orbit, $v$ is constant and we expect
+where $R_*$ is the radius of the star, $b$ is the minimum impact
+parameter, and $v$ is the instantaneous velocity of the planet. On a
+circular orbit, $v$ is constant ($v_c$) and we expect
 \begin{equation}\label{eq:durcirc}
 T_c = \frac{\sqrt{R_*^2 - b^2}}{\pi a}P,
 \end{equation}
@@ -134,7 +134,7 @@ we define the transit duration deviation, $\Delta$, as
 %\Delta = \begin{dcases} \frac{T-T_c}{T_c} & T_c < T \\ \frac{T_c - T}{T_c} & T_c > T, \end{dcases}
 \Delta = \left|\frac{T-T_c}{T_c}\right|
 \end{equation}
-and for ease of notation, $\Delta' \equiv T/T_c$,
+and for ease of notation, $\Delta' \equiv T/T_c = v_c/v$,
 %\begin{equation}\label{eq:deltaprime}
 %\Delta' \equiv \begin{cases} \Delta + 1 & T_c < T \\ \Delta - 1 & T_c > T, \end{cases}
 %\end{equation}
@@ -143,15 +143,33 @@ then we find that
 %e_{min} = \begin{dcases} \frac{\Delta'^2 - 1}{\Delta'^2 + 1} & T_c < T \\ \frac{1 - \Delta'^2}{1 + \Delta'^2} & T_c > T \end{dcases}
 e_{min} = \left|\frac{\Delta'^2 - 1}{\Delta'^2 + 1}\right|
 \end{equation}
-is the minimum eccentricity permitted by transit data.  Note that in
-the ratio $T/T_c$, the minimum impact parameter cancels out, leaving
-$e_{min}$ a function of 4 parameters: $P$, $a$, $v$, and $R_*$.  We
-will use the \kepler lightcurves to constrain $P$ and $v/R_*$, meaning
-that we must determine though other means the semi--major axis and
-stellar radius.  The semi--major axis, and also the reference circular
+is the minimum eccentricity permitted by the transit data.  The
+$e_{min}$ signal is effectively a measure of the actual to circular
+transit duration, or physically, the actual to circular velocity.
+Note that in the ratio $T/T_c$, the minimum impact parameter cancels
+out (although it is explicitly included in the transit model and will
+affect other parameters through covariance).  This leaves $e_{min}$ a
+function of 4 parameters: $P$, $a$, $v$, and $R_*$.  We will use
+the \kepler lightcurves to constrain $P$ and $v/R_*$, meaning that we
+must determine though other means the semi--major axis and stellar
+radius.  The semi--major axis, and also the reference circular
 velocity, may be determined through the host star mass, making it
 critical that we are able to estimate the stellar mass and radius
 reliably.
+
+As outlined in \cite{2008ApJ...678.1407F}, transit durations that are
+{\it less} than the circular duration may be plausibly due to a poorly
+constrained impact parameter, or eccentricity.  However, transit
+durations that are {\it longer} than circular may only arise due to
+eccentricity.  For long cadence \kepler data, the impact parameter is
+typically the most poorly constrained of all model parameters, because
+its primary constraint comes from the ingress/egress durations, which
+are poorly resolved for small planets at a 30--minute cadence.
+However, with now several hundred transits per system to (each poorly)
+resolve the ingress/egress, our KOI 701.01 analysis below suggests
+that the dependence of other model parameters on $b$ does not
+compromise our $e_{min}$ analysis, although we have not fully tested
+this at large impact parameter ($b \sim 1$).
 
 The transit duration deviation has been used in several studies to
 constrain the eccentricity distribution. \cite{Moorhead11} analyzed
@@ -489,8 +507,13 @@ T & = & 2 * \tau \sqrt{1 - \beta_0^2}.
 Combining Equations~\ref{eq:tdd},\ref{eq:emin} and \ref{eq-dt} we express $e_{min}$ in terms of our model
 parameters:
 \begin{eqnarray}
-e_{min} & = & \left| \frac{P^{2} - 4 \pi^{2} \alpha^{2} \tau^{2}}{P^{2} + 4 \pi^{2} \alpha^{2} \tau^{2}} \right|.
+e_{min} & = & \left| \frac{P^{2} - 4 \pi^{2} \alpha^{2} \tau^{2}}{P^{2} + 4 \pi^{2} \alpha^{2} \tau^{2}} \right| 
 \label{eq-emin2}
+\end{eqnarray}
+or, physically,
+\begin{eqnarray}
+e_{min} & = & \left| \frac{1 - (v_c/v_\perp)^2}{1 + (v_c/v_\perp)^2} \right| .
+\label{eq-emin3}
 \end{eqnarray}
 
 Equation~\ref{eq-emin2} indicates that $e_{min}$ is purely a function
