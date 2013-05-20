@@ -145,17 +145,17 @@ e_{min} = \left|\frac{\Delta'^2 - 1}{\Delta'^2 + 1}\right|
 \end{equation}
 is the minimum eccentricity permitted by the transit data.  The
 $e_{min}$ signal is effectively a measure of the actual to circular
-transit duration, or physically, the actual to circular velocity.
-Note that in the ratio $T/T_c$, the minimum impact parameter cancels
-out (although it is explicitly included in the transit model and will
-affect other parameters through covariance).  This leaves $e_{min}$ a
-function of 4 parameters: $P$, $a$, $v$, and $R_*$.  We will use
-the \kepler lightcurves to constrain $P$ and $v/R_*$, meaning that we
-must determine though other means the semi--major axis and stellar
-radius.  The semi--major axis, and also the reference circular
-velocity, may be determined through the host star mass, making it
-critical that we are able to estimate the stellar mass and radius
-reliably.
+transit duration, or physically, the circular to actual transverse
+velocity.  Note that in the ratio $T/T_c$, the minimum impact
+parameter cancels out (although it is explicitly included in the
+transit model and will affect other parameters through covariance).
+This leaves $e_{min}$ a function of 4 parameters: $P$, $a$, $v$, and
+$R_*$.  We will use the \kepler lightcurves to constrain $P$ and
+$v/R_*$, meaning that we must determine though other means the
+semi--major axis and stellar radius.  The semi--major axis, and also
+the reference circular velocity, may be determined through the host
+star mass, making it critical that we are able to estimate the stellar
+mass and radius reliably.
 
 As outlined in \cite{2008ApJ...678.1407F}, transit durations that are
 {\it less} than the circular duration may be plausibly due to a poorly
@@ -483,7 +483,7 @@ the centers of the sources are aligned along the x--axis at
 center--of--transit time $t_0$ -- and the location of the planet on
 the transit chord across the stellar disk.  The x--coordinate of the
 planet as a function of time is represented as $x(t) / R_* = (t - t_0)
-* v_\perp / R_* = (t - t_0) / \tau$, where $v_\perp$ is the (unknown)
+* v / R_* = (t - t_0) / \tau$, where $v$ is the (unknown)
 perpendicular velocity, and $\tau$ is the (fitted) amount of time it
 takes the planet to traverse a distance equal to the stellar radius
 assuming no acceleration.  This allows us to express geometrically the
@@ -512,7 +512,7 @@ e_{min} & = & \left| \frac{P^{2} - 4 \pi^{2} \alpha^{2} \tau^{2}}{P^{2} + 4 \pi^
 \end{eqnarray}
 or, physically,
 \begin{eqnarray}
-e_{min} & = & \left| \frac{1 - (v_c/v_\perp)^2}{1 + (v_c/v_\perp)^2} \right| .
+e_{min} & = & \left| \frac{1 - (v_c/v)^2}{1 + (v_c/v)^2} \right| .
 \label{eq-emin3}
 \end{eqnarray}
 
@@ -1054,14 +1054,19 @@ for the Origins of Solar Systems call for proposals, including:
 PI Becker will be technical lead the project for the first 1.5 years,
 which will constitute the data analysis (MCMC) portion of the project.
 He will work at 50\% FTE with the graduate student to implement the
-computations on the \kepler sample of data.  Co--I Barnes will serve as
-technical lead for the project for the second 1.5 years, as the
+computations on the \kepler sample of data.  Co--I Barnes will serve
+as technical lead for the project for the second 1.5 years, as the
 project transitions from analysis of the data to interpretation and
 constraints on tidal evolution theory.  Co--I Agol has significant
 experience in dealing with the \kepler data, including implementing
 detrending algorithms to correct for correlated noise in the \kepler
-data.  He will advise as--needed throughout the project.  PI Becker
-will serve as the project lead throughout.
+data.  He will advise as--needed throughout the project.  Co--I Hebb
+has extensive experience in inferring the stellar properties of
+exoplanet host stars, and will serve as the lead for determining the
+host stars' mass and radius.  PI Becker will serve as the project lead
+throughout.  We will have weekly meetings at the Unviersity of
+Washington to manage progress, and yearly meetings including Hebb to
+focus on host star characterization.
 
 We regard the professional development of students as an important
 responsibility of {\it any} research project.  In this regard, the
