@@ -17,45 +17,18 @@
 {Barnes}, J.~W. 2007, \pasp, 119, 986
 
 \bibitem[\protect\citeauthoryear{{Barnes} \& {Greenberg}}{{Barnes} \&
-  {Greenberg}}{2006a}]{BarnesGreenberg06b}
-{Barnes}, R.,  \& {Greenberg}, R. 2006a, \apjl, 652, L53
-
-\bibitem[\protect\citeauthoryear{{Barnes} \& {Greenberg}}{{Barnes} \&
-  {Greenberg}}{2006b}]{BarnesGreenberg06a}
-{Barnes}, R.,  \& {Greenberg}, R. 2006b, \apj, 638, 478
-
-\bibitem[\protect\citeauthoryear{{Barnes} et~al.}{{Barnes}
-  et~al.}{2011}]{Barnes11}
-{Barnes}, R., {Greenberg}, R., {Quinn}, T.~R., {McArthur}, B.~E.,  \&
-  {Benedict}, G.~F. 2011, \apj, 726, 71
-
-\bibitem[\protect\citeauthoryear{{Barnes} et~al.}{{Barnes}
-  et~al.}{2009a}]{Barnes09}
-{Barnes}, R., {Jackson}, B., {Greenberg}, R.,  \& {Raymond}, S.~N. 2009a,
-  \apjl, 700, L30
+  {Greenberg}}{2006}]{BarnesGreenberg06a}
+{Barnes}, R.,  \& {Greenberg}, R. 2006, \apj, 638, 478
 
 \bibitem[\protect\citeauthoryear{{Barnes} et~al.}{{Barnes}
   et~al.}{2013}]{Barnes13}
 {Barnes}, R., {Mullins}, K., {Goldblatt}, C., {Meadows}, V.~S., {Kasting},
   J.~F.,  \& {Heller}, R. 2013, Astrobiology, 13, 225
 
-\bibitem[\protect\citeauthoryear{{Barnes} \& {Quinn}}{{Barnes} \&
-  {Quinn}}{2001}]{BarnesQuinn01}
-{Barnes}, R.,  \& {Quinn}, T. 2001, \apj, 550, 884
-
 \bibitem[\protect\citeauthoryear{{Barnes} et~al.}{{Barnes}
-  et~al.}{2009b}]{Barnes09_1km}
-{Barnes}, R., {Quinn}, T.~R., {Lissauer}, J.~J.,  \& {Richardson}, D.~C. 2009b,
+  et~al.}{2009}]{Barnes09_1km}
+{Barnes}, R., {Quinn}, T.~R., {Lissauer}, J.~J.,  \& {Richardson}, D.~C. 2009,
   \icarus, 203, 626
-
-\bibitem[\protect\citeauthoryear{{Barnes} \& {Raymond}}{{Barnes} \&
-  {Raymond}}{2004}]{BarnesRaymond04}
-{Barnes}, R.,  \& {Raymond}, S.~N. 2004, \apj, 617, 569
-
-\bibitem[\protect\citeauthoryear{{Barnes} et~al.}{{Barnes}
-  et~al.}{2008}]{Barnes08}
-{Barnes}, R., {Raymond}, S.~N., {Jackson}, B.,  \& {Greenberg}, R. 2008,
-  Astrobiology, 8, 557
 
 \bibitem[\protect\citeauthoryear{{Batalha} et~al.}{{Batalha}
   et~al.}{2011}]{Batalha11}
@@ -270,11 +243,6 @@ Gelman, A.,  \& Rubin, D. 1992, Statistical Science, 7, 457
   et~al.}{2010}]{Matsumura10}
 {Matsumura}, S., {Peale}, S.~J.,  \& {Rasio}, F.~A. 2010, \apj, 725, 1995
 
-\bibitem[\protect\citeauthoryear{{McArthur} et~al.}{{McArthur}
-  et~al.}{2010}]{McArthur10}
-{McArthur}, B.~E., {Benedict}, G.~F., {Barnes}, R., {Martioli}, E.,
-  {Korzennik}, S., {Nelan}, E.,  \& {Butler}, R.~P. 2010, \apj, 715, 1203
-
 \bibitem[\protect\citeauthoryear{{Moorhead} et~al.}{{Moorhead}
   et~al.}{2011}]{Moorhead11}
 {Moorhead}, A.~V., et~al. 2011, \apjs, 197, 1
@@ -296,10 +264,6 @@ Gelman, A.,  \& Rubin, D. 1992, Statistical Science, 7, 457
   et~al.}{1996}]{Rasio96}
 {Rasio}, F.~A., {Tout}, C.~A., {Lubow}, S.~H.,  \& {Livio}, M. 1996, \apj, 470,
   1187
-
-\bibitem[\protect\citeauthoryear{{Reffert} \& {Quirrenbach}}{{Reffert} \&
-  {Quirrenbach}}{2011}]{ReffertQuirrenbach11}
-{Reffert}, S.,  \& {Quirrenbach}, A. 2011, \aap, 527, A140
 
 \bibitem[\protect\citeauthoryear{{Ribas} et~al.}{{Ribas}
   et~al.}{2005}]{Ribas05}
@@ -334,12 +298,6 @@ Gelman, A.,  \& Rubin, D. 1992, Statistical Science, 7, 457
 \bibitem[\protect\citeauthoryear{{Veras} \& {Armitage}}{{Veras} \&
   {Armitage}}{2004}]{VerasArmitage04}
 {Veras}, D.,  \& {Armitage}, P.~J. 2004, \icarus, 172, 349
-
-\bibitem[\protect\citeauthoryear{{Vidal-Madjar} et~al.}{{Vidal-Madjar}
-  et~al.}{2003}]{VidalMadjar03}
-{Vidal-Madjar}, A., {Lecavelier des Etangs}, A., {D{\'e}sert}, J.-M.,
-  {Ballester}, G.~E., {Ferlet}, R., {H{\'e}brard}, G.,  \& {Mayor}, M. 2003,
-  \nat, 422, 143
 
 \bibitem[\protect\citeauthoryear{{Watson}, {Donahue}, \& {Walker}}{{Watson}
   et~al.}{1981}]{Watson81}
