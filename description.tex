@@ -200,7 +200,7 @@ $e_{min} > 0$ then tides have not damped the eccentricity, and, if we
 know the age of the system, then we can estimate the tidal $Q$ (or in
 the CTL model, the time lag factor).
 
-As an example consider the two curves in Fig.~\ref{fig:compareQ}.  The
+As an example consider the two curves in Fig.~\ref{fig:compareQ}, produced using the classical tidal theory as described in \cite{Barnes13}.  The
 line shows 10 Gyr of tidal evolution of a 2~\rearth~planet with a
 density of 1 g/cm$^3$ and tidal $Q$ of $10^6$ (i.e. a 3.8~\mearth~
 ``mini-Neptune''), while the filled circles represent the orbit of a
@@ -925,11 +925,7 @@ follow the procedure described for our pilot study, but will expand
 the analysis to a broader range of initial conditions as well as
 include alternative tidal models.  The pilot study (25,000 simulations
 of $\sim 5$ Gyr each) requires about 4 hours on a modern workstation,
-and therefore many such trials are easily tractable.  Co--I Barnes is
-an expert in tidal effects on exoplanets
-\citep{Barnes08,Jackson08,Barnes09,Barnes13}, and will use his
-existing code \texttt{eqtide} that follows the prescriptions in
-\cite{Barnes13}.  The free parameters are the mass--radius
+and therefore many such trials are easily tractable.  The free parameters are the mass--radius
 relationship for both rocky and gaseous bodies, the value of
 $R_{crit}$, the $Q$s of rocky and gaseous bodies, the initial
 eccentricity distribution, and the age distribution of \kepler stars.
@@ -941,8 +937,7 @@ are possible \citep[e.g.][]{Seager07,Fortney07,Lissauer11}.  We will
 use these other scalings for the masses of the rocky planets, as well
 as mixing the models to allow for a range of compositions.  For the
 gaseous planets, we will assume different densities in the range 0.5
--- 3 g/cm$^3$, and also mixed cases where the density is chosen at
-random.  The value of $R_{crit}$ is the parameter we are most
+-- 3 g/cm$^3$.  The value of $R_{crit}$ is the parameter we are most
 interested in, and we will grid it finely, varying it from 1 to 2.5
 \rearth in 0.1~\rearth intervals.  We will consider two different
 models for $Q$($R$), the tidal $Q$ as a function of planetary radius.
@@ -977,31 +972,19 @@ appropriate equilibrium tidal model.
 {\centerline{\ub{\sc Task B: Multi--planet Systems}}}
 \smallskip
 
-Many of the \kepler systems are multiple.  It's likely that many
-singletons are as well, but with non--transiting companions.  Mutual
+Mutual
 gravitational interactions between planets can maintain an
 eccentricity, even in the presence of strong tidal damping
-\citep{MardlingLin02,GreenbergVanLaerhoven11,Correia12}.  While this
-pumping cannot explain the discrepancy in Fig.~\ref{fig:emin}, it can
-still prevent some planets from reaching $e_{min} = 0$, and lead to an
-incorrect determination of $R_{crit}$.  To assess this possibility, we
+\citep{MardlingLin02,GreenbergVanLaerhoven11,Correia12}.  To assess this effect, we
 will perform simulations of multiplanet systems undergoing tidal
-damping.
-
-Ideally these simulations would couple an N--body integrator to the
-tidal models, as the former can be very accurate.  Unfortunately the
-timescales are so long that such an approach is intractable.  We
-therefore must use classical secular theory in which the evolution over
-Gyr can be computed in seconds.  The second order theory is
+damping. The Gyr 
+timescales for damping are too long for accurate N-body modeling, so will use classical secular theory to model the planet-planet interactions. The second order theory is
 insufficient for many of the cases we consider, which will have
 eccentricities up to 0.9.  Therefore, we will use higher order
 theories, which have been previously developed
-\citep[e.g.][]{Ford00,VerasArmitage04,LibertHenrard05}.  We may also
-take advantage of the high degree of coplanarity of close--in
-\kepler systems \cite{Fabrycky12}, and ignore all terms involving
-inclination.  As each of these models is computationally cheap, we can
-safely use the 12th order theory of \cite{LibertHenrard05} to evaluate
-the evolution.  
+\citep[e.g.][]{Ford00,VerasArmitage04,LibertHenrard05}. To maximize accuracy, and take advantage of the high degree of coplanarity of close--in
+\kepler systems \cite{Fabrycky12}, we will use the coplanar 12th order theory of \cite{LibertHenrard05} to evaluate
+the evolution.
 
 More challenging is the choice of initial conditions.  While many
 \kepler systems are multiple, we do not yet know the underlying
@@ -1009,23 +992,15 @@ distribution of orbital architectures.  A full exploration of
 parameter space with arbitrary multiplicity and orbital elements would
 be intractable, and would be very challenging to interpret.  We
 therefore will limit our study to suites of 25,000 systems with
-multiplicity that follows from the observations.  Furthermore, we will
-limit the size of our planetary systems to $<0.5$ AU.  More distant
-companions could certainly affect the orbits of close--in companions,
-but the more distant companions may also be on inclined orbits, as
-demonstrated by $\upsilon$ Andromedae c and d
-\citep{McArthur10,ReffertQuirrenbach11}.  Therefore, to ease both the
-computational burden, and not to diverge too far into unconstrained
-parameter space, we will use these constraints.  The physical
-properties of the planets will be in the same ranges as above.  Co--I
-Barnes has experience with secular theory
-\citep{BarnesGreenberg06a,BarnesGreenberg06b}, and hence will lead
-this effort.  We will perform numerical tests of stability of initial
-conditions, and will throw out systems that divergently cross strong
-mean motion resonances -- such 2:1, 3:1, and 3:2 -- that lead to
-system break--up \citep[e.g.][]{Gomes05}.
+multiplicity that follows from the observations.  To better match
+the \kepler systems, we will limit the size of our planetary systems
+to $<0.5$ AU. The physical properties of the planets will be in the
+same ranges as above. We will perform numerical tests of stability of
+initial conditions, and will throw out systems that divergently cross
+strong mean motion resonances -- such 2:1, 3:1, and 3:2 -- that lead
+to system break--up \citep[e.g.][]{Gomes05}.
 
-Additionally, it is likely that many of the close--in systems cannot
+Additionally, it may be that many of the close--in systems cannot
 have initial eccentricities comparable to the non--tidally--evolved
 planets because they would be unstable.  In those cases, the orbits
 are probably close to their primordial morphologies and experienced
@@ -1038,15 +1013,6 @@ full set and the high metallicity set.
 \medskip
 {\centerline{\ub{\sc Task C: Atmospheric Mass Loss}}}
 \smallskip
-
-In addition to tidal evolution, close--in exoplanets can also
-experience mass loss, as high energy radiation can liberate hydrogen
-\citep{Watson81,VidalMadjar03}.  \cite{Jackson10} showed that mass
-loss and tidal evolution are coupled for the case of CoRoT--7 b and
-that both positive and negative feedbacks are possible.  Mass loss is
-especially important in our study as a planet could transition from a
-gaseous body to a rocky body during its lifetime, leading to a
-two--speed evolution.
 
 We will employ the classic mass loss of model of \cite{Watson81} in
 which XUV photons liberate hydrogen atoms in the upper atmosphere.
@@ -1108,8 +1074,7 @@ infrastructures to model multi--dimensional systems.
 Co--I Barnes was a Co--I on NASA OSS grant 811073.02.07.01.15
 ``Simulating the Initial Planetesimal Disk'' which produced the first
 N-body simulation of 1 km planetesimal accretion
-\citep{Barnes09_1km}. As part of this effort, Barnes used several hundred thousand hours of CPU time at NASA HPC facilities, such as the Columbia and Plaiedes supercomputers. He has published $\sim 40$ papers on tidal theory and orbital dynamics, focusing on exoplanets
-\citep[e.g.][]{BarnesQuinn01,BarnesRaymond04,BarnesGreenberg06a,Barnes11,Barnes13}. 
+\citep{Barnes09_1km}. As part of this effort, Barnes used several hundred thousand hours of CPU time at NASA HPC facilities, such as the Columbia and Plaiedes supercomputers. He has published $\sim 40$ papers on tidal theory and orbital dynamics, including secular modeling \citep{BarnesGreenberg06a}, tidal effects \cotep{Jackson08a,Barnes13}, and coupling with atmospheric mass loss \citep{Jackson10,Barnes13}. 
 
 Co--I Agol has originated several important ideas in the field of
 extrasolar planets, including analytic light curve
