@@ -79,8 +79,16 @@
   et~al.}{2013}]{2013arXiv1304.7387B}
 {Borucki}, W.~J., et~al. 2013, ArXiv e-prints
 
+\bibitem[\protect\citeauthoryear{{Bouchy} et~al.}{{Bouchy}
+  et~al.}{2010}]{Bouchy2010}
+{Bouchy}, F., et~al. 2010, \aap, 519, A98
+
 \bibitem[\protect\citeauthoryear{{Burke}}{{Burke}}{2008}]{Burke08}
 {Burke}, C.~J. 2008, \apj, 679, 1566
+
+\bibitem[\protect\citeauthoryear{{Butler} et~al.}{{Butler}
+  et~al.}{2006}]{Butler06}
+{Butler}, R.~P., et~al. 2006, \apj, 646, 505
 
 \bibitem[\protect\citeauthoryear{{Correia}, {Bou{\'e}}, \& {Laskar}}{{Correia}
   et~al.}{2012}]{Correia12}
@@ -103,6 +111,16 @@
 \bibitem[\protect\citeauthoryear{{Dawson} \& {Murray-Clay}}{{Dawson} \&
   {Murray-Clay}}{2013}]{DawsonMurrayClay13}
 {Dawson}, R.~I.,  \& {Murray-Clay}, R.~A. 2013, \apjl, 767, L24
+
+\bibitem[\protect\citeauthoryear{{Dotter} et~al.}{{Dotter}
+  et~al.}{2008}]{Dotter2008}
+{Dotter}, A., {Chaboyer}, B., {Jevremovi{\'c}}, D., {Kostov}, V., {Baron}, E.,
+  \& {Ferguson}, J.~W. 2008, \apjs, 178, 89
+
+\bibitem[\protect\citeauthoryear{{Everett} et~al.}{{Everett}
+  et~al.}{2013}]{Everett2013}
+{Everett}, M.~E., {Howell}, S.~B., {Silva}, D.~R.,  \& {Szkody}, P. 2013, ArXiv
+  e-prints
 
 \bibitem[\protect\citeauthoryear{{Fabrycky} et~al.}{{Fabrycky}
   et~al.}{2012}]{Fabrycky12}
@@ -147,6 +165,10 @@ Gelman, A.,  \& Rubin, D. 1992, Statistical Science, 7, 457
 {Gomes}, R., {Levison}, H.~F., {Tsiganis}, K.,  \& {Morbidelli}, A. 2005, \nat,
   435, 466
 
+\bibitem[\protect\citeauthoryear{{G{\'o}mez Maqueo Chew} et~al.}{{G{\'o}mez
+  Maqueo Chew} et~al.}{2013}]{Yilen2013}
+{G{\'o}mez Maqueo Chew}, Y., et~al. 2013, \apj, 768, 79
+
 \bibitem[\protect\citeauthoryear{{Goodman} \& {Weare}}{{Goodman} \&
   {Weare}}{2010}]{Goodman-Weare}
 {Goodman}, J.,  \& {Weare}, J. 2010, Communications in Applied Mathematics and
@@ -159,9 +181,19 @@ Gelman, A.,  \& Rubin, D. 1992, Statistical Science, 7, 457
   {Van Laerhoven}}{2011}]{GreenbergVanLaerhoven11}
 {Greenberg}, R.,  \& {Van Laerhoven}, C. 2011, \apj, 733, 8
 
+\bibitem[\protect\citeauthoryear{{Hebb} et~al.}{{Hebb} et~al.}{2009}]{Hebb2009}
+{Hebb}, L., et~al. 2009, \apj, 693, 1920
+
+\bibitem[\protect\citeauthoryear{{Hebb} et~al.}{{Hebb} et~al.}{2010}]{Hebb2010}
+{Hebb}, L., et~al. 2010, \apj, 708, 224
+
 \bibitem[\protect\citeauthoryear{{Holman} \& {Murray}}{{Holman} \&
   {Murray}}{2005}]{2005Sci...307.1288H}
 {Holman}, M.~J.,  \& {Murray}, N.~W. 2005, Science, 307, 1288
+
+\bibitem[\protect\citeauthoryear{{Huber} et~al.}{{Huber}
+  et~al.}{2013}]{Huber2013}
+{Huber}, D., et~al. 2013, \apj, 767, 127
 
 \bibitem[\protect\citeauthoryear{{Hut}}{{Hut}}{1981}]{Hut81}
 {Hut}, P. 1981, \aap, 99, 126
@@ -178,6 +210,10 @@ Gelman, A.,  \& Rubin, D. 1992, Statistical Science, 7, 457
   et~al.}{2010}]{Jackson10}
 {Jackson}, B., {Miller}, N., {Barnes}, R., {Raymond}, S.~N., {Fortney}, J.~J.,
   \& {Greenberg}, R. 2010, \mnras, 407, 910
+
+\bibitem[\protect\citeauthoryear{{Kane} et~al.}{{Kane} et~al.}{2012}]{Kane12}
+{Kane}, S.~R., {Ciardi}, D.~R., {Gelino}, D.~M.,  \& {von Braun}, K. 2012,
+  \mnras, 425, 757
 
 \bibitem[\protect\citeauthoryear{{Khodachenko} et~al.}{{Khodachenko}
   et~al.}{2007}]{Khodachenko07}
@@ -257,9 +293,19 @@ Gelman, A.,  \& Rubin, D. 1992, Statistical Science, 7, 457
   et~al.}{2011}]{Moorhead11}
 {Moorhead}, A.~V., et~al. 2011, \apjs, 197, 1
 
+\bibitem[\protect\citeauthoryear{{Muirhead} et~al.}{{Muirhead}
+  et~al.}{2012}]{Muirhead2012}
+{Muirhead}, P.~S., {Hamren}, K., {Schlawin}, E., {Rojas-Ayala}, B., {Covey},
+  K.~R.,  \& {Lloyd}, J.~P. 2012, \apjl, 750, L37
+
 \bibitem[\protect\citeauthoryear{{Owen} \& {Wu}}{{Owen} \&
   {Wu}}{2013}]{OwenWu13}
 {Owen}, J.~E.,  \& {Wu}, Y. 2013, ArXiv e-prints
+
+\bibitem[\protect\citeauthoryear{{Pinsonneault} et~al.}{{Pinsonneault}
+  et~al.}{2012}]{Pinsonneault2012}
+{Pinsonneault}, M.~H., {An}, D., {Molenda-{\.Z}akowicz}, J., {Chaplin}, W.~J.,
+  {Metcalfe}, T.~S.,  \& {Bruntt}, H. 2012, \apjs, 199, 30
 
 \bibitem[\protect\citeauthoryear{{Plavchan}, {Bilinski}, \&
   {Currie}}{{Plavchan} et~al.}{2012}]{Plavchan12}
@@ -296,13 +342,13 @@ Gelman, A.,  \& Rubin, D. 1992, Statistical Science, 7, 457
   et~al.}{2007}]{Sotin07}
 {Sotin}, C., {Grasset}, O.,  \& {Mocquet}, A. 2007, \icarus, 191, 337
 
+\bibitem[\protect\citeauthoryear{{Southworth}}{{Southworth}}{2009}]{Southworth%
+2009}
+{Southworth}, J. 2009, \mnras, 394, 272
+
 \bibitem[\protect\citeauthoryear{{Tegmark} et~al.}{{Tegmark}
   et~al.}{2004}]{2004PhRvD..69j3501T}
 {Tegmark}, M., et~al. 2004, \prd, 69, 103501
-
-\bibitem[\protect\citeauthoryear{{Torres}, {Andersen}, \&
-  {Gim{\'e}nez}}{{Torres} et~al.}{2010}]{Torres10}
-{Torres}, G., {Andersen}, J.,  \& {Gim{\'e}nez}, A. 2010, \aapr, 18, 67
 
 \bibitem[\protect\citeauthoryear{{Valencia} et~al.}{{Valencia}
   et~al.}{2010}]{Valencia10}
@@ -323,6 +369,10 @@ Gelman, A.,  \& Rubin, D. 1992, Statistical Science, 7, 457
   et~al.}{1981}]{Watson81}
 {Watson}, A.~J., {Donahue}, T.~M.,  \& {Walker}, J.~C.~G. 1981, \icarus, 48,
   150
+
+\bibitem[\protect\citeauthoryear{{Wisniewski} et~al.}{{Wisniewski}
+  et~al.}{2012}]{Wisniewski2012}
+{Wisniewski}, J.~P., et~al. 2012, \aj, 143, 107
 
 \bibitem[\protect\citeauthoryear{{Yelle}}{{Yelle}}{2004}]{Yelle04}
 {Yelle}, R.~V. 2004, \icarus, 170, 167

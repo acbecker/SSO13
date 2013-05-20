@@ -151,7 +151,7 @@ parameter cancels out (although it is explicitly included in the
 transit model and will affect other parameters through covariance).
 This leaves $e_{min}$ a function of 4 parameters: $P$, $a$, $v$, and
 $R_*$.  We will use the \kepler lightcurves to constrain $P$ and
-$v/R_*$, meaning that we must determine though other means the
+$R_*/v$, meaning that we must determine though other means the
 semi--major axis and stellar radius.  The semi--major axis, and also
 the reference circular velocity, may be determined through the host
 star mass, making it critical that we are able to estimate the stellar
@@ -162,14 +162,14 @@ As outlined in \cite{2008ApJ...678.1407F}, transit durations that are
 constrained impact parameter, or eccentricity.  However, transit
 durations that are {\it longer} than circular may only arise due to
 eccentricity.  For long cadence \kepler data, the impact parameter is
-typically the most poorly constrained of all model parameters, because
-its primary constraint comes from the ingress/egress durations, which
-are poorly resolved for small planets at a 30--minute cadence.
-However, with now several hundred transits per system to (each poorly)
-resolve the ingress/egress, our KOI 701.01 analysis below suggests
-that the dependence of other model parameters on $b$ does not
-compromise our $e_{min}$ analysis, although we have not fully tested
-this at large impact parameter ($b \sim 1$).
+typically the most poorly known of all model parameters, because its
+primary constraint comes from the ingress/egress durations, which are
+poorly resolved for small planets at a 30--minute cadence.  However,
+with now several hundred transits per system to (each poorly) resolve
+the ingress/egress, our KOI 701.01 analysis below suggests that the
+dependence of other model parameters on $b$ does not compromise our
+$e_{min}$ analysis, although we have not fully tested this at large
+impact parameter ($b \sim 1$).
 
 The transit duration deviation has been used in several studies to
 constrain the eccentricity distribution. \cite{Moorhead11} analyzed
@@ -180,9 +180,9 @@ which $T > T_c$. They also found that eccentricities appear to be
 large regardless of orbital period, and that small planets tend to
 have larger eccentricities. More recent work has failed to determine
 if the \kepler~eccentricity distribution is consistent with the radial
-velocity planets \citep{Plavchan12,Kane13}. These studies made good
-progress, but were limited by the number of known candidates, as well
-as the relatively poor characterization of the transits themselves.
+velocity planets \citep{Plavchan12,Kane12}. These studies were limited
+by the number of known candidates, as well as the relatively poor
+characterization of the transits themselves.
 
 \medskip
 {\centerline{\ub{\sc The Boundary Between Rocky and Gaseous Planets}}}
@@ -374,11 +374,11 @@ associated change in tidal $Q$.
 
 In summary, the effects of tidal circularization appear not to be
 present in publicly available fits to the \kepler data, in sharp
-contradiction with the radial velocity exoplanet sample \citep{XXX}.
-These fits are therefore inadequate to identify $R_{crit}$ and tidal
-$Q$s, meaning a state--of--the--art statistical re--analysis
-of \kepler photometry is required to determine these fundamental
-parameters.
+contradiction with the radial velocity exoplanet
+sample \citep{Butler06}.  These fits are therefore inadequate to
+identify $R_{crit}$ and tidal $Q$s, meaning a state--of--the--art
+statistical re--analysis of \kepler photometry is required to
+determine these fundamental parameters.
 
 \bigskip
 \centerline{\bf III. Technical Approach and Methodology}
@@ -419,8 +419,8 @@ eccentricity, {\it but this need not be the case}.  Instead we use a
 purely geometric implementation of \cite{2002ApJ...580L.171M} whose
 only assumption is that the planet has constant transverse velocity
 during transit.  This generalization is especially important for our
-proposal, as we need to compare our observed model with one that would
-be observed in the zero--eccentricity limit.
+proposal, as we need to compare our measured transit duration with the
+one that would be observed in the zero--eccentricity limit.
 
 The main observable in this model is the time it takes the planet to
 cross the stellar equator, $\tau$ (this may also be thought of as a
@@ -441,64 +441,64 @@ Carlo (MCMC) modeling in our analysis, described below.
 {\centerline{\ub{\sc Transit Model}}}
 \smallskip
 
-To avoid a dependency between the fitted model and a physical model
-that includes orbital dynamics, we parameterize the lightcurve model
-in purely geometric terms.  To do so, we adopt the quadratic
-limb--darkened model of \cite{2002ApJ...580L.171M}, which describes
-transit lightcurves in terms of two (nuisance) limb--darkening
-coefficients and two (important) system parameters.  The first of the
-system parameters is the planetary radius divided by the stellar
-radius ($\zeta \equiv Rp/R_*$), which determines the fractional area
-of the stellar disk that may be occulted by the planet.  The second is
-the impact parameter of the planet ($\beta \equiv b/R_*$).  This
-variable is a function of time, due to the objects' relative motion.
-This function is dependent on the chord that the planet takes across
-the stellar disk, itself typically estimated using the orbital
-parameters semi--major axis ($\alpha \equiv a/R_*$) and inclination.
+%To avoid a dependency between the fitted model and a physical model
+%that includes orbital dynamics, we parameterize the lightcurve model
+%in purely geometric terms.  To do so, w
 
-\begin{figure*}[t] 
-  \begin{minipage}[c]{0.37\textwidth}
-    \includegraphics[width=\textwidth]{figures/schem.eps}
-  \end{minipage}\hfill
-  \begin{minipage}[c]{0.6\textwidth}
-    \caption{Schematic detailing our geometric model for the impact
-      parameter as a function of time, $\beta(t)$.  Relevant variables
-      include the minimum impact parameter scaled by the stellar radius
-      $\beta_0$, the radius of the planet scaled by the stellar radius
-      $\zeta$, and the time-dependent position of the planet $x(t)$.  The
-      fitted parameters are $t_0$ (defined where $\beta(t_0) = \beta_0$),
-      the minimum impact parameter $\beta_0$, scaled planetary radius
-      $\zeta$, and $\tau$ (which represents the time for the planet to
-      travel the angular distance subtended by the stellar radius). }
-    \label{fig-schem}
-    \hspace*{\fill}  
-    \hrule
-  \end{minipage}
-\end{figure*}
+We adopt the quadratic limb--darkened model
+of \cite{2002ApJ...580L.171M}, which describes transit lightcurves in
+terms of two (nuisance) limb--darkening coefficients and two
+(important) system parameters.  The first of the system parameters is
+the planetary radius divided by the stellar radius ($\zeta \equiv
+Rp/R_*$), which determines the fractional area of the stellar disk
+that may be occulted by the planet.  The second is the impact
+parameter of the planet ($\beta \equiv b/R_*$).  This variable is a
+function of time, due to the objects' relative motion.  This function
+is dependent on the chord that the planet takes across the stellar
+disk, itself typically estimated using the orbital parameters
+semi--major axis ($\alpha \equiv a/R_*$) and inclination.
 
-Instead we use here a purely geometric parameterization, represented
-in Figure~\ref{fig-schem}.  We describe the impact parameter as a
-function of time using the minimum impact parameter $\beta_0$ -- when
-the centers of the sources are aligned along the x--axis at
-center--of--transit time $t_0$ -- and the location of the planet on
-the transit chord across the stellar disk.  The x--coordinate of the
-planet as a function of time is represented as $x(t) / R_* = (t - t_0)
-* v / R_* = (t - t_0) / \tau$, where $v$ is the (unknown)
-perpendicular velocity, and $\tau$ is the (fitted) amount of time it
-takes the planet to traverse a distance equal to the stellar radius
-assuming no acceleration.  This allows us to express geometrically the
-impact parameter as a function of time:
+%\begin{figure*}[t] 
+%  \begin{minipage}[c]{0.37\textwidth}
+%    \includegraphics[width=\textwidth]{figures/schem.eps}
+%  \end{minipage}\hfill
+%  \begin{minipage}[c]{0.6\textwidth}
+%    \caption{Schematic detailing our geometric model for the impact
+%      parameter as a function of time, $\beta(t)$.  Relevant variables
+%      include the minimum impact parameter scaled by the stellar radius
+%      $\beta_0$, the radius of the planet scaled by the stellar radius
+%      $\zeta$, and the time-dependent position of the planet $x(t)$.  The
+%      fitted parameters are $t_0$ (defined where $\beta(t_0) = \beta_0$),
+%      the minimum impact parameter $\beta_0$, scaled planetary radius
+%      $\zeta$, and $\tau$ (which represents the time for the planet to
+%      travel the angular distance subtended by the stellar radius). }
+%    \label{fig-schem}
+%    \hspace*{\fill}  
+%    \hrule
+%  \end{minipage}
+%\end{figure*}
+
+Instead we use here a purely geometric parameterization.
+%, represented in Figure~\ref{fig-schem}.  
+We describe the impact parameter as a function of time using the
+minimum impact parameter $\beta_0$ -- when the centers of the sources
+are maximally aligned at center--of--transit time $t_0$ -- and the
+location of the planet on the transit chord across the stellar disk.
+The coordinate of the planet as a function of time is represented as
+$x(t) / R_* = (t - t_0) * v / R_* = (t - t_0) / \tau$, where $v$ is
+the (unknown) perpendicular velocity, and $\tau$ is the (fitted)
+amount of time it takes the planet to traverse a distance equal to the
+stellar radius assuming no acceleration.  This allows us to express
+geometrically the impact parameter as a function of time:
 \begin{eqnarray}
 \beta(t) & = & \sqrt{\beta_0^2 + \left((t - t_0) / \tau\right)^2},
 \end{eqnarray}
 which is then used along with $\zeta$ to generate a model transit
 lightcurve.
 This model yields a 4--parameter fit to each transit: $t_0, \beta_0^2,
-\tau, \zeta$.  The system period $P$ is determined using the
+\tau, \zeta$.  The system period $P$ is determined using 
 multiple ($N$) transits and the ensemble of $t_{0;i=1...N}$.  The
-transit duration $T$ is found from the 2 solutions to $\beta(t) = 1$,
-and represents the time between the center of the planet crossing each
-limb of the star:
+transit duration $T$ is found from the 2 solutions to $\beta(t) = 1$:
 \begin{eqnarray}
 T & = & 2 * \tau \sqrt{1 - \beta_0^2}.
 \label{eq-dt}
@@ -510,7 +510,7 @@ parameters:
 e_{min} & = & \left| \frac{P^{2} - 4 \pi^{2} \alpha^{2} \tau^{2}}{P^{2} + 4 \pi^{2} \alpha^{2} \tau^{2}} \right| 
 \label{eq-emin2}
 \end{eqnarray}
-or, physically,
+or, more intuitively,
 \begin{eqnarray}
 e_{min} & = & \left| \frac{1 - (v_c/v)^2}{1 + (v_c/v)^2} \right| .
 \label{eq-emin3}
@@ -519,16 +519,17 @@ e_{min} & = & \left| \frac{1 - (v_c/v)^2}{1 + (v_c/v)^2} \right| .
 Equation~\ref{eq-emin2} indicates that $e_{min}$ is purely a function
 of the fitted parameter $\tau$, the derived period $P$, and an
 externally estimated semi--major axis for the planet (in units of the
-stellar radius) $\alpha$.  The uncertainty in $e_{min}$ scales as
-below for all 3 parameters:
+stellar radius) $\alpha$.  
 
-\begin{eqnarray}
-\frac{\delta e_{min}}{\delta \xi} & = & \frac{\Xi~e_{min}}{\xi} ~~~~~ \left[\xi = \tau; P; \alpha \right] \\
-{\rm where}~~~~~\Xi & \equiv & \frac{16 \pi^{2} \alpha^{2} \tau^{2} P^{2}}{16 \pi^{4} \alpha^{4} \tau^{4} - P^{4}}.\nonumber
-\label{eq-emin3}
-\end{eqnarray}
-In the limit of a circular orbit ($P \rightarrow 2 \pi \alpha \tau$),
-the product $\Xi~e_{min}$ = 1.
+%The uncertainty in $e_{min}$ scales as below for all 3 parameters:
+%
+%\begin{eqnarray}
+%\frac{\delta e_{min}}{\delta \xi} & = & \frac{\Xi~e_{min}}{\xi} ~~~~~ \left[\xi = \tau; P; \alpha \right] \\
+%{\rm where}~~~~~\Xi & \equiv & \frac{16 \pi^{2} \alpha^{2} \tau^{2} P^{2}}{16 \pi^{4} \alpha^{4} \tau^{4} - P^{4}}.\nonumber
+%\label{eq-emin3}
+%\end{eqnarray}
+%In the limit of a circular orbit ($P \rightarrow 2 \pi \alpha \tau$),
+%the product $\Xi~e_{min}$ = 1.
 
 \medskip
 {\centerline{\ub{\sc KOI 701.01}}}
@@ -777,11 +778,90 @@ approximately 20 after 32 transits (Figure~\ref{fig-marg}).
 % [  8.68753383e-01   1.04710322e+00   5.37619028e+00   7.30660176e+00    4.92974425e+01   2.06649569e+02]]
 
 \medskip
-{\centerline{\ub{\sc Kepler Objects of Interest}}}
+{\centerline{\ub{\sc Target Selection and Characterization}}}
 \smallskip
 
-We have examined the KOI list and produced a preliminary target list. Suitable objects have published values for $T$, $b$ XXX, $R_*/a$ and $R_p$, and have a mass estimate between 0.7 and 1.4 \msun, i.e. FGK stars. These cuts left
-890.  We expect characterization of these host stars to improve rapidly, and will apply relevant models, e.g. the \cite{Torres10} stellar relation models, to poorly constrained systems to maximize the number of systems we can analyze. At the same time we expect some false positives to be identified, too. We therefore expect to analyze about 1000 KOIs.
+We have examined the current KOIs to establish a preliminary target
+list.  We find 890 objects with appropriate values of $P$ and $R_p$,
+and have host star mass estimates between 0.7 and 1.4 \msun, i.e. FGK
+stars.  We expect this list to expand somewhat with on--going study of
+the \kepler data; we anticipate running our pipeline on approximately
+1000 systems.
+
+As described above, our analysis requires a measure of the orbital
+separation relative to the stellar radius, $\alpha = a / R_{s}$, to
+derive $e_{min}$ (Equation~\ref{eq-emin2}).  The separation is
+obtained trivially from Kepler's 3rd Law according to, $a = (M_*
+P^{2})^{2/3}$ where $M_*$ is the mass of the host star.
+Unfortunately, the mass of an isolated star is not directly
+observable.  Instead, it must be inferred by comparing observed
+stellar properties to theoretical stellar evolution models and/or
+empirical calibrations.  Thus, to derive the stellar mass, we will
+interpolate state-of-the-art stellar evolution models from the
+Dartmouth group \citep{Dotter2008} in three parameters: effective
+temperature ($T_{eff}$), metallicity ([Fe/H]), and gravity ($log~g$),
+as we (L.~Hebb) have done for many other confirmed transiting planets
+with radial velocity measurements \citep[e.g.][]{Hebb2009,Hebb2010}.
+
+Although the stellar parameters are available for all the KOI objects
+in the Kepler Input Catalogue, these values are based on broad band
+colors and are known to have systematic
+problems \citep{Muirhead2012,Pinsonneault2012}.  Therefore, we will
+derive the host star mass using the $T_{eff}$ and [Fe/H] derived
+directly from spectra through stellar characterization techniques.
+While $T_{eff}$ and [Fe/H] can be determined with high precision from
+the stellar spectrum, $log~g$ is usually poorly constrained, and thus
+stellar masses derived from the spectroscopic $log~g$ can have large
+uncertainties and can suffer from systematics.
+
+To avoid this problem, we will obtain the $log~g$ values based on a
+novel characterization of the high frequency variability in the {\it
+Kepler} light curves (Bastien, Stassun et al.\ 2013, to appear in
+Nature) which has been shown to reproduce the exquisite
+astroseismically measured $log~g$ values \citep{Huber2013} for dwarf
+and subgiant stars.  The authors present a technique that can be used
+to derive $log~g$ values for the majority of Kepler targets with
+uncertainties of $\le 0.1$ by empirically detecting granulation on the
+stellar surface.  This allows for significantly more accurate and
+precise gravity measurements than can be derived from typical modeling
+of broad absorption line wings.
+
+We plan to use the information available in the literature to derive
+the host star mass for our sample.  Several teams have large,
+observing programs to obtain spectra of this important sample.  For
+example, \citet{Everett2013} derived stellar parameters for $\sim 400$
+faint KOIs from low resolution data; approximately 1000 targets have
+been observed with Keck HIRES (J.~Johnson et al.\ in prep) and are
+currently being analyzed with a new Spectroscopy Made Easy (SME)
+pipeline (Cargile, Hebb et al.\ in prep); and the 2.5m Nordic Optical
+Telescope (NOT) has has an ongoing program to derive stellar
+parameters of Kepler KOIs (L. Buchave, PI).  However, if certain
+targets lack observed spectra or derived stellar parameters, we will
+obtain the necessary data with the ARC 3.5m echelle spectrograph
+through the University of Washington's guaranteed access to the Apache
+Point Telescopes.  We will analyze these data as necessary with our
+SME pipeline, as we have done for many other
+targets \citep[i.e.][]{Wisniewski2012}.
+
+We will interpolate the Dartmouth models considering the 1$\sigma$
+errors in the photometrically measured $log~g$ and in the
+spectroscopically determined [Fe/H] and $T_{eff}$.  Typical
+uncertainties of $\le 0.1$~dex is [Fe/H], $\le 100$~K in $T_{eff}$,
+and $\le 0.1$ in $log~g$ result in uncertainties on the resulting
+stellar mass of $5-8$\% for well understood F, G and K-dwarf stars.
+This error budget includes the formal errors from the measured
+uncertainties on the parameters and systematic uncertainties arising
+from variation between different stellar evolution models
+\citep[2-4\%,][]{Southworth2009}.  For each target, we will combine the
+extremely precise orbital period determined from our modeling and our
+derived mass to determine the orbital separation, $a$.  Combined with
+the accurate $log~g$ measured from the photometric variability (as
+described above), we will produce a catalogue of $\alpha = a/R_{s}$
+values for all the short period KOI transiting planet candidates in
+our sample with conservative uncertainties of $\le 10$\%.  Finally,
+our comparison of the stellar parameters to the evolutionary models
+also allows us to estimate stellar age, which is critical to
+understanding the tidal quality factors.
 
 \medskip
 {\centerline{\ub{\sc Computational Requirements}}}
@@ -819,7 +899,12 @@ available.
 In the following sections, we describe the theoretical component of
 our research plan in more detail.  In Task A, we consider systems
 consisting of one star and one planet.  In Task B, we include multiple
-planet systems. In Task C, we incorporate mass loss.
+planet systems. In Task C, we incorporate mass loss.  For each task,
+our final step will be a comparison between simulated data and the
+ensemble of well--characterized \kepler targets.  This will be done by
+comparing the measured distributions of $e_{min}$ to those simulated
+using $R_{crit}$, $Q_r$, and $Q_g$ (and possibly factoring in
+multiplicity, metallicity, and mass loss).
 
 \medskip
 {\centerline{\ub{\sc Task A: Tides in Star--Planet Systems}}}
@@ -860,11 +945,11 @@ we must consider this possibility, too.  This also introduces a new
 radius cut--off, $R_{mid}$, which we will allow to move from 2 to
 5~\rearth.  The $Q$ range for these systems will have values between
 3000 and 30,000.  We will randomly choose a stellar mass in the range
-0.7--1.4~\msun as we are interested in FGK stars.  \rory{A sentence on
-the age distribution}. Finally, we will keep the initial eccentricity
-distribution consistent with that of more distant exoplanets.
-Ultimately we expect to run several hundred suites of systems, easily
-do--able on a modern multi--core workstation.
+0.7--1.4~\msun as we are interested in FGK stars.  Finally, we will
+keep the initial eccentricity distribution consistent with that of
+more distant exoplanets.  Ultimately we expect to run several hundred
+suites of systems, easily do--able on a modern multi--core
+workstation.
 
 The examples in Figs.~\ref{fig:compareQ}--\ref{fig:emin} used one
 tidal model, in which the lag angle between the tidal bulge and the
@@ -1017,7 +1102,9 @@ N-body simulation of 1 km planetesimal accretion
 
 Co--I Agol...
 
-Co--I Hebb...
+Co--I Hebb is an expert in the field of characterizing exoplanet host
+stars using state-of-the-art stellar evolution
+models \citep[e.g.][]{Hebb2009,Hebb2010,Bouchy2010,Yilen2013}.
 
 \bigskip
 \centerline{\bf V. Relevance to NASA Programs}
@@ -1064,7 +1151,7 @@ data.  He will advise as--needed throughout the project.  Co--I Hebb
 has extensive experience in inferring the stellar properties of
 exoplanet host stars, and will serve as the lead for determining the
 host stars' mass and radius.  PI Becker will serve as the project lead
-throughout.  We will have weekly meetings at the Unviersity of
+throughout.  We will have weekly meetings at the University of
 Washington to manage progress, and yearly meetings including Hebb to
 focus on host star characterization.
 
@@ -1103,17 +1190,18 @@ through a {\tt github} site specifically designed for this project.
 Our modeling software will also be released via {\tt github}.
 
 {\bf Year 2 (2015):} The second year will begin with the MCMC analyses
-of the periods via times of transit, and transition to theoretical
-interpretation of the systems.  We will start with linear ephemeris
-models for all systems to estimate periods; for those systems where
-this model is insufficient, we will examine transit timing models with
-more complicated ephemerides.  We anticipate that this effort may
-result in the publication of ancillary papers on the transit timings
-of the systems under study, with assistance from Agol on the
-interpretation of the results. During this year, Barnes will begin
-working with the graduate student on the theoretical aspects of the
-project. They will design and simulate the models described in Task A
-and publish a preliminary estimate of $R_{crit}$, $Q_g$, and
+of the periods via times of transit, include a strong focus on
+characterizing the host star mass and radius, and transition to
+theoretical interpretation of the systems.  We will start with linear
+ephemeris models for all systems to estimate periods; for those
+systems where this model is insufficient, we will examine transit
+timing models with more complicated ephemerides.  We anticipate that
+this effort may result in the publication of ancillary papers on the
+transit timings of the systems under study, with assistance from Agol
+on the interpretation of the results. During this year, Barnes will
+begin working with the graduate student on the theoretical aspects of
+the project. They will design and simulate the models described in
+Task A and publish a preliminary estimate of $R_{crit}$, $Q_g$, and
 $Q_r$. During this year we will also begin running simulations of
 multiplanet systems with tidal damping.
 
@@ -1125,9 +1213,7 @@ all available \kepler data and will compare this final data set to the
 synthetic data produced by the tides+multiplicity+evaporation model.
 A final paper will summarize the results of the investigation,
 including final values, with error estimates, for $R_{crit}$, $Q_r$,
-$Q_g$, and $\epsilon$.  We will characterize the degeneracies between
-these parameters using a Bayesian framework.
-
+$Q_g$, and $\epsilon$.  
 
 
 \bigskip
